@@ -1,0 +1,177 @@
+d:\pliki użytkownika\documents\visual studio 2013\Projects\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+d:\pliki użytkownika\documents\visual studio 2013\Projects\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe
+d:\pliki użytkownika\documents\visual studio 2013\Projects\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.pdb
+d:\pliki użytkownika\documents\visual studio 2013\Projects\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
+d:\pliki użytkownika\documents\visual studio 2013\Projects\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie.resources
+d:\pliki użytkownika\documents\visual studio 2013\Projects\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
+d:\pliki użytkownika\documents\visual studio 2013\Projects\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
+d:\pliki użytkownika\documents\visual studio 2013\Projects\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.exe
+d:\pliki użytkownika\documents\visual studio 2013\Projects\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.pdb
+d:\pliki użytkownika\documents\visual studio 2013\Projects\POMOST Lite\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
+d:\pliki użytkownika\documents\visual studio 2013\Projects\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie.pl-PL.resources
+d:\pliki użytkownika\documents\visual studio 2013\Projects\POMOST Lite\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.exe
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.pdb
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.pdb
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_baza.resources
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownik.resources
+F:\inż. oprogramowania\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_baza.pl-PL.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\obj\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\obj\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\bin\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\bin\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_baza.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\obj\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\obj\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\bin\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\bin\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_baza.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia (2)\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\obj\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\obj\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\bin\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\bin\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_baza.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia — kopia\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia — kopia\POMOST Lite\obj\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v2 — kopia — kopia\POMOST Lite\obj\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\bin\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\bin\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_baza.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3 — kopia\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3 — kopia\POMOST Lite\obj\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Documents\Visual Studio 2013\Projects\POMOST Lite v3 — kopia\POMOST Lite\obj\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\obj\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\obj\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\bin\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\bin\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Desktop\POMOST Lite v3 — kopia\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_uzytkownika.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_uzytkownika.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\bin\Debug\mops.mdf
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\bin\Debug\mops_log.ldf
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\bin\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\bin\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Desktop\POMOST Lite v3\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST Lite.exe
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST Lite.pdb
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\bin\Debug\POMOST Lite.exe
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\bin\Debug\POMOST Lite.pdb
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_uzytkownika.resources
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.resources
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
+F:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST Lite.exe
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST Lite.pdb
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\bin\Debug\POMOST Lite.exe
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\bin\Debug\POMOST Lite.pdb
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_uzytkownika.resources
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.resources
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
+E:\inż. oprogramowania\POMOST Lite v3.1\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\obj\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\obj\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\bin\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\bin\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_uzytkownika.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
+D:\Pliki użytkownika\Desktop\POMOST Lite v3.1.1\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_uzytkownika.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
+D:\Pliki użytkownika\Desktop\POMOST Lite\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite v1\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite v1\POMOST Lite\obj\Debug\POMOST Lite.pdb
