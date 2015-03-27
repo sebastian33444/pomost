@@ -53,16 +53,10 @@
       <Column Name="haslo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="dzielnica" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="miasto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="admin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="pracownik_dokumenty" Member="dokumenties" ThisKey="id_pracownik" OtherKey="id_pracownik" Type="dokumenty" />
       <Association Name="pracownik_świadczenie" Member="świadczenies" ThisKey="id_pracownik" OtherKey="id_pracownik" Type="świadczenie" />
       <Association Name="pracownik_petent" Member="petents" ThisKey="id_pracownik" OtherKey="id_pracownik" Type="petent" />
-    </Type>
-  </Table>
-  <Table Name="dbo.administratorzy" Member="administratorzies">
-    <Type Name="administratorzy">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="login" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="haslo" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

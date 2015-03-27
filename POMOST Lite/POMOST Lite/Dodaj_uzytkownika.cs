@@ -33,43 +33,9 @@ namespace POMOST_Lite
             listBox1.ValueMember = "id_pracownik";
         }
 
-        void wczytajAdmin()
-        {
-            listBox1.Items.Clear();
-            listBox1.Items.AddRange(baza.administratorzies.ToArray());
-            listBox1.DisplayMember = "login";
-        }
 
         private void dodaj_Click(object sender, EventArgs e)
         {
-            if (checkBoxAdmin.Checked)
-            {
-                bool ok = true;
-                foreach (administratorzy adm in baza.administratorzies)
-                {
-                    if (adm.login == nazwa_uzytkownika.Text)
-                    {
-                        ok = false;
-                        break;
-                    }
-                }
-                if (nazwa_uzytkownika != null && haslol.Text != null && ok == true)
-                {
-                    administratorzy adm = new administratorzy();
-                    baza.administratorzies.InsertOnSubmit(adm);
-                    adm.login = nazwa_uzytkownika.Text;
-                    adm.haslo = szyfrowanie.SzyfrujMD5(haslol.Text);
-                    baza.SubmitChanges();
-                    MessageBox.Show("Pomyślnie dodano administratora.");
-                    wczytajAdmin();
-                }
-                else
-                {
-                    MessageBox.Show("Nie wszystkie pola są wypełnione lub login już zajety.");
-                }
-            }
-            else
-            {
                 bool ok = true;
                 foreach (pracownik p in baza.pracowniks)
                 {
@@ -89,6 +55,14 @@ namespace POMOST_Lite
                     prac.haslo = szyfrowanie.SzyfrujMD5(haslol.Text);
                     prac.miasto = miastol.Text;
                     prac.dzielnica = dzielnical.Text;
+                    if (checkBoxAdmin.Checked)
+                    {
+                        prac.admin = true;
+                    }
+                    else
+                    {
+                        prac.admin = false;
+                    }
                     baza.SubmitChanges();
                     MessageBox.Show("Pomyślnie dodano użytkownika.");
                     wczytajOsoby();
@@ -97,8 +71,6 @@ namespace POMOST_Lite
                 {
                     MessageBox.Show("Nie wszystkie pola są wypełnione lub login już zajety.");
                 }
-               
-            }
         }
 
         private void Dodaj_uzytkownika_FormClosing(object sender, FormClosingEventArgs e)
@@ -109,58 +81,25 @@ namespace POMOST_Lite
 
         private void edytuj_Click(object sender, EventArgs e)
         {
-            if (checkBoxAdmin.Checked)
-            {
-                foreach(administratorzy adm in baza.administratorzies.Where(adm => adm.login == listBox1.Text))
-                {
-                    nazwa_uzytkownika.Text = adm.login;
-                    haslol.Text = adm.haslo;
-                    anuluj.Visible = true;
-                    zapisz.Visible = true;
-                    tryb_edycji.Visible = true;
-                    dodaj.Enabled = false;
-                    usun.Enabled = false;
-                }
-            }
-            else
-            {
                 foreach(pracownik p in baza.pracowniks.Where(p => p.login == listBox1.Text))
                 {
                     nazwa_uzytkownika.Text = p.login;
-                    haslol.Text = p.haslo;
                     imiel.Text = p.imie;
                     nazwiskol.Text = p.nazwisko;
                     dzielnical.Text = p.dzielnica;
                     miastol.Text = p.miasto;
+                    checkBoxAdmin.Checked = p.admin;
                     anuluj.Visible = true;
                     zapisz.Visible = true;
                     tryb_edycji.Visible = true;
                     dodaj.Enabled = false;
                     usun.Enabled = false;
                 }
-
-            }
         }
 
         private void usun_Click(object sender, EventArgs e)
         {
-            if (checkBoxAdmin.Checked)
-            {
-                var dokasacji = from p in baza.administratorzies where p.login == listBox1.Text && p.login !="admin" select p;
-                try
-                {
-                    baza.administratorzies.DeleteAllOnSubmit(dokasacji);
-                    baza.SubmitChanges();
-                }
-                catch
-                {
-                    MessageBox.Show("Nie można usunąć głównego administratora.");
-                }
-                wczytajAdmin();
-            }
-            else
-            {
-                var dokasacji = from p in baza.pracowniks where p.login == listBox1.Text select p;
+                var dokasacji = from p in baza.pracowniks where p.login == listBox1.Text && p.login != "admin" select p;
                 try
                 {
                     baza.pracowniks.DeleteAllOnSubmit(dokasacji);
@@ -168,43 +107,9 @@ namespace POMOST_Lite
                 }
                 catch
                 {
-                    MessageBox.Show("Nie można usunąć pracownika, do którego są podpięci petenci, dokumenty lub świadczenia.");
+                    MessageBox.Show("Nie można usunąć pracownika, do którego są podpięci petenci, dokumenty lub świadczenia.  Nie można usunąć głównego administratora.");
                 }
                 wczytajOsoby();
-            }
-
-        }
-
-        private void checkBoxAdmin_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxAdmin.Checked)
-            {
-                wczytajAdmin();
-                nazwa_uzytkownika.Text = null;
-                haslol.Text = null;
-                imiel.Text = null;
-                nazwiskol.Text = null;
-                dzielnical.Text = null;
-                miastol.Text = null;
-                imiel.Enabled = false;
-                nazwiskol.Enabled = false;
-                dzielnical.Enabled = false;
-                miastol.Enabled = false;
-            }
-            else
-            {
-                wczytajOsoby();
-                nazwa_uzytkownika.Text = null;
-                haslol.Text = null;
-                imiel.Text = null;
-                nazwiskol.Text = null;
-                dzielnical.Text = null;
-                miastol.Text = null;
-                imiel.Enabled = true;
-                nazwiskol.Enabled = true;
-                dzielnical.Enabled = true;
-                miastol.Enabled = true;
-            }
         }
 
         private void wroc_Click(object sender, EventArgs e)
@@ -231,21 +136,6 @@ namespace POMOST_Lite
 
         private void zapisz_Click(object sender, EventArgs e)
         {
-            if (checkBoxAdmin.Checked)
-            {
-                foreach (administratorzy adm in baza.administratorzies.Where(adm => adm.login == listBox1.Text))
-                {
-                    adm.login = nazwa_uzytkownika.Text;
-                    adm.haslo = szyfrowanie.SzyfrujMD5(haslol.Text);
-                    anuluj.Visible = false;
-                    zapisz.Visible = false;
-                    tryb_edycji.Visible = false;
-                    dodaj.Enabled = true;
-                    usun.Enabled = true;
-                }
-            }
-            else
-            {
                 foreach (pracownik p in baza.pracowniks.Where(p => p.login == listBox1.Text))
                 {
                     p.login = nazwa_uzytkownika.Text;
@@ -260,8 +150,22 @@ namespace POMOST_Lite
                     dodaj.Enabled = true;
                     usun.Enabled = true;
                 }
+             baza.SubmitChanges();
+        }
+
+        private void listBox1_Click(object sender, EventArgs e)
+        {
+            foreach (pracownik p in baza.pracowniks.Where(p => p.login == listBox1.Text))
+            {
+                if (p.admin == true)
+                {
+                    checkBoxAdmin.Checked = true;
+                }
+                else
+                {
+                    checkBoxAdmin.Checked = false;
+                }
             }
-            baza.SubmitChanges();
         }
     }
 }

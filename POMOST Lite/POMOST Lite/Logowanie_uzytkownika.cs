@@ -39,14 +39,7 @@ namespace POMOST_Lite
                     log = true;
                 }
             }
-            foreach (administratorzy adm in baza.administratorzies)
-            {
-                if (adm.login == nazwa_uzytkownika.Text && adm.haslo.ToUpper() == szyfrowanie.SzyfrujMD5(haslo.Text))
-                {
-                    log = true;
-                }
-            }
-            if (log == true)
+             if (log == true)
             {
                 this.Hide();
                 Strona_glowna str_gl = new Strona_glowna();
@@ -62,9 +55,9 @@ namespace POMOST_Lite
         {
             bool log = false;
             Dodaj_uzytkownika adduser = new Dodaj_uzytkownika();
-            foreach (administratorzy adm in baza.administratorzies)
+            foreach (pracownik prac in baza.pracowniks.Where(prac => prac.admin == true))
             {
-                if (adm.login == nazwa_uzytkownika.Text && adm.haslo.ToUpper() == szyfrowanie.SzyfrujMD5(haslo.Text))
+                if (prac.login == nazwa_uzytkownika.Text && prac.haslo.ToUpper() == szyfrowanie.SzyfrujMD5(haslo.Text))
                 {
                     log = true;
                 }

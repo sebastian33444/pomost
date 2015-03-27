@@ -13,6 +13,8 @@ namespace POMOST_Lite
     public partial class Strona_glowna : Form
     {
         DataClassesDataContext baza = new DataClassesDataContext();
+        private string p;
+        private string status;
 
         
         public Strona_glowna()
@@ -21,6 +23,27 @@ namespace POMOST_Lite
             foreach(pracownik p in baza.pracowniks)
             {
                 richTextBox1.AppendText(p.imie + " "+ p.nazwisko +"\n");
+            }
+        }
+
+        public Strona_glowna(string p, string status)
+        {
+            // TODO: Complete member initialization
+            this.p = p;
+            this.status = status;
+            if (status == "admin")
+            {
+                MessageBox.Show(p + status);
+                /*
+                foreach(administratorzy adm in baza.administratorzies.Where(adm => adm.login == p))
+                {
+                    tslabelLogin.Text = adm.login;
+                }
+                 * */
+            }
+            else if (status =="user")
+            {
+
             }
         }
 

@@ -42,9 +42,6 @@ namespace POMOST_Lite
     partial void Insertpracownik(pracownik instance);
     partial void Updatepracownik(pracownik instance);
     partial void Deletepracownik(pracownik instance);
-    partial void Insertadministratorzy(administratorzy instance);
-    partial void Updateadministratorzy(administratorzy instance);
-    partial void Deleteadministratorzy(administratorzy instance);
     #endregion
 		
 		public DataClassesDataContext() : 
@@ -106,14 +103,6 @@ namespace POMOST_Lite
 			get
 			{
 				return this.GetTable<pracownik>();
-			}
-		}
-		
-		public System.Data.Linq.Table<administratorzy> administratorzies
-		{
-			get
-			{
-				return this.GetTable<administratorzy>();
 			}
 		}
 	}
@@ -1113,6 +1102,8 @@ namespace POMOST_Lite
 		
 		private string _miasto;
 		
+		private bool _admin;
+		
 		private EntitySet<dokumenty> _dokumenties;
 		
 		private EntitySet<świadczenie> _świadczenies;
@@ -1137,6 +1128,8 @@ namespace POMOST_Lite
     partial void OndzielnicaChanged();
     partial void OnmiastoChanging(string value);
     partial void OnmiastoChanged();
+    partial void OnadminChanging(bool value);
+    partial void OnadminChanged();
     #endregion
 		
 		public pracownik()
@@ -1287,6 +1280,26 @@ namespace POMOST_Lite
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin", DbType="Bit NOT NULL")]
+		public bool admin
+		{
+			get
+			{
+				return this._admin;
+			}
+			set
+			{
+				if ((this._admin != value))
+				{
+					this.OnadminChanging(value);
+					this.SendPropertyChanging();
+					this._admin = value;
+					this.SendPropertyChanged("admin");
+					this.OnadminChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="pracownik_dokumenty", Storage="_dokumenties", ThisKey="id_pracownik", OtherKey="id_pracownik")]
 		public EntitySet<dokumenty> dokumenties
 		{
@@ -1380,123 +1393,6 @@ namespace POMOST_Lite
 		{
 			this.SendPropertyChanging();
 			entity.pracownik = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.administratorzy")]
-	public partial class administratorzy : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private string _login;
-		
-		private string _haslo;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnloginChanging(string value);
-    partial void OnloginChanged();
-    partial void OnhasloChanging(string value);
-    partial void OnhasloChanged();
-    #endregion
-		
-		public administratorzy()
-		{
-			OnCreated();
-		}
-
-        public administratorzy(administratorzy administratorzy1)
-        {
-            // TODO: Complete member initialization
-            this.administratorzy1 = administratorzy1;
-        }
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_login", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string login
-		{
-			get
-			{
-				return this._login;
-			}
-			set
-			{
-				if ((this._login != value))
-				{
-					this.OnloginChanging(value);
-					this.SendPropertyChanging();
-					this._login = value;
-					this.SendPropertyChanged("login");
-					this.OnloginChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_haslo", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string haslo
-		{
-			get
-			{
-				return this._haslo;
-			}
-			set
-			{
-				if ((this._haslo != value))
-				{
-					this.OnhasloChanging(value);
-					this.SendPropertyChanging();
-					this._haslo = value;
-					this.SendPropertyChanged("haslo");
-					this.OnhasloChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-        private administratorzy administratorzy1;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 }

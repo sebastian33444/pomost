@@ -40,13 +40,13 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.tslabelLogin = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.tslabelMiasto = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
+            this.tslabelDzielnica = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -137,13 +137,13 @@
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.toolStripLabel2,
+            this.tslabelLogin,
             this.toolStripSeparator2,
             this.toolStripLabel3,
-            this.toolStripLabel4,
+            this.tslabelMiasto,
             this.toolStripSeparator3,
             this.toolStripLabel5,
-            this.toolStripLabel6,
+            this.tslabelDzielnica,
             this.toolStripSeparator4});
             this.toolStrip2.Location = new System.Drawing.Point(0, 25);
             this.toolStrip2.Name = "toolStrip2";
@@ -157,11 +157,11 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(40, 22);
             this.toolStripLabel1.Text = "Login:";
             // 
-            // toolStripLabel2
+            // tslabelLogin
             // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel2.Text = "toolStripLabel2";
+            this.tslabelLogin.Name = "tslabelLogin";
+            this.tslabelLogin.Size = new System.Drawing.Size(86, 22);
+            this.tslabelLogin.Text = "toolStripLabel2";
             // 
             // toolStripSeparator2
             // 
@@ -174,11 +174,11 @@
             this.toolStripLabel3.Size = new System.Drawing.Size(46, 22);
             this.toolStripLabel3.Text = "Miasto:";
             // 
-            // toolStripLabel4
+            // tslabelMiasto
             // 
-            this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel4.Text = "toolStripLabel4";
+            this.tslabelMiasto.Name = "tslabelMiasto";
+            this.tslabelMiasto.Size = new System.Drawing.Size(86, 22);
+            this.tslabelMiasto.Text = "toolStripLabel4";
             // 
             // toolStripSeparator3
             // 
@@ -191,11 +191,11 @@
             this.toolStripLabel5.Size = new System.Drawing.Size(57, 22);
             this.toolStripLabel5.Text = "Dzielnica:";
             // 
-            // toolStripLabel6
+            // tslabelDzielnica
             // 
-            this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel6.Text = "toolStripLabel6";
+            this.tslabelDzielnica.Name = "tslabelDzielnica";
+            this.tslabelDzielnica.Size = new System.Drawing.Size(86, 22);
+            this.tslabelDzielnica.Text = "toolStripLabel6";
             // 
             // toolStripSeparator4
             // 
@@ -237,13 +237,13 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripLabel tslabelLogin;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
+        private System.Windows.Forms.ToolStripLabel tslabelMiasto;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel6;
+        private System.Windows.Forms.ToolStripLabel tslabelDzielnica;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }
