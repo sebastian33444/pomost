@@ -124,6 +124,7 @@ namespace POMOST_Lite
         {
             nazwa_uzytkownika.Text = null;
             haslol.Text = null;
+            hasloponl.Text = null;
             imiel.Text = null;
             nazwiskol.Text = null;
             dzielnical.Text = null;
@@ -159,6 +160,7 @@ namespace POMOST_Lite
                         nazwiskol.Text = null;
                         dzielnical.Text = null;
                         miastol.Text = null;
+                        MessageBox.Show("Pomyślnie zmodyfikowano użytkownika.");
                     }
                     else if (haslol.Text == hasloponl.Text && haslol.Text.Length == 0 && p.imie.Length > 0 && p.nazwisko.Length > 0 && p.dzielnica.Length > 0 && p.miasto.Length > 0)
                     {
@@ -178,7 +180,7 @@ namespace POMOST_Lite
                         nazwiskol.Text = null;
                         dzielnical.Text = null;
                         miastol.Text = null;
-                        MessageBox.Show("Hasło pozostało bez zmian.");
+                        MessageBox.Show("Pomyslnie zmodyfikowano użytkownika. Hasło pozostało bez zmian.");
                     }
                     else
                     {
