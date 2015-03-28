@@ -45,7 +45,7 @@ namespace POMOST_Lite
     #endregion
 		
 		public DataClassesDataContext() : 
-				base(global::POMOST_Lite.Properties.Settings.Default.mopsConnectionString1, mappingSource)
+				base(global::POMOST_Lite.Properties.Settings.Default.mopsConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}

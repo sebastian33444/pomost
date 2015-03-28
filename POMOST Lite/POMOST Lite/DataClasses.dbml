@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="mops" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\mops.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="POMOST_Lite.Properties.Settings" SettingsPropertyName="mopsConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=&quot;D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\mops.mdf&quot;;Integrated Security=True;Connect Timeout=30" SettingsObjectName="POMOST_Lite.Properties.Settings" SettingsPropertyName="mopsConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.dokumenty" Member="dokumenties">
     <Type Name="dokumenty">
       <Column Name="id_dokumentu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

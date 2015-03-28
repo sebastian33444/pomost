@@ -33,5 +33,27 @@ namespace POMOST_Lite.Properties {
                 return ((string)(this["mopsConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\bin\\Debug\\mops.mdf;I" +
+            "ntegrated Security=True;Connect Timeout=30")]
+        public string mopsConnectionString {
+            get {
+                return ((string)(this["mopsConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=\"D:\\Pliki użytkownika\\Documents\\GitH" +
+            "ub\\pomost\\POMOST Lite\\mops.mdf\";Integrated Security=True;Connect Timeout=30")]
+        public string mopsConnectionString2 {
+            get {
+                return ((string)(this["mopsConnectionString2"]));
+            }
+        }
     }
 }

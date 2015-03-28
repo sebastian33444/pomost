@@ -45,7 +45,7 @@ namespace POMOST_Lite
                         break;
                     }
                 }
-                if (imiel.Text != null && nazwiskol.Text != null && nazwa_uzytkownika != null && haslol.Text != null && miastol.Text != null && dzielnical.Text != null && ok == true)
+                if (imiel.Text.Length > 0 && nazwiskol.Text.Length > 0 && nazwa_uzytkownika.Text.Length > 0 && haslol.Text.Length > 0 && miastol.Text.Length > 0 && dzielnical.Text.Length > 0 && ok == true && haslol.Text == hasloponl.Text)
                 {
                     pracownik prac = new pracownik();
                     baza.pracowniks.InsertOnSubmit(prac);
@@ -56,20 +56,21 @@ namespace POMOST_Lite
                     prac.miasto = miastol.Text;
                     prac.dzielnica = dzielnical.Text;
                     if (checkBoxAdmin.Checked)
-                    {
-                        prac.admin = true;
-                    }
+                        {
+                            prac.admin = true;
+                        }
                     else
-                    {
-                        prac.admin = false;
-                    }
-                    baza.SubmitChanges();
-                    MessageBox.Show("Pomyślnie dodano użytkownika.");
-                    wczytajOsoby();
+                        {
+                            prac.admin = false;
+                        }
+                        baza.SubmitChanges();
+                        MessageBox.Show("Pomyślnie dodano użytkownika.");
+                        wczytajOsoby();
+                    
                 }
                 else
                 {
-                    MessageBox.Show("Nie wszystkie pola są wypełnione lub login już zajety.");
+                    MessageBox.Show("Nie wszystkie pola są wypełnione lub login już zajety lub hasła nie są identyczne.");
                 }
         }
 
@@ -139,16 +140,50 @@ namespace POMOST_Lite
                 foreach (pracownik p in baza.pracowniks.Where(p => p.login == listBox1.Text))
                 {
                     p.login = nazwa_uzytkownika.Text;
-                    p.haslo = szyfrowanie.SzyfrujMD5(haslol.Text);
-                    p.imie = imiel.Text;
-                    p.nazwisko = nazwiskol.Text;
-                    p.dzielnica = dzielnical.Text;
-                    p.miasto = miastol.Text;
-                    anuluj.Visible = false;
-                    zapisz.Visible = false;
-                    tryb_edycji.Visible = false;
-                    dodaj.Enabled = true;
-                    usun.Enabled = true;
+                    if (haslol.Text == hasloponl.Text && haslol.Text.Length > 0 && p.imie.Length > 0 && p.nazwisko.Length > 0 && p.dzielnica.Length > 0 && p.miasto.Length > 0)
+                    {
+                        p.haslo = szyfrowanie.SzyfrujMD5(haslol.Text);
+                        p.imie = imiel.Text;
+                        p.nazwisko = nazwiskol.Text;
+                        p.dzielnica = dzielnical.Text;
+                        p.miasto = miastol.Text;
+                        anuluj.Visible = false;
+                        zapisz.Visible = false;
+                        tryb_edycji.Visible = false;
+                        dodaj.Enabled = true;
+                        usun.Enabled = true;
+                        nazwa_uzytkownika.Text = null;
+                        haslol.Text = null;
+                        hasloponl.Text = null;
+                        imiel.Text = null;
+                        nazwiskol.Text = null;
+                        dzielnical.Text = null;
+                        miastol.Text = null;
+                    }
+                    else if (haslol.Text == hasloponl.Text && haslol.Text.Length == 0 && p.imie.Length > 0 && p.nazwisko.Length > 0 && p.dzielnica.Length > 0 && p.miasto.Length > 0)
+                    {
+                        p.imie = imiel.Text;
+                        p.nazwisko = nazwiskol.Text;
+                        p.dzielnica = dzielnical.Text;
+                        p.miasto = miastol.Text;
+                        anuluj.Visible = false;
+                        zapisz.Visible = false;
+                        tryb_edycji.Visible = false;
+                        dodaj.Enabled = true;
+                        usun.Enabled = true;
+                        nazwa_uzytkownika.Text = null;
+                        haslol.Text = null;
+                        hasloponl.Text = null;
+                        imiel.Text = null;
+                        nazwiskol.Text = null;
+                        dzielnical.Text = null;
+                        miastol.Text = null;
+                        MessageBox.Show("Hasło pozostało bez zmian.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hasła nie są identyczne.");
+                    }
                 }
              baza.SubmitChanges();
         }

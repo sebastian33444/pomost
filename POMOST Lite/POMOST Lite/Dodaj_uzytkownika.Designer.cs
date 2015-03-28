@@ -50,13 +50,15 @@
             this.zapisz = new System.Windows.Forms.Button();
             this.anuluj = new System.Windows.Forms.Button();
             this.tryb_edycji = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.hasloponl = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // dodaj
             // 
             this.dodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dodaj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dodaj.Location = new System.Drawing.Point(474, 228);
+            this.dodaj.Location = new System.Drawing.Point(474, 257);
             this.dodaj.Name = "dodaj";
             this.dodaj.Size = new System.Drawing.Size(75, 32);
             this.dodaj.TabIndex = 20;
@@ -109,7 +111,7 @@
             // 
             this.wroc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.wroc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.wroc.Location = new System.Drawing.Point(551, 265);
+            this.wroc.Location = new System.Drawing.Point(551, 294);
             this.wroc.Name = "wroc";
             this.wroc.Size = new System.Drawing.Size(75, 32);
             this.wroc.TabIndex = 15;
@@ -131,7 +133,7 @@
             // nazwiskol
             // 
             this.nazwiskol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.nazwiskol.Location = new System.Drawing.Point(147, 142);
+            this.nazwiskol.Location = new System.Drawing.Point(147, 171);
             this.nazwiskol.Name = "nazwiskol";
             this.nazwiskol.Size = new System.Drawing.Size(320, 23);
             this.nazwiskol.TabIndex = 25;
@@ -139,7 +141,7 @@
             // imiel
             // 
             this.imiel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.imiel.Location = new System.Drawing.Point(147, 113);
+            this.imiel.Location = new System.Drawing.Point(147, 142);
             this.imiel.Name = "imiel";
             this.imiel.Size = new System.Drawing.Size(320, 23);
             this.imiel.TabIndex = 26;
@@ -149,7 +151,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(76, 145);
+            this.label1.Location = new System.Drawing.Point(76, 174);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 17);
             this.label1.TabIndex = 27;
@@ -160,7 +162,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(108, 116);
+            this.label3.Location = new System.Drawing.Point(108, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 17);
             this.label3.TabIndex = 28;
@@ -171,7 +173,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(76, 174);
+            this.label5.Location = new System.Drawing.Point(76, 203);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 17);
             this.label5.TabIndex = 30;
@@ -180,7 +182,7 @@
             // miastol
             // 
             this.miastol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.miastol.Location = new System.Drawing.Point(148, 199);
+            this.miastol.Location = new System.Drawing.Point(148, 228);
             this.miastol.Name = "miastol";
             this.miastol.Size = new System.Drawing.Size(320, 23);
             this.miastol.TabIndex = 32;
@@ -188,7 +190,7 @@
             // dzielnical
             // 
             this.dzielnical.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.dzielnical.Location = new System.Drawing.Point(147, 171);
+            this.dzielnical.Location = new System.Drawing.Point(147, 200);
             this.dzielnical.Name = "dzielnical";
             this.dzielnical.Size = new System.Drawing.Size(320, 23);
             this.dzielnical.TabIndex = 33;
@@ -198,7 +200,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(92, 202);
+            this.label4.Location = new System.Drawing.Point(92, 231);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 17);
             this.label4.TabIndex = 34;
@@ -208,7 +210,7 @@
             // 
             this.edytuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.edytuj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.edytuj.Location = new System.Drawing.Point(474, 265);
+            this.edytuj.Location = new System.Drawing.Point(474, 294);
             this.edytuj.Name = "edytuj";
             this.edytuj.Size = new System.Drawing.Size(76, 32);
             this.edytuj.TabIndex = 20;
@@ -220,7 +222,7 @@
             // 
             this.usun.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.usun.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.usun.Location = new System.Drawing.Point(551, 227);
+            this.usun.Location = new System.Drawing.Point(551, 256);
             this.usun.Name = "usun";
             this.usun.Size = new System.Drawing.Size(76, 32);
             this.usun.TabIndex = 20;
@@ -235,7 +237,7 @@
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(474, 58);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(153, 164);
+            this.listBox1.Size = new System.Drawing.Size(153, 196);
             this.listBox1.TabIndex = 35;
             this.listBox1.Click += new System.EventHandler(this.listBox1_Click);
             // 
@@ -254,7 +256,7 @@
             // 
             this.zapisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.zapisz.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.zapisz.Location = new System.Drawing.Point(148, 257);
+            this.zapisz.Location = new System.Drawing.Point(145, 279);
             this.zapisz.Name = "zapisz";
             this.zapisz.Size = new System.Drawing.Size(76, 32);
             this.zapisz.TabIndex = 20;
@@ -266,7 +268,7 @@
             // 
             this.anuluj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.anuluj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.anuluj.Location = new System.Drawing.Point(230, 257);
+            this.anuluj.Location = new System.Drawing.Point(227, 279);
             this.anuluj.Name = "anuluj";
             this.anuluj.Size = new System.Drawing.Size(75, 32);
             this.anuluj.TabIndex = 15;
@@ -278,18 +280,40 @@
             // 
             this.tryb_edycji.AutoSize = true;
             this.tryb_edycji.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tryb_edycji.Location = new System.Drawing.Point(148, 235);
+            this.tryb_edycji.Location = new System.Drawing.Point(145, 257);
             this.tryb_edycji.Name = "tryb_edycji";
             this.tryb_edycji.Size = new System.Drawing.Size(157, 17);
             this.tryb_edycji.TabIndex = 37;
             this.tryb_edycji.Text = "Tryb edycji użytkownika";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(53, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 17);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Ponów hasło";
+            // 
+            // hasloponl
+            // 
+            this.hasloponl.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.hasloponl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.hasloponl.Location = new System.Drawing.Point(147, 112);
+            this.hasloponl.Name = "hasloponl";
+            this.hasloponl.PasswordChar = '*';
+            this.hasloponl.Size = new System.Drawing.Size(320, 23);
+            this.hasloponl.TabIndex = 39;
             // 
             // Dodaj_uzytkownika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(639, 301);
+            this.ClientSize = new System.Drawing.Size(639, 328);
+            this.Controls.Add(this.hasloponl);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.tryb_edycji);
             this.Controls.Add(this.checkBoxAdmin);
             this.Controls.Add(this.listBox1);
@@ -347,5 +371,7 @@
         private System.Windows.Forms.Button zapisz;
         private System.Windows.Forms.Button anuluj;
         private System.Windows.Forms.Label tryb_edycji;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox hasloponl;
     }
 }
