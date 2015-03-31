@@ -20,10 +20,6 @@ namespace POMOST_Lite
         public Strona_glowna()
         {
             InitializeComponent();
-            foreach(pracownik p in baza.pracowniks)
-            {
-                richTextBox1.AppendText(p.imie + " "+ p.nazwisko +"\n");
-            }
         }
 
         public Strona_glowna(string p, string status)

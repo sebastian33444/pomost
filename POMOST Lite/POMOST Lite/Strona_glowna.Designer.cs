@@ -37,7 +37,6 @@
             this.edytuj_petenta = new System.Windows.Forms.ToolStripButton();
             this.wyszukaj = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tslabelLogin = new System.Windows.Forms.ToolStripLabel();
@@ -48,6 +47,9 @@
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.tslabelDzielnica = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.lbPetent = new System.Windows.Forms.ListBox();
+            this.lbDokumenty = new System.Windows.Forms.ListBox();
+            this.lbSwiadczenia = new System.Windows.Forms.ListBox();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -123,14 +125,6 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 63);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(946, 118);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
-            // 
             // toolStrip2
             // 
             this.toolStrip2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -202,14 +196,40 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
+            // lbPetent
+            // 
+            this.lbPetent.FormattingEnabled = true;
+            this.lbPetent.Location = new System.Drawing.Point(0, 53);
+            this.lbPetent.Name = "lbPetent";
+            this.lbPetent.Size = new System.Drawing.Size(345, 407);
+            this.lbPetent.TabIndex = 3;
+            // 
+            // lbDokumenty
+            // 
+            this.lbDokumenty.FormattingEnabled = true;
+            this.lbDokumenty.Location = new System.Drawing.Point(351, 53);
+            this.lbDokumenty.Name = "lbDokumenty";
+            this.lbDokumenty.Size = new System.Drawing.Size(322, 407);
+            this.lbDokumenty.TabIndex = 4;
+            // 
+            // lbSwiadczenia
+            // 
+            this.lbSwiadczenia.FormattingEnabled = true;
+            this.lbSwiadczenia.Location = new System.Drawing.Point(679, 53);
+            this.lbSwiadczenia.Name = "lbSwiadczenia";
+            this.lbSwiadczenia.Size = new System.Drawing.Size(291, 407);
+            this.lbSwiadczenia.TabIndex = 5;
+            // 
             // Strona_glowna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(970, 459);
+            this.Controls.Add(this.lbSwiadczenia);
+            this.Controls.Add(this.lbDokumenty);
+            this.Controls.Add(this.lbPetent);
             this.Controls.Add(this.toolStrip2);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Strona_glowna";
             this.ShowIcon = false;
@@ -234,7 +254,6 @@
         private System.Windows.Forms.ToolStripButton edytuj_petenta;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton wyszukaj;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel tslabelLogin;
@@ -245,5 +264,8 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
         private System.Windows.Forms.ToolStripLabel tslabelDzielnica;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ListBox lbPetent;
+        private System.Windows.Forms.ListBox lbDokumenty;
+        private System.Windows.Forms.ListBox lbSwiadczenia;
     }
 }

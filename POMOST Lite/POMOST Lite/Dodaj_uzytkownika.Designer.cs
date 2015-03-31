@@ -45,7 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.edytuj = new System.Windows.Forms.Button();
             this.usun = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbPracownicy = new System.Windows.Forms.ListBox();
             this.checkBoxAdmin = new System.Windows.Forms.CheckBox();
             this.zapisz = new System.Windows.Forms.Button();
             this.anuluj = new System.Windows.Forms.Button();
@@ -230,22 +230,22 @@
             this.usun.UseVisualStyleBackColor = true;
             this.usun.Click += new System.EventHandler(this.usun_Click);
             // 
-            // listBox1
+            // lbPracownicy
             // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(474, 58);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(153, 196);
-            this.listBox1.TabIndex = 35;
-            this.listBox1.Click += new System.EventHandler(this.listBox1_Click);
+            this.lbPracownicy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbPracownicy.FormattingEnabled = true;
+            this.lbPracownicy.ItemHeight = 16;
+            this.lbPracownicy.Location = new System.Drawing.Point(474, 58);
+            this.lbPracownicy.Name = "lbPracownicy";
+            this.lbPracownicy.Size = new System.Drawing.Size(153, 196);
+            this.lbPracownicy.TabIndex = 35;
+            this.lbPracownicy.Click += new System.EventHandler(this.lbPracownicy_Click);
             // 
             // checkBoxAdmin
             // 
             this.checkBoxAdmin.AutoSize = true;
             this.checkBoxAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.checkBoxAdmin.Location = new System.Drawing.Point(494, 31);
+            this.checkBoxAdmin.Location = new System.Drawing.Point(321, 257);
             this.checkBoxAdmin.Name = "checkBoxAdmin";
             this.checkBoxAdmin.Size = new System.Drawing.Size(110, 21);
             this.checkBoxAdmin.TabIndex = 36;
@@ -316,7 +316,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tryb_edycji);
             this.Controls.Add(this.checkBoxAdmin);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbPracownicy);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dzielnical);
             this.Controls.Add(this.miastol);
@@ -366,7 +366,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button edytuj;
         private System.Windows.Forms.Button usun;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbPracownicy;
         private System.Windows.Forms.CheckBox checkBoxAdmin;
         private System.Windows.Forms.Button zapisz;
         private System.Windows.Forms.Button anuluj;

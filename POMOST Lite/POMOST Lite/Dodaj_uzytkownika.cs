@@ -27,10 +27,10 @@ namespace POMOST_Lite
 
         void wczytajOsoby()
         {
-            listBox1.Items.Clear();
-            listBox1.Items.AddRange(baza.pracowniks.OrderBy(o => o.login).ToArray());
-            listBox1.DisplayMember = "login";
-            listBox1.ValueMember = "id_pracownik";
+            lbPracownicy.Items.Clear();
+            lbPracownicy.Items.AddRange(baza.pracowniks.OrderBy(o => o.login).ToArray());
+            lbPracownicy.DisplayMember = "login";
+            lbPracownicy.ValueMember = "id_pracownik";
         }
 
 
@@ -82,7 +82,7 @@ namespace POMOST_Lite
 
         private void edytuj_Click(object sender, EventArgs e)
         {
-                foreach(pracownik p in baza.pracowniks.Where(p => p.login == listBox1.Text))
+                foreach(pracownik p in baza.pracowniks.Where(p => p.login == lbPracownicy.Text))
                 {
                     nazwa_uzytkownika.Text = p.login;
                     imiel.Text = p.imie;
@@ -100,7 +100,7 @@ namespace POMOST_Lite
 
         private void usun_Click(object sender, EventArgs e)
         {
-                var dokasacji = from p in baza.pracowniks where p.login == listBox1.Text && p.login != "admin" select p;
+                var dokasacji = from p in baza.pracowniks where p.login == lbPracownicy.Text && p.login != "admin" select p;
                 try
                 {
                     baza.pracowniks.DeleteAllOnSubmit(dokasacji);
@@ -138,7 +138,7 @@ namespace POMOST_Lite
 
         private void zapisz_Click(object sender, EventArgs e)
         {
-                foreach (pracownik p in baza.pracowniks.Where(p => p.login == listBox1.Text))
+                foreach (pracownik p in baza.pracowniks.Where(p => p.login == lbPracownicy.Text))
                 {
                     p.login = nazwa_uzytkownika.Text;
                     if (haslol.Text == hasloponl.Text && haslol.Text.Length > 0 && p.imie.Length > 0 && p.nazwisko.Length > 0 && p.dzielnica.Length > 0 && p.miasto.Length > 0)
@@ -148,6 +148,14 @@ namespace POMOST_Lite
                         p.nazwisko = nazwiskol.Text;
                         p.dzielnica = dzielnical.Text;
                         p.miasto = miastol.Text;
+                        if (checkBoxAdmin.Checked)
+                        {
+                            p.admin = true;
+                        }
+                        else
+                        {
+                            p.admin = false;
+                        }
                         anuluj.Visible = false;
                         zapisz.Visible = false;
                         tryb_edycji.Visible = false;
@@ -168,6 +176,14 @@ namespace POMOST_Lite
                         p.nazwisko = nazwiskol.Text;
                         p.dzielnica = dzielnical.Text;
                         p.miasto = miastol.Text;
+                        if (checkBoxAdmin.Checked)
+                        {
+                            p.admin = true;
+                        }
+                        else
+                        {
+                            p.admin = false;
+                        }
                         anuluj.Visible = false;
                         zapisz.Visible = false;
                         tryb_edycji.Visible = false;
@@ -190,9 +206,9 @@ namespace POMOST_Lite
              baza.SubmitChanges();
         }
 
-        private void listBox1_Click(object sender, EventArgs e)
+        private void lbPracownicy_Click(object sender, EventArgs e)
         {
-            foreach (pracownik p in baza.pracowniks.Where(p => p.login == listBox1.Text))
+            foreach (pracownik p in baza.pracowniks.Where(p => p.login == lbPracownicy.Text))
             {
                 if (p.admin == true)
                 {
@@ -202,7 +218,7 @@ namespace POMOST_Lite
                 {
                     checkBoxAdmin.Checked = false;
                 }
-            }
+        }
         }
     }
 }
