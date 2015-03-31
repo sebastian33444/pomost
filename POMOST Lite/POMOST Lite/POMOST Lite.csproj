@@ -68,6 +68,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Dodaj_dokumenty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dodaj_dokumenty.Designer.cs">
+      <DependentUpon>Dodaj_dokumenty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dodaj_uzytkownika.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <None Include="DataClasses.dbml.layout">
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="Dodaj_dokumenty.resx">
+      <DependentUpon>Dodaj_dokumenty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dodaj_uzytkownika.resx">
       <DependentUpon>Dodaj_uzytkownika.cs</DependentUpon>
     </EmbeddedResource>

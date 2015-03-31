@@ -37,6 +37,7 @@
             this.edytuj_petenta = new System.Windows.Forms.ToolStripButton();
             this.wyszukaj = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tslabelLogin = new System.Windows.Forms.ToolStripLabel();
@@ -64,6 +65,7 @@
             this.usun_petenta,
             this.edytuj_petenta,
             this.wyszukaj,
+            this.toolStripButton1,
             this.toolStripSeparator1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -78,13 +80,13 @@
             this.menu.Image = ((System.Drawing.Image)(resources.GetObject("menu.Image")));
             this.menu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(67, 22);
+            this.menu.Size = new System.Drawing.Size(62, 22);
             this.menu.Text = "Menu";
             // 
             // Wyloguj
             // 
             this.Wyloguj.Name = "Wyloguj";
-            this.Wyloguj.Size = new System.Drawing.Size(118, 22);
+            this.Wyloguj.Size = new System.Drawing.Size(113, 22);
             this.Wyloguj.Text = "Wyloguj";
             this.Wyloguj.Click += new System.EventHandler(this.Wyloguj_Click);
             // 
@@ -93,7 +95,7 @@
             this.dodaj_petenta.Image = ((System.Drawing.Image)(resources.GetObject("dodaj_petenta.Image")));
             this.dodaj_petenta.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dodaj_petenta.Name = "dodaj_petenta";
-            this.dodaj_petenta.Size = new System.Drawing.Size(101, 22);
+            this.dodaj_petenta.Size = new System.Drawing.Size(96, 22);
             this.dodaj_petenta.Text = "Dodaj petenta";
             // 
             // usun_petenta
@@ -101,7 +103,7 @@
             this.usun_petenta.Image = ((System.Drawing.Image)(resources.GetObject("usun_petenta.Image")));
             this.usun_petenta.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.usun_petenta.Name = "usun_petenta";
-            this.usun_petenta.Size = new System.Drawing.Size(97, 22);
+            this.usun_petenta.Size = new System.Drawing.Size(92, 22);
             this.usun_petenta.Text = "Usuń petenta";
             // 
             // edytuj_petenta
@@ -109,7 +111,7 @@
             this.edytuj_petenta.Image = ((System.Drawing.Image)(resources.GetObject("edytuj_petenta.Image")));
             this.edytuj_petenta.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.edytuj_petenta.Name = "edytuj_petenta";
-            this.edytuj_petenta.Size = new System.Drawing.Size(103, 22);
+            this.edytuj_petenta.Size = new System.Drawing.Size(99, 22);
             this.edytuj_petenta.Text = "Edytuj petenta";
             // 
             // wyszukaj
@@ -117,13 +119,22 @@
             this.wyszukaj.Image = ((System.Drawing.Image)(resources.GetObject("wyszukaj.Image")));
             this.wyszukaj.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.wyszukaj.Name = "wyszukaj";
-            this.wyszukaj.Size = new System.Drawing.Size(76, 22);
+            this.wyszukaj.Size = new System.Drawing.Size(73, 22);
             this.wyszukaj.Text = "Wyszukaj";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(111, 22);
+            this.toolStripButton1.Text = "Dodaj dokumenty";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStrip2
             // 
@@ -148,13 +159,13 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(40, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(36, 22);
             this.toolStripLabel1.Text = "Login:";
             // 
             // tslabelLogin
             // 
             this.tslabelLogin.Name = "tslabelLogin";
-            this.tslabelLogin.Size = new System.Drawing.Size(86, 22);
+            this.tslabelLogin.Size = new System.Drawing.Size(78, 22);
             this.tslabelLogin.Text = "toolStripLabel2";
             // 
             // toolStripSeparator2
@@ -165,13 +176,13 @@
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(46, 22);
+            this.toolStripLabel3.Size = new System.Drawing.Size(42, 22);
             this.toolStripLabel3.Text = "Miasto:";
             // 
             // tslabelMiasto
             // 
             this.tslabelMiasto.Name = "tslabelMiasto";
-            this.tslabelMiasto.Size = new System.Drawing.Size(86, 22);
+            this.tslabelMiasto.Size = new System.Drawing.Size(78, 22);
             this.tslabelMiasto.Text = "toolStripLabel4";
             // 
             // toolStripSeparator3
@@ -182,13 +193,13 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(57, 22);
+            this.toolStripLabel5.Size = new System.Drawing.Size(52, 22);
             this.toolStripLabel5.Text = "Dzielnica:";
             // 
             // tslabelDzielnica
             // 
             this.tslabelDzielnica.Name = "tslabelDzielnica";
-            this.tslabelDzielnica.Size = new System.Drawing.Size(86, 22);
+            this.tslabelDzielnica.Size = new System.Drawing.Size(78, 22);
             this.tslabelDzielnica.Text = "toolStripLabel6";
             // 
             // toolStripSeparator4
@@ -267,5 +278,6 @@
         private System.Windows.Forms.ListBox lbPetent;
         private System.Windows.Forms.ListBox lbDokumenty;
         private System.Windows.Forms.ListBox lbSwiadczenia;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

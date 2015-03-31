@@ -52,5 +52,12 @@ namespace POMOST_Lite
         {
             Application.Exit();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Dodaj_dokumenty d_d = new Dodaj_dokumenty();
+            d_d.Show();
+
+        }
     }
 }
