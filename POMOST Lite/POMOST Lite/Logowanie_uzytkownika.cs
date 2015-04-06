@@ -21,7 +21,7 @@ namespace POMOST_Lite
 
         public Logowanie_uzytkownika()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void zamknij_Click(object sender, EventArgs e)
@@ -31,6 +31,9 @@ namespace POMOST_Lite
 
         public void zaloguj_Click(object sender, EventArgs e)
         {
+            Konfiguracja_bazy kb = new Konfiguracja_bazy();
+            kb.deserializacja();            
+
             bool log = false;
             foreach (pracownik p in baza.pracowniks)
             {

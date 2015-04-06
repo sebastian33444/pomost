@@ -189,19 +189,3 @@ D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\bin\Debug\
 D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.pdb
 D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
 D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe.config
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.exe
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.pdb
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.pdb
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_uzytkownika.resources
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Konfiguracja_bazy.resources
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.resources
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_dokumenty.resources
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache

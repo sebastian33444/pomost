@@ -20,9 +20,18 @@ namespace POMOST_Lite
         {
             InitializeComponent();
             wczytajOsoby();
-            anuluj.Visible = false;
-            zapisz.Visible = false;
-            tryb_edycji.Visible = false;
+            anuluj_edycja.Visible = false;
+            zapisz_edycja.Visible = false;
+            anuluj_dodaj.Visible = false;
+            zapisz_dodaj.Visible = false;
+            nazwa_uzytkownika.Enabled = false;
+            haslol.Enabled = false;
+            hasloponl.Enabled = false;
+            imiel.Enabled = false;
+            nazwiskol.Enabled = false;
+            dzielnical.Enabled = false;
+            miastol.Enabled = false;
+            checkBoxAdmin.Enabled = false;
         }
 
         void wczytajOsoby()
@@ -36,43 +45,31 @@ namespace POMOST_Lite
 
         private void dodaj_Click(object sender, EventArgs e)
         {
-                bool ok = true;
-                foreach (pracownik p in baza.pracowniks)
-                {
-                    if (p.login == nazwa_uzytkownika.Text)
-                    {
-                        ok = false;
-                        break;
-                    }
-                }
-                if (imiel.Text.Length > 0 && nazwiskol.Text.Length > 0 && nazwa_uzytkownika.Text.Length > 0 && haslol.Text.Length > 0 && miastol.Text.Length > 0 && dzielnical.Text.Length > 0 && ok == true && haslol.Text == hasloponl.Text)
-                {
-                    pracownik prac = new pracownik();
-                    baza.pracowniks.InsertOnSubmit(prac);
-                    prac.imie = imiel.Text;
-                    prac.nazwisko = nazwiskol.Text;
-                    prac.login = nazwa_uzytkownika.Text;
-                    prac.haslo = szyfrowanie.SzyfrujMD5(haslol.Text);
-                    prac.miasto = miastol.Text;
-                    prac.dzielnica = dzielnical.Text;
-                    if (checkBoxAdmin.Checked)
-                        {
-                            prac.admin = true;
-                        }
-                    else
-                        {
-                            prac.admin = false;
-                        }
-                        baza.SubmitChanges();
-                        MessageBox.Show("Pomyślnie dodano użytkownika.");
-                        wczytajOsoby();
-                    
-                }
-                else
-                {
-                    MessageBox.Show("Nie wszystkie pola są wypełnione lub login już zajety lub hasła nie są identyczne.");
-                }
-        }
+                anuluj_dodaj.Visible = true;
+                zapisz_dodaj.Visible = true;
+                nazwa_uzytkownika.Enabled = true;
+                haslol.Enabled = true;
+                hasloponl.Enabled = true;
+                imiel.Enabled = true;
+                nazwiskol.Enabled = true;
+                dzielnical.Enabled = true;
+                miastol.Enabled = true;
+                checkBoxAdmin.Enabled = true;
+                nazwa_uzytkownika.Text = null;
+                haslol.Text = null;
+                hasloponl.Text = null;
+                imiel.Text = null;
+                nazwiskol.Text = null;
+                dzielnical.Text = null;
+                miastol.Text = null;
+                checkBoxAdmin.Checked = false;
+                anuluj_dodaj.Visible = true;
+                zapisz_dodaj.Visible = true;
+                edytuj.Enabled = false;
+                usun.Enabled = false;
+                lbPracownicy.Enabled = false;
+                dodaj.Enabled = false;
+         }
 
         private void Dodaj_uzytkownika_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -82,6 +79,21 @@ namespace POMOST_Lite
 
         private void edytuj_Click(object sender, EventArgs e)
         {
+            lbPracownicy.Enabled = true;
+            anuluj_edycja.Visible = true;
+            zapisz_edycja.Visible = true;
+            nazwa_uzytkownika.Enabled = true;
+            haslol.Enabled = true;
+            hasloponl.Enabled = true;
+            imiel.Enabled = true;
+            nazwiskol.Enabled = true;
+            dzielnical.Enabled = true;
+            miastol.Enabled = true;
+            checkBoxAdmin.Enabled = true;
+            anuluj_edycja.Visible = true;
+            zapisz_edycja.Visible = true;
+            dodaj.Enabled = false;
+            usun.Enabled = false;
                 foreach(pracownik p in baza.pracowniks.Where(p => p.login == lbPracownicy.Text))
                 {
                     nazwa_uzytkownika.Text = p.login;
@@ -90,11 +102,6 @@ namespace POMOST_Lite
                     dzielnical.Text = p.dzielnica;
                     miastol.Text = p.miasto;
                     checkBoxAdmin.Checked = p.admin;
-                    anuluj.Visible = true;
-                    zapisz.Visible = true;
-                    tryb_edycji.Visible = true;
-                    dodaj.Enabled = false;
-                    usun.Enabled = false;
                 }
         }
 
@@ -120,92 +127,6 @@ namespace POMOST_Lite
             log.Show();
         }
 
-        private void anuluj_Click(object sender, EventArgs e)
-        {
-            nazwa_uzytkownika.Text = null;
-            haslol.Text = null;
-            hasloponl.Text = null;
-            imiel.Text = null;
-            nazwiskol.Text = null;
-            dzielnical.Text = null;
-            miastol.Text = null;
-            dodaj.Enabled = true;
-            usun.Enabled = true;
-            anuluj.Visible = false;
-            zapisz.Visible = false;
-            tryb_edycji.Visible = false;
-        }
-
-        private void zapisz_Click(object sender, EventArgs e)
-        {
-                foreach (pracownik p in baza.pracowniks.Where(p => p.login == lbPracownicy.Text))
-                {
-                    p.login = nazwa_uzytkownika.Text;
-                    if (haslol.Text == hasloponl.Text && haslol.Text.Length > 0 && p.imie.Length > 0 && p.nazwisko.Length > 0 && p.dzielnica.Length > 0 && p.miasto.Length > 0)
-                    {
-                        p.haslo = szyfrowanie.SzyfrujMD5(haslol.Text);
-                        p.imie = imiel.Text;
-                        p.nazwisko = nazwiskol.Text;
-                        p.dzielnica = dzielnical.Text;
-                        p.miasto = miastol.Text;
-                        if (checkBoxAdmin.Checked)
-                        {
-                            p.admin = true;
-                        }
-                        else
-                        {
-                            p.admin = false;
-                        }
-                        anuluj.Visible = false;
-                        zapisz.Visible = false;
-                        tryb_edycji.Visible = false;
-                        dodaj.Enabled = true;
-                        usun.Enabled = true;
-                        nazwa_uzytkownika.Text = null;
-                        haslol.Text = null;
-                        hasloponl.Text = null;
-                        imiel.Text = null;
-                        nazwiskol.Text = null;
-                        dzielnical.Text = null;
-                        miastol.Text = null;
-                        MessageBox.Show("Pomyślnie zmodyfikowano użytkownika.");
-                    }
-                    else if (haslol.Text == hasloponl.Text && haslol.Text.Length == 0 && p.imie.Length > 0 && p.nazwisko.Length > 0 && p.dzielnica.Length > 0 && p.miasto.Length > 0)
-                    {
-                        p.imie = imiel.Text;
-                        p.nazwisko = nazwiskol.Text;
-                        p.dzielnica = dzielnical.Text;
-                        p.miasto = miastol.Text;
-                        if (checkBoxAdmin.Checked)
-                        {
-                            p.admin = true;
-                        }
-                        else
-                        {
-                            p.admin = false;
-                        }
-                        anuluj.Visible = false;
-                        zapisz.Visible = false;
-                        tryb_edycji.Visible = false;
-                        dodaj.Enabled = true;
-                        usun.Enabled = true;
-                        nazwa_uzytkownika.Text = null;
-                        haslol.Text = null;
-                        hasloponl.Text = null;
-                        imiel.Text = null;
-                        nazwiskol.Text = null;
-                        dzielnical.Text = null;
-                        miastol.Text = null;
-                        MessageBox.Show("Pomyslnie zmodyfikowano użytkownika. Hasło pozostało bez zmian.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Hasła nie są identyczne.");
-                    }
-                }
-             baza.SubmitChanges();
-        }
-
         private void lbPracownicy_Click(object sender, EventArgs e)
         {
             foreach (pracownik p in baza.pracowniks.Where(p => p.login == lbPracownicy.Text))
@@ -219,6 +140,189 @@ namespace POMOST_Lite
                     checkBoxAdmin.Checked = false;
                 }
         }
+        }
+
+        private void anuluj_edycja_Click(object sender, EventArgs e)
+        {
+            nazwa_uzytkownika.Text = null;
+            haslol.Text = null;
+            hasloponl.Text = null;
+            imiel.Text = null;
+            nazwiskol.Text = null;
+            dzielnical.Text = null;
+            miastol.Text = null;
+            dodaj.Enabled = true;
+            usun.Enabled = true;
+            anuluj_edycja.Visible = false;
+            zapisz_edycja.Visible = false;
+            nazwa_uzytkownika.Enabled = false;
+            haslol.Enabled = false;
+            hasloponl.Enabled = false;
+            imiel.Enabled = false;
+            nazwiskol.Enabled = false;
+            dzielnical.Enabled = false;
+            miastol.Enabled = false;
+            checkBoxAdmin.Enabled = false;
+        }
+
+        private void zapisz_edycja_Click(object sender, EventArgs e)
+        {
+            foreach (pracownik p in baza.pracowniks.Where(p => p.login == lbPracownicy.Text))
+            {
+                p.login = nazwa_uzytkownika.Text;
+                if (haslol.Text == hasloponl.Text && haslol.Text.Length > 0 && p.imie.Length > 0 && p.nazwisko.Length > 0 && p.dzielnica.Length > 0 && p.miasto.Length > 0)
+                {
+                    p.haslo = szyfrowanie.SzyfrujMD5(haslol.Text);
+                    p.imie = imiel.Text;
+                    p.nazwisko = nazwiskol.Text;
+                    p.dzielnica = dzielnical.Text;
+                    p.miasto = miastol.Text;
+                    if (checkBoxAdmin.Checked)
+                    {
+                        p.admin = true;
+                    }
+                    else
+                    {
+                        p.admin = false;
+                    }
+                    anuluj_edycja.Visible = false;
+                    zapisz_edycja.Visible = false;
+                    dodaj.Enabled = true;
+                    usun.Enabled = true;
+                    nazwa_uzytkownika.Text = null;
+                    haslol.Text = null;
+                    hasloponl.Text = null;
+                    imiel.Text = null;
+                    nazwiskol.Text = null;
+                    dzielnical.Text = null;
+                    miastol.Text = null;
+                    MessageBox.Show("Pomyślnie zmodyfikowano użytkownika.");
+                    nazwa_uzytkownika.Enabled = false;
+                    haslol.Enabled = false;
+                    hasloponl.Enabled = false;
+                    imiel.Enabled = false;
+                    nazwiskol.Enabled = false;
+                    dzielnical.Enabled = false;
+                    miastol.Enabled = false;
+                    checkBoxAdmin.Enabled = false;
+                }
+                else if (haslol.Text == hasloponl.Text && haslol.Text.Length == 0 && p.imie.Length > 0 && p.nazwisko.Length > 0 && p.dzielnica.Length > 0 && p.miasto.Length > 0)
+                {
+                    p.imie = imiel.Text;
+                    p.nazwisko = nazwiskol.Text;
+                    p.dzielnica = dzielnical.Text;
+                    p.miasto = miastol.Text;
+                    if (checkBoxAdmin.Checked)
+                    {
+                        p.admin = true;
+                    }
+                    else
+                    {
+                        p.admin = false;
+                    }
+                    anuluj_edycja.Visible = false;
+                    zapisz_edycja.Visible = false;
+                    dodaj.Enabled = true;
+                    usun.Enabled = true;
+                    nazwa_uzytkownika.Text = null;
+                    haslol.Text = null;
+                    hasloponl.Text = null;
+                    imiel.Text = null;
+                    nazwiskol.Text = null;
+                    dzielnical.Text = null;
+                    miastol.Text = null;
+                    MessageBox.Show("Pomyslnie zmodyfikowano użytkownika. Hasło pozostało bez zmian.");
+                    nazwa_uzytkownika.Enabled = false;
+                    haslol.Enabled = false;
+                    hasloponl.Enabled = false;
+                    imiel.Enabled = false;
+                    nazwiskol.Enabled = false;
+                    dzielnical.Enabled = false;
+                    miastol.Enabled = false;
+                    checkBoxAdmin.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Hasła nie są identyczne.");
+                }
+            }
+            baza.SubmitChanges();
+        }
+
+        private void zapisz_dodaj_Click(object sender, EventArgs e)
+        {
+            bool ok = true;
+            foreach (pracownik p in baza.pracowniks)
+            {
+                if (p.login == nazwa_uzytkownika.Text)
+                {
+                    ok = false;
+                    break;
+                }
+            }
+            if (imiel.Text.Length > 0 && nazwiskol.Text.Length > 0 && nazwa_uzytkownika.Text.Length > 0 && haslol.Text.Length > 0 && miastol.Text.Length > 0 && dzielnical.Text.Length > 0 && ok == true && haslol.Text == hasloponl.Text)
+            {
+                pracownik prac = new pracownik();
+                baza.pracowniks.InsertOnSubmit(prac);
+                prac.imie = imiel.Text;
+                prac.nazwisko = nazwiskol.Text;
+                prac.login = nazwa_uzytkownika.Text;
+                prac.haslo = szyfrowanie.SzyfrujMD5(haslol.Text);
+                prac.miasto = miastol.Text;
+                prac.dzielnica = dzielnical.Text;
+
+                if (checkBoxAdmin.Checked)
+                {
+                    prac.admin = true;
+                }
+                else
+                {
+                    prac.admin = false;
+                }
+                baza.SubmitChanges();
+                MessageBox.Show("Pomyślnie dodano użytkownika.");
+                nazwa_uzytkownika.Enabled = false;
+                haslol.Enabled = false;
+                hasloponl.Enabled = false;
+                imiel.Enabled = false;
+                nazwiskol.Enabled = false;
+                dzielnical.Enabled = false;
+                miastol.Enabled = false;
+                checkBoxAdmin.Enabled = false;
+                lbPracownicy.Enabled = true;
+                dodaj.Enabled = true;
+                wczytajOsoby();
+
+            }
+            else
+            {
+                MessageBox.Show("Nie wszystkie pola są wypełnione lub login już zajety lub hasła nie są identyczne.");
+            }
+        }
+
+        private void anuluj_dodaj_Click(object sender, EventArgs e)
+        {
+            nazwa_uzytkownika.Text = null;
+            haslol.Text = null;
+            hasloponl.Text = null;
+            imiel.Text = null;
+            nazwiskol.Text = null;
+            dzielnical.Text = null;
+            miastol.Text = null;
+            edytuj.Enabled = true;
+            usun.Enabled = true;
+            anuluj_dodaj.Visible = false;
+            zapisz_dodaj.Visible = false;
+            nazwa_uzytkownika.Enabled = false;
+            haslol.Enabled = false;
+            hasloponl.Enabled = false;
+            imiel.Enabled = false;
+            nazwiskol.Enabled = false;
+            dzielnical.Enabled = false;
+            miastol.Enabled = false;
+            checkBoxAdmin.Enabled = false;
+            lbPracownicy.Enabled = true;
+            dodaj.Enabled = true;
         }
     }
 }

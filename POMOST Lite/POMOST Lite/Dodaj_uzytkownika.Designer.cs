@@ -47,11 +47,12 @@
             this.usun = new System.Windows.Forms.Button();
             this.lbPracownicy = new System.Windows.Forms.ListBox();
             this.checkBoxAdmin = new System.Windows.Forms.CheckBox();
-            this.zapisz = new System.Windows.Forms.Button();
-            this.anuluj = new System.Windows.Forms.Button();
-            this.tryb_edycji = new System.Windows.Forms.Label();
+            this.zapisz_edycja = new System.Windows.Forms.Button();
+            this.anuluj_edycja = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.hasloponl = new System.Windows.Forms.TextBox();
+            this.zapisz_dodaj = new System.Windows.Forms.Button();
+            this.anuluj_dodaj = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dodaj
@@ -61,7 +62,7 @@
             this.dodaj.Location = new System.Drawing.Point(474, 257);
             this.dodaj.Name = "dodaj";
             this.dodaj.Size = new System.Drawing.Size(75, 32);
-            this.dodaj.TabIndex = 20;
+            this.dodaj.TabIndex = 0;
             this.dodaj.Text = "Dodaj";
             this.dodaj.UseVisualStyleBackColor = true;
             this.dodaj.Click += new System.EventHandler(this.dodaj_Click);
@@ -74,7 +75,7 @@
             this.haslol.Name = "haslol";
             this.haslol.PasswordChar = '*';
             this.haslol.Size = new System.Drawing.Size(320, 23);
-            this.haslol.TabIndex = 19;
+            this.haslol.TabIndex = 4;
             // 
             // nazwa_uzytkownika
             // 
@@ -83,7 +84,7 @@
             this.nazwa_uzytkownika.Location = new System.Drawing.Point(147, 55);
             this.nazwa_uzytkownika.Name = "nazwa_uzytkownika";
             this.nazwa_uzytkownika.Size = new System.Drawing.Size(320, 23);
-            this.nazwa_uzytkownika.TabIndex = 18;
+            this.nazwa_uzytkownika.TabIndex = 3;
             // 
             // label_haslo
             // 
@@ -93,7 +94,7 @@
             this.label_haslo.Location = new System.Drawing.Point(97, 87);
             this.label_haslo.Name = "label_haslo";
             this.label_haslo.Size = new System.Drawing.Size(44, 17);
-            this.label_haslo.TabIndex = 17;
+            this.label_haslo.TabIndex = 30;
             this.label_haslo.Text = "Hasło";
             // 
             // label_uzytkownik
@@ -104,7 +105,7 @@
             this.label_uzytkownik.Location = new System.Drawing.Point(11, 58);
             this.label_uzytkownik.Name = "label_uzytkownik";
             this.label_uzytkownik.Size = new System.Drawing.Size(130, 17);
-            this.label_uzytkownik.TabIndex = 16;
+            this.label_uzytkownik.TabIndex = 30;
             this.label_uzytkownik.Text = "Nazwa użytkownika";
             // 
             // wroc
@@ -114,7 +115,7 @@
             this.wroc.Location = new System.Drawing.Point(551, 294);
             this.wroc.Name = "wroc";
             this.wroc.Size = new System.Drawing.Size(75, 32);
-            this.wroc.TabIndex = 15;
+            this.wroc.TabIndex = 3;
             this.wroc.Text = "Wróć";
             this.wroc.UseVisualStyleBackColor = true;
             this.wroc.Click += new System.EventHandler(this.wroc_Click);
@@ -127,7 +128,7 @@
             this.info.Location = new System.Drawing.Point(193, 12);
             this.info.Name = "info";
             this.info.Size = new System.Drawing.Size(206, 17);
-            this.info.TabIndex = 13;
+            this.info.TabIndex = 29;
             this.info.Text = "Zarządzanie użytkownikami";
             // 
             // nazwiskol
@@ -136,7 +137,7 @@
             this.nazwiskol.Location = new System.Drawing.Point(147, 171);
             this.nazwiskol.Name = "nazwiskol";
             this.nazwiskol.Size = new System.Drawing.Size(320, 23);
-            this.nazwiskol.TabIndex = 25;
+            this.nazwiskol.TabIndex = 7;
             // 
             // imiel
             // 
@@ -144,7 +145,7 @@
             this.imiel.Location = new System.Drawing.Point(147, 142);
             this.imiel.Name = "imiel";
             this.imiel.Size = new System.Drawing.Size(320, 23);
-            this.imiel.TabIndex = 26;
+            this.imiel.TabIndex = 6;
             // 
             // label1
             // 
@@ -154,7 +155,7 @@
             this.label1.Location = new System.Drawing.Point(76, 174);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 17);
-            this.label1.TabIndex = 27;
+            this.label1.TabIndex = 30;
             this.label1.Text = "Nazwisko";
             // 
             // label3
@@ -165,7 +166,7 @@
             this.label3.Location = new System.Drawing.Point(108, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 17);
-            this.label3.TabIndex = 28;
+            this.label3.TabIndex = 30;
             this.label3.Text = "Imię";
             // 
             // label5
@@ -185,7 +186,7 @@
             this.miastol.Location = new System.Drawing.Point(148, 228);
             this.miastol.Name = "miastol";
             this.miastol.Size = new System.Drawing.Size(320, 23);
-            this.miastol.TabIndex = 32;
+            this.miastol.TabIndex = 9;
             // 
             // dzielnical
             // 
@@ -193,7 +194,7 @@
             this.dzielnical.Location = new System.Drawing.Point(147, 200);
             this.dzielnical.Name = "dzielnical";
             this.dzielnical.Size = new System.Drawing.Size(320, 23);
-            this.dzielnical.TabIndex = 33;
+            this.dzielnical.TabIndex = 8;
             // 
             // label4
             // 
@@ -203,7 +204,7 @@
             this.label4.Location = new System.Drawing.Point(92, 231);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 17);
-            this.label4.TabIndex = 34;
+            this.label4.TabIndex = 30;
             this.label4.Text = "Miasto";
             // 
             // edytuj
@@ -213,7 +214,7 @@
             this.edytuj.Location = new System.Drawing.Point(474, 294);
             this.edytuj.Name = "edytuj";
             this.edytuj.Size = new System.Drawing.Size(76, 32);
-            this.edytuj.TabIndex = 20;
+            this.edytuj.TabIndex = 2;
             this.edytuj.Text = "Edytuj";
             this.edytuj.UseVisualStyleBackColor = true;
             this.edytuj.Click += new System.EventHandler(this.edytuj_Click);
@@ -225,7 +226,7 @@
             this.usun.Location = new System.Drawing.Point(551, 256);
             this.usun.Name = "usun";
             this.usun.Size = new System.Drawing.Size(76, 32);
-            this.usun.TabIndex = 20;
+            this.usun.TabIndex = 1;
             this.usun.Text = "Usuń";
             this.usun.UseVisualStyleBackColor = true;
             this.usun.Click += new System.EventHandler(this.usun_Click);
@@ -245,46 +246,37 @@
             // 
             this.checkBoxAdmin.AutoSize = true;
             this.checkBoxAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.checkBoxAdmin.Location = new System.Drawing.Point(321, 257);
+            this.checkBoxAdmin.Location = new System.Drawing.Point(56, 256);
             this.checkBoxAdmin.Name = "checkBoxAdmin";
-            this.checkBoxAdmin.Size = new System.Drawing.Size(110, 21);
-            this.checkBoxAdmin.TabIndex = 36;
-            this.checkBoxAdmin.Text = "administracja";
+            this.checkBoxAdmin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBoxAdmin.Size = new System.Drawing.Size(111, 21);
+            this.checkBoxAdmin.TabIndex = 10;
+            this.checkBoxAdmin.Text = "Administracja";
             this.checkBoxAdmin.UseVisualStyleBackColor = true;
             // 
-            // zapisz
+            // zapisz_edycja
             // 
-            this.zapisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.zapisz.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.zapisz.Location = new System.Drawing.Point(145, 279);
-            this.zapisz.Name = "zapisz";
-            this.zapisz.Size = new System.Drawing.Size(76, 32);
-            this.zapisz.TabIndex = 20;
-            this.zapisz.Text = "Zapisz";
-            this.zapisz.UseVisualStyleBackColor = true;
-            this.zapisz.Click += new System.EventHandler(this.zapisz_Click);
+            this.zapisz_edycja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zapisz_edycja.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.zapisz_edycja.Location = new System.Drawing.Point(196, 284);
+            this.zapisz_edycja.Name = "zapisz_edycja";
+            this.zapisz_edycja.Size = new System.Drawing.Size(76, 32);
+            this.zapisz_edycja.TabIndex = 11;
+            this.zapisz_edycja.Text = "Zapisz";
+            this.zapisz_edycja.UseVisualStyleBackColor = true;
+            this.zapisz_edycja.Click += new System.EventHandler(this.zapisz_edycja_Click);
             // 
-            // anuluj
+            // anuluj_edycja
             // 
-            this.anuluj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.anuluj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.anuluj.Location = new System.Drawing.Point(227, 279);
-            this.anuluj.Name = "anuluj";
-            this.anuluj.Size = new System.Drawing.Size(75, 32);
-            this.anuluj.TabIndex = 15;
-            this.anuluj.Text = "Anuluj";
-            this.anuluj.UseVisualStyleBackColor = true;
-            this.anuluj.Click += new System.EventHandler(this.anuluj_Click);
-            // 
-            // tryb_edycji
-            // 
-            this.tryb_edycji.AutoSize = true;
-            this.tryb_edycji.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tryb_edycji.Location = new System.Drawing.Point(145, 257);
-            this.tryb_edycji.Name = "tryb_edycji";
-            this.tryb_edycji.Size = new System.Drawing.Size(157, 17);
-            this.tryb_edycji.TabIndex = 37;
-            this.tryb_edycji.Text = "Tryb edycji użytkownika";
+            this.anuluj_edycja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.anuluj_edycja.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.anuluj_edycja.Location = new System.Drawing.Point(278, 284);
+            this.anuluj_edycja.Name = "anuluj_edycja";
+            this.anuluj_edycja.Size = new System.Drawing.Size(75, 32);
+            this.anuluj_edycja.TabIndex = 12;
+            this.anuluj_edycja.Text = "Anuluj";
+            this.anuluj_edycja.UseVisualStyleBackColor = true;
+            this.anuluj_edycja.Click += new System.EventHandler(this.anuluj_edycja_Click);
             // 
             // label2
             // 
@@ -293,7 +285,7 @@
             this.label2.Location = new System.Drawing.Point(53, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 17);
-            this.label2.TabIndex = 38;
+            this.label2.TabIndex = 30;
             this.label2.Text = "Ponów hasło";
             // 
             // hasloponl
@@ -304,7 +296,31 @@
             this.hasloponl.Name = "hasloponl";
             this.hasloponl.PasswordChar = '*';
             this.hasloponl.Size = new System.Drawing.Size(320, 23);
-            this.hasloponl.TabIndex = 39;
+            this.hasloponl.TabIndex = 5;
+            // 
+            // zapisz_dodaj
+            // 
+            this.zapisz_dodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zapisz_dodaj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.zapisz_dodaj.Location = new System.Drawing.Point(196, 270);
+            this.zapisz_dodaj.Name = "zapisz_dodaj";
+            this.zapisz_dodaj.Size = new System.Drawing.Size(76, 32);
+            this.zapisz_dodaj.TabIndex = 11;
+            this.zapisz_dodaj.Text = "Zapisz";
+            this.zapisz_dodaj.UseVisualStyleBackColor = true;
+            this.zapisz_dodaj.Click += new System.EventHandler(this.zapisz_dodaj_Click);
+            // 
+            // anuluj_dodaj
+            // 
+            this.anuluj_dodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.anuluj_dodaj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.anuluj_dodaj.Location = new System.Drawing.Point(278, 270);
+            this.anuluj_dodaj.Name = "anuluj_dodaj";
+            this.anuluj_dodaj.Size = new System.Drawing.Size(75, 32);
+            this.anuluj_dodaj.TabIndex = 12;
+            this.anuluj_dodaj.Text = "Anuluj";
+            this.anuluj_dodaj.UseVisualStyleBackColor = true;
+            this.anuluj_dodaj.Click += new System.EventHandler(this.anuluj_dodaj_Click);
             // 
             // Dodaj_uzytkownika
             // 
@@ -314,7 +330,6 @@
             this.ClientSize = new System.Drawing.Size(639, 328);
             this.Controls.Add(this.hasloponl);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tryb_edycji);
             this.Controls.Add(this.checkBoxAdmin);
             this.Controls.Add(this.lbPracownicy);
             this.Controls.Add(this.label4);
@@ -325,7 +340,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.imiel);
             this.Controls.Add(this.nazwiskol);
-            this.Controls.Add(this.zapisz);
+            this.Controls.Add(this.zapisz_dodaj);
+            this.Controls.Add(this.zapisz_edycja);
             this.Controls.Add(this.usun);
             this.Controls.Add(this.edytuj);
             this.Controls.Add(this.dodaj);
@@ -333,7 +349,8 @@
             this.Controls.Add(this.nazwa_uzytkownika);
             this.Controls.Add(this.label_haslo);
             this.Controls.Add(this.label_uzytkownik);
-            this.Controls.Add(this.anuluj);
+            this.Controls.Add(this.anuluj_dodaj);
+            this.Controls.Add(this.anuluj_edycja);
             this.Controls.Add(this.wroc);
             this.Controls.Add(this.info);
             this.MaximizeBox = false;
@@ -368,10 +385,11 @@
         private System.Windows.Forms.Button usun;
         private System.Windows.Forms.ListBox lbPracownicy;
         private System.Windows.Forms.CheckBox checkBoxAdmin;
-        private System.Windows.Forms.Button zapisz;
-        private System.Windows.Forms.Button anuluj;
-        private System.Windows.Forms.Label tryb_edycji;
+        private System.Windows.Forms.Button zapisz_edycja;
+        private System.Windows.Forms.Button anuluj_edycja;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox hasloponl;
+        private System.Windows.Forms.Button zapisz_dodaj;
+        private System.Windows.Forms.Button anuluj_dodaj;
     }
 }

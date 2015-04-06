@@ -64,6 +64,7 @@
             // 
             // nazwa_uzytkownika
             // 
+            this.nazwa_uzytkownika.AcceptsTab = true;
             this.nazwa_uzytkownika.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             resources.ApplyResources(this.nazwa_uzytkownika, "nazwa_uzytkownika");
             this.nazwa_uzytkownika.Name = "nazwa_uzytkownika";
