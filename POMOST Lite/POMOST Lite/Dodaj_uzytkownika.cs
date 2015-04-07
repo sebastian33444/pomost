@@ -36,10 +36,11 @@ namespace POMOST_Lite
 
         void wczytajOsoby()
         {
+            lbPracownicy.MultiColumn = true;
+            lbPracownicy.SelectionMode = SelectionMode.MultiExtended;
             lbPracownicy.Items.Clear();
-            lbPracownicy.Items.AddRange(baza.pracowniks.OrderBy(o => o.login).ToArray());
-            lbPracownicy.DisplayMember = "login";
-            lbPracownicy.ValueMember = "id_pracownik";
+            var items = from p in baza.pracowniks select p.login +" - "+ p.admin;
+            lbPracownicy.Items.AddRange(items.ToArray());
         }
 
 
@@ -323,6 +324,12 @@ namespace POMOST_Lite
             checkBoxAdmin.Enabled = false;
             lbPracownicy.Enabled = true;
             dodaj.Enabled = true;
+        }
+
+        private void Dodaj_uzytkownika_Load(object sender, EventArgs e)
+        {
+            this.pracownikTableAdapter.Fill(this.mopsDataSet.pracownik);
+
         }
     }
 }

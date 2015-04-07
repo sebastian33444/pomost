@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dodaj = new System.Windows.Forms.Button();
             this.haslol = new System.Windows.Forms.TextBox();
             this.nazwa_uzytkownika = new System.Windows.Forms.TextBox();
@@ -53,6 +54,15 @@
             this.hasloponl = new System.Windows.Forms.TextBox();
             this.zapisz_dodaj = new System.Windows.Forms.Button();
             this.anuluj_dodaj = new System.Windows.Forms.Button();
+            this.mopsDataSet = new POMOST_Lite.mopsDataSet();
+            this.mopsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pracownikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pracownikTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.pracownikTableAdapter();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pracownikBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dodaj
@@ -233,10 +243,12 @@
             // 
             // lbPracownicy
             // 
+            this.lbPracownicy.ColumnWidth = 20;
             this.lbPracownicy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbPracownicy.FormattingEnabled = true;
             this.lbPracownicy.ItemHeight = 16;
             this.lbPracownicy.Location = new System.Drawing.Point(474, 58);
+            this.lbPracownicy.MultiColumn = true;
             this.lbPracownicy.Name = "lbPracownicy";
             this.lbPracownicy.Size = new System.Drawing.Size(153, 196);
             this.lbPracownicy.TabIndex = 35;
@@ -322,12 +334,51 @@
             this.anuluj_dodaj.UseVisualStyleBackColor = true;
             this.anuluj_dodaj.Click += new System.EventHandler(this.anuluj_dodaj_Click);
             // 
+            // mopsDataSet
+            // 
+            this.mopsDataSet.DataSetName = "mopsDataSet";
+            this.mopsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mopsDataSetBindingSource
+            // 
+            this.mopsDataSetBindingSource.DataSource = this.mopsDataSet;
+            this.mopsDataSetBindingSource.Position = 0;
+            // 
+            // pracownikBindingSource
+            // 
+            this.pracownikBindingSource.DataMember = "pracownik";
+            this.pracownikBindingSource.DataSource = this.mopsDataSetBindingSource;
+            // 
+            // pracownikTableAdapter
+            // 
+            this.pracownikTableAdapter.ClearBeforeFill = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(474, 39);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 13);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Użytkownik:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(587, 39);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(39, 13);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Admin:";
+            // 
             // Dodaj_uzytkownika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(639, 328);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.hasloponl);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.checkBoxAdmin);
@@ -359,6 +410,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POMOST Lite";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dodaj_uzytkownika_FormClosing);
+            this.Load += new System.EventHandler(this.Dodaj_uzytkownika_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pracownikBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,5 +446,11 @@
         private System.Windows.Forms.TextBox hasloponl;
         private System.Windows.Forms.Button zapisz_dodaj;
         private System.Windows.Forms.Button anuluj_dodaj;
+        private System.Windows.Forms.BindingSource mopsDataSetBindingSource;
+        private mopsDataSet mopsDataSet;
+        private System.Windows.Forms.BindingSource pracownikBindingSource;
+        private mopsDataSetTableAdapters.pracownikTableAdapter pracownikTableAdapter;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
