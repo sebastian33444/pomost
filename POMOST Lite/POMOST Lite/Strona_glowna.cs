@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace POMOST_Lite
 {
@@ -14,33 +16,22 @@ namespace POMOST_Lite
     {
         DataClassesDataContext baza = new DataClassesDataContext();
         private string p;
-        private string status;
+        private bool admin = false;
+        private int id_prac; 
 
-        
-        public Strona_glowna()
+        public Strona_glowna(string p)
         {
             InitializeComponent();
-        }
 
-        public Strona_glowna(string p, string status)
-        {
-            // TODO: Complete member initialization
             this.p = p;
-            this.status = status;
-            if (status == "admin")
-            {
-                MessageBox.Show(p + status);
-                /*
-                foreach(administratorzy adm in baza.administratorzies.Where(adm => adm.login == p))
-                {
-                    tslabelLogin.Text = adm.login;
-                }
-                 * */
-            }
-            else if (status =="user")
-            {
-
-            }
+           foreach(pracownik prac in baza.pracowniks.Where(prac => prac.login == p))
+           {
+               tslabelLogin.Text = prac.login.ToString();
+               tslabelMiasto.Text = prac.miasto.ToString();
+               tslabelDzielnica.Text = prac.dzielnica.ToString();
+               admin = prac.admin;
+               id_prac = prac.id_pracownik;
+           }
         }
 
         private void Wyloguj_Click(object sender, EventArgs e)
@@ -52,5 +43,23 @@ namespace POMOST_Lite
         {
             Application.Exit();
         }
+
+        private void Strona_glowna_Load(object sender, EventArgs e)
+        {
+            if(admin == true)
+            {
+                this.petentTableAdapter.Fill(this.mopsDataSet1.petent);
+            }
+            else
+            {
+                dgvPetent.DataSource = from p in baza.petents
+                                       where p.id_pracownik == id_prac
+                                       select p;
+            }
+
+
+        }
+
+
     }
 }

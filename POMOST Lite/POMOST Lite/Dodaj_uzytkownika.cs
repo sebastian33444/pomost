@@ -36,11 +36,10 @@ namespace POMOST_Lite
 
         void wczytajOsoby()
         {
-            lbPracownicy.MultiColumn = true;
-            lbPracownicy.SelectionMode = SelectionMode.MultiExtended;
             lbPracownicy.Items.Clear();
-            var items = from p in baza.pracowniks select p.login +" - "+ p.admin;
-            lbPracownicy.Items.AddRange(items.ToArray());
+            lbPracownicy.Items.AddRange(baza.pracowniks.OrderBy(o => o.login).ToArray());
+            lbPracownicy.DisplayMember = "login";
+            lbPracownicy.ValueMember = "id_pracownik";
         }
 
 
@@ -123,9 +122,7 @@ namespace POMOST_Lite
 
         private void wroc_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Logowanie_uzytkownika log = new Logowanie_uzytkownika();
-            log.Show();
+            this.Close();    
         }
 
         private void lbPracownicy_Click(object sender, EventArgs e)

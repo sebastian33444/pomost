@@ -18,6 +18,8 @@ namespace POMOST_Lite
     {
         DataClassesDataContext baza = new DataClassesDataContext();
         md5 szyfrowanie = new md5();
+        Konfiguracja_bazy konfbaza = new Konfiguracja_bazy();
+        Dodaj_uzytkownika adduser = new Dodaj_uzytkownika();
 
         public Logowanie_uzytkownika()
         {
@@ -31,9 +33,6 @@ namespace POMOST_Lite
 
         public void zaloguj_Click(object sender, EventArgs e)
         {
-            Konfiguracja_bazy kb = new Konfiguracja_bazy();
-            kb.deserializacja();            
-
             bool log = false;
             foreach (pracownik p in baza.pracowniks)
             {
@@ -45,8 +44,8 @@ namespace POMOST_Lite
              if (log == true)
             {
                 this.Hide();
-                Strona_glowna str_gl = new Strona_glowna();
-                str_gl.Show();
+                Strona_glowna str_gl = new Strona_glowna(nazwa_uzytkownika.Text);
+                str_gl.ShowDialog();
             }
             else
             {
@@ -57,7 +56,7 @@ namespace POMOST_Lite
         private void dodaj_uzytkownika_Click(object sender, EventArgs e)
         {
             bool log = false;
-            Dodaj_uzytkownika adduser = new Dodaj_uzytkownika();
+
             foreach (pracownik prac in baza.pracowniks.Where(prac => prac.admin == true))
             {
                 if (prac.login == nazwa_uzytkownika.Text && prac.haslo.ToUpper() == szyfrowanie.SzyfrujMD5(haslo.Text))
@@ -67,8 +66,9 @@ namespace POMOST_Lite
             }
             if (log == true)
             {
+
                 this.Hide();
-                adduser.Show();
+                adduser.ShowDialog();
             }
             else
             {
@@ -78,9 +78,8 @@ namespace POMOST_Lite
 
         private void KonfBazy_Click(object sender, EventArgs e)
         {
-            Konfiguracja_bazy konfbaza = new Konfiguracja_bazy();
             this.Hide();
-            konfbaza.Show();
+            konfbaza.ShowDialog();
         }
     }
 

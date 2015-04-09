@@ -248,7 +248,6 @@
             this.lbPracownicy.FormattingEnabled = true;
             this.lbPracownicy.ItemHeight = 16;
             this.lbPracownicy.Location = new System.Drawing.Point(474, 58);
-            this.lbPracownicy.MultiColumn = true;
             this.lbPracownicy.Name = "lbPracownicy";
             this.lbPracownicy.Size = new System.Drawing.Size(153, 196);
             this.lbPracownicy.TabIndex = 35;

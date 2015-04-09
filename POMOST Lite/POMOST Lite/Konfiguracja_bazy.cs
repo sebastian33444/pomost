@@ -32,9 +32,9 @@ namespace POMOST_Lite
 
         private void zamknij_Click(object sender, EventArgs e)
         {
-            this.Close();
             Logowanie_uzytkownika log = new Logowanie_uzytkownika();
             log.Show();
+            this.Close();
         }
 
         private void zapisz_Click(object sender, EventArgs e)

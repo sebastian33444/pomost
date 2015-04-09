@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Strona_glowna));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.menu = new System.Windows.Forms.ToolStripDropDownButton();
@@ -47,16 +48,38 @@
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.tslabelDzielnica = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.lbPetent = new System.Windows.Forms.ListBox();
-            this.lbDokumenty = new System.Windows.Forms.ListBox();
-            this.lbSwiadczenia = new System.Windows.Forms.ListBox();
+            this.mopsDataSet1 = new POMOST_Lite.mopsDataSet();
+            this.dgvPetent = new System.Windows.Forms.DataGridView();
+            this.mopsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.petentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.petentTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.petentTableAdapter();
+            this.idpetentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwiskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peselDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.województwoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.miastoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kodpocztowyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ulicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrulicyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrmieszkaniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrtelefonuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idpracownikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.swiadczenia = new System.Windows.Forms.ToolStripButton();
+            this.dokumenty = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPetent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu,
@@ -64,10 +87,12 @@
             this.usun_petenta,
             this.edytuj_petenta,
             this.wyszukaj,
-            this.toolStripSeparator1});
+            this.toolStripSeparator1,
+            this.swiadczenia,
+            this.dokumenty});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(970, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1187, 26);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -78,13 +103,13 @@
             this.menu.Image = ((System.Drawing.Image)(resources.GetObject("menu.Image")));
             this.menu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(67, 22);
+            this.menu.Size = new System.Drawing.Size(74, 23);
             this.menu.Text = "Menu";
             // 
             // Wyloguj
             // 
             this.Wyloguj.Name = "Wyloguj";
-            this.Wyloguj.Size = new System.Drawing.Size(118, 22);
+            this.Wyloguj.Size = new System.Drawing.Size(128, 24);
             this.Wyloguj.Text = "Wyloguj";
             this.Wyloguj.Click += new System.EventHandler(this.Wyloguj_Click);
             // 
@@ -93,7 +118,7 @@
             this.dodaj_petenta.Image = ((System.Drawing.Image)(resources.GetObject("dodaj_petenta.Image")));
             this.dodaj_petenta.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dodaj_petenta.Name = "dodaj_petenta";
-            this.dodaj_petenta.Size = new System.Drawing.Size(101, 22);
+            this.dodaj_petenta.Size = new System.Drawing.Size(116, 23);
             this.dodaj_petenta.Text = "Dodaj petenta";
             // 
             // usun_petenta
@@ -101,7 +126,7 @@
             this.usun_petenta.Image = ((System.Drawing.Image)(resources.GetObject("usun_petenta.Image")));
             this.usun_petenta.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.usun_petenta.Name = "usun_petenta";
-            this.usun_petenta.Size = new System.Drawing.Size(97, 22);
+            this.usun_petenta.Size = new System.Drawing.Size(112, 23);
             this.usun_petenta.Text = "Usuń petenta";
             // 
             // edytuj_petenta
@@ -109,7 +134,7 @@
             this.edytuj_petenta.Image = ((System.Drawing.Image)(resources.GetObject("edytuj_petenta.Image")));
             this.edytuj_petenta.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.edytuj_petenta.Name = "edytuj_petenta";
-            this.edytuj_petenta.Size = new System.Drawing.Size(103, 22);
+            this.edytuj_petenta.Size = new System.Drawing.Size(118, 23);
             this.edytuj_petenta.Text = "Edytuj petenta";
             // 
             // wyszukaj
@@ -117,17 +142,18 @@
             this.wyszukaj.Image = ((System.Drawing.Image)(resources.GetObject("wyszukaj.Image")));
             this.wyszukaj.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.wyszukaj.Name = "wyszukaj";
-            this.wyszukaj.Size = new System.Drawing.Size(76, 22);
+            this.wyszukaj.Size = new System.Drawing.Size(86, 23);
             this.wyszukaj.Text = "Wyszukaj";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 26);
             // 
             // toolStrip2
             // 
             this.toolStrip2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
@@ -139,22 +165,22 @@
             this.toolStripLabel5,
             this.tslabelDzielnica,
             this.toolStripSeparator4});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 25);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 26);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(970, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(1187, 25);
             this.toolStrip2.TabIndex = 2;
             this.toolStrip2.Text = "toolStrip2";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(40, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(46, 22);
             this.toolStripLabel1.Text = "Login:";
             // 
             // tslabelLogin
             // 
             this.tslabelLogin.Name = "tslabelLogin";
-            this.tslabelLogin.Size = new System.Drawing.Size(86, 22);
+            this.tslabelLogin.Size = new System.Drawing.Size(101, 22);
             this.tslabelLogin.Text = "toolStripLabel2";
             // 
             // toolStripSeparator2
@@ -165,13 +191,13 @@
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(46, 22);
+            this.toolStripLabel3.Size = new System.Drawing.Size(54, 22);
             this.toolStripLabel3.Text = "Miasto:";
             // 
             // tslabelMiasto
             // 
             this.tslabelMiasto.Name = "tslabelMiasto";
-            this.tslabelMiasto.Size = new System.Drawing.Size(86, 22);
+            this.tslabelMiasto.Size = new System.Drawing.Size(101, 22);
             this.tslabelMiasto.Text = "toolStripLabel4";
             // 
             // toolStripSeparator3
@@ -182,13 +208,13 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(57, 22);
+            this.toolStripLabel5.Size = new System.Drawing.Size(65, 22);
             this.toolStripLabel5.Text = "Dzielnica:";
             // 
             // tslabelDzielnica
             // 
             this.tslabelDzielnica.Name = "tslabelDzielnica";
-            this.tslabelDzielnica.Size = new System.Drawing.Size(86, 22);
+            this.tslabelDzielnica.Size = new System.Drawing.Size(101, 22);
             this.tslabelDzielnica.Text = "toolStripLabel6";
             // 
             // toolStripSeparator4
@@ -196,49 +222,184 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
-            // lbPetent
+            // mopsDataSet1
             // 
-            this.lbPetent.FormattingEnabled = true;
-            this.lbPetent.Location = new System.Drawing.Point(0, 53);
-            this.lbPetent.Name = "lbPetent";
-            this.lbPetent.Size = new System.Drawing.Size(345, 407);
-            this.lbPetent.TabIndex = 3;
+            this.mopsDataSet1.DataSetName = "mopsDataSet";
+            this.mopsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // lbDokumenty
+            // dgvPetent
             // 
-            this.lbDokumenty.FormattingEnabled = true;
-            this.lbDokumenty.Location = new System.Drawing.Point(351, 53);
-            this.lbDokumenty.Name = "lbDokumenty";
-            this.lbDokumenty.Size = new System.Drawing.Size(322, 407);
-            this.lbDokumenty.TabIndex = 4;
+            this.dgvPetent.AllowUserToAddRows = false;
+            this.dgvPetent.AllowUserToDeleteRows = false;
+            this.dgvPetent.AutoGenerateColumns = false;
+            this.dgvPetent.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgvPetent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPetent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idpetentDataGridViewTextBoxColumn,
+            this.imieDataGridViewTextBoxColumn,
+            this.nazwiskoDataGridViewTextBoxColumn,
+            this.durDataGridViewTextBoxColumn,
+            this.peselDataGridViewTextBoxColumn,
+            this.województwoDataGridViewTextBoxColumn,
+            this.miastoDataGridViewTextBoxColumn,
+            this.kodpocztowyDataGridViewTextBoxColumn,
+            this.ulicaDataGridViewTextBoxColumn,
+            this.nrulicyDataGridViewTextBoxColumn,
+            this.nrmieszkaniaDataGridViewTextBoxColumn,
+            this.nrtelefonuDataGridViewTextBoxColumn,
+            this.idpracownikDataGridViewTextBoxColumn});
+            this.dgvPetent.DataSource = this.petentBindingSource;
+            this.dgvPetent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPetent.Location = new System.Drawing.Point(0, 51);
+            this.dgvPetent.Name = "dgvPetent";
+            this.dgvPetent.ReadOnly = true;
+            this.dgvPetent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPetent.Size = new System.Drawing.Size(1187, 469);
+            this.dgvPetent.TabIndex = 6;
             // 
-            // lbSwiadczenia
+            // mopsDataSet1BindingSource
             // 
-            this.lbSwiadczenia.FormattingEnabled = true;
-            this.lbSwiadczenia.Location = new System.Drawing.Point(679, 53);
-            this.lbSwiadczenia.Name = "lbSwiadczenia";
-            this.lbSwiadczenia.Size = new System.Drawing.Size(291, 407);
-            this.lbSwiadczenia.TabIndex = 5;
+            this.mopsDataSet1BindingSource.DataSource = this.mopsDataSet1;
+            this.mopsDataSet1BindingSource.Position = 0;
+            // 
+            // petentBindingSource
+            // 
+            this.petentBindingSource.DataMember = "petent";
+            this.petentBindingSource.DataSource = this.mopsDataSet1BindingSource;
+            // 
+            // petentTableAdapter
+            // 
+            this.petentTableAdapter.ClearBeforeFill = true;
+            // 
+            // idpetentDataGridViewTextBoxColumn
+            // 
+            this.idpetentDataGridViewTextBoxColumn.DataPropertyName = "id_petent";
+            this.idpetentDataGridViewTextBoxColumn.HeaderText = "id_petent";
+            this.idpetentDataGridViewTextBoxColumn.Name = "idpetentDataGridViewTextBoxColumn";
+            this.idpetentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // imieDataGridViewTextBoxColumn
+            // 
+            this.imieDataGridViewTextBoxColumn.DataPropertyName = "imie";
+            this.imieDataGridViewTextBoxColumn.HeaderText = "imie";
+            this.imieDataGridViewTextBoxColumn.Name = "imieDataGridViewTextBoxColumn";
+            this.imieDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nazwiskoDataGridViewTextBoxColumn
+            // 
+            this.nazwiskoDataGridViewTextBoxColumn.DataPropertyName = "nazwisko";
+            this.nazwiskoDataGridViewTextBoxColumn.HeaderText = "nazwisko";
+            this.nazwiskoDataGridViewTextBoxColumn.Name = "nazwiskoDataGridViewTextBoxColumn";
+            this.nazwiskoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // durDataGridViewTextBoxColumn
+            // 
+            this.durDataGridViewTextBoxColumn.DataPropertyName = "d_ur";
+            this.durDataGridViewTextBoxColumn.HeaderText = "d_ur";
+            this.durDataGridViewTextBoxColumn.Name = "durDataGridViewTextBoxColumn";
+            this.durDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // peselDataGridViewTextBoxColumn
+            // 
+            this.peselDataGridViewTextBoxColumn.DataPropertyName = "pesel";
+            this.peselDataGridViewTextBoxColumn.HeaderText = "pesel";
+            this.peselDataGridViewTextBoxColumn.Name = "peselDataGridViewTextBoxColumn";
+            this.peselDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // województwoDataGridViewTextBoxColumn
+            // 
+            this.województwoDataGridViewTextBoxColumn.DataPropertyName = "województwo";
+            this.województwoDataGridViewTextBoxColumn.HeaderText = "województwo";
+            this.województwoDataGridViewTextBoxColumn.Name = "województwoDataGridViewTextBoxColumn";
+            this.województwoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // miastoDataGridViewTextBoxColumn
+            // 
+            this.miastoDataGridViewTextBoxColumn.DataPropertyName = "miasto";
+            this.miastoDataGridViewTextBoxColumn.HeaderText = "miasto";
+            this.miastoDataGridViewTextBoxColumn.Name = "miastoDataGridViewTextBoxColumn";
+            this.miastoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kodpocztowyDataGridViewTextBoxColumn
+            // 
+            this.kodpocztowyDataGridViewTextBoxColumn.DataPropertyName = "kod_pocztowy";
+            this.kodpocztowyDataGridViewTextBoxColumn.HeaderText = "kod_pocztowy";
+            this.kodpocztowyDataGridViewTextBoxColumn.Name = "kodpocztowyDataGridViewTextBoxColumn";
+            this.kodpocztowyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ulicaDataGridViewTextBoxColumn
+            // 
+            this.ulicaDataGridViewTextBoxColumn.DataPropertyName = "ulica";
+            this.ulicaDataGridViewTextBoxColumn.HeaderText = "ulica";
+            this.ulicaDataGridViewTextBoxColumn.Name = "ulicaDataGridViewTextBoxColumn";
+            this.ulicaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nrulicyDataGridViewTextBoxColumn
+            // 
+            this.nrulicyDataGridViewTextBoxColumn.DataPropertyName = "nr_ulicy";
+            this.nrulicyDataGridViewTextBoxColumn.HeaderText = "nr_ulicy";
+            this.nrulicyDataGridViewTextBoxColumn.Name = "nrulicyDataGridViewTextBoxColumn";
+            this.nrulicyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nrmieszkaniaDataGridViewTextBoxColumn
+            // 
+            this.nrmieszkaniaDataGridViewTextBoxColumn.DataPropertyName = "nr_mieszkania";
+            this.nrmieszkaniaDataGridViewTextBoxColumn.HeaderText = "nr_mieszkania";
+            this.nrmieszkaniaDataGridViewTextBoxColumn.Name = "nrmieszkaniaDataGridViewTextBoxColumn";
+            this.nrmieszkaniaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nrtelefonuDataGridViewTextBoxColumn
+            // 
+            this.nrtelefonuDataGridViewTextBoxColumn.DataPropertyName = "nr_telefonu";
+            this.nrtelefonuDataGridViewTextBoxColumn.HeaderText = "nr_telefonu";
+            this.nrtelefonuDataGridViewTextBoxColumn.Name = "nrtelefonuDataGridViewTextBoxColumn";
+            this.nrtelefonuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idpracownikDataGridViewTextBoxColumn
+            // 
+            this.idpracownikDataGridViewTextBoxColumn.DataPropertyName = "id_pracownik";
+            this.idpracownikDataGridViewTextBoxColumn.HeaderText = "id_pracownik";
+            this.idpracownikDataGridViewTextBoxColumn.Name = "idpracownikDataGridViewTextBoxColumn";
+            this.idpracownikDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // swiadczenia
+            // 
+            this.swiadczenia.Image = ((System.Drawing.Image)(resources.GetObject("swiadczenia.Image")));
+            this.swiadczenia.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.swiadczenia.Name = "swiadczenia";
+            this.swiadczenia.Size = new System.Drawing.Size(101, 23);
+            this.swiadczenia.Text = "Świadczenia";
+            // 
+            // dokumenty
+            // 
+            this.dokumenty.Image = ((System.Drawing.Image)(resources.GetObject("dokumenty.Image")));
+            this.dokumenty.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dokumenty.Name = "dokumenty";
+            this.dokumenty.Size = new System.Drawing.Size(101, 23);
+            this.dokumenty.Text = "Dokumenty";
             // 
             // Strona_glowna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(970, 459);
-            this.Controls.Add(this.lbSwiadczenia);
-            this.Controls.Add(this.lbDokumenty);
-            this.Controls.Add(this.lbPetent);
+            this.ClientSize = new System.Drawing.Size(1187, 520);
+            this.Controls.Add(this.dgvPetent);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Strona_glowna";
             this.ShowIcon = false;
             this.Text = "POMOST Lite";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Strona_glowna_FormClosed);
+            this.Load += new System.EventHandler(this.Strona_glowna_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPetent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,8 +425,25 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
         private System.Windows.Forms.ToolStripLabel tslabelDzielnica;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ListBox lbPetent;
-        private System.Windows.Forms.ListBox lbDokumenty;
-        private System.Windows.Forms.ListBox lbSwiadczenia;
+        private mopsDataSet mopsDataSet1;
+        private System.Windows.Forms.DataGridView dgvPetent;
+        private System.Windows.Forms.BindingSource mopsDataSet1BindingSource;
+        private System.Windows.Forms.BindingSource petentBindingSource;
+        private mopsDataSetTableAdapters.petentTableAdapter petentTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idpetentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imieDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn durDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn peselDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn województwoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn miastoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kodpocztowyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ulicaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nrulicyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nrmieszkaniaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nrtelefonuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idpracownikDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripButton swiadczenia;
+        private System.Windows.Forms.ToolStripButton dokumenty;
     }
 }
