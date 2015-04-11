@@ -60,6 +60,22 @@ namespace POMOST_Lite
 
         }
 
+        private void usun_petenta_Click(object sender, EventArgs e)
+        {
+
+            dgvPetent.Rows.RemoveAt(this.dgvPetent.CurrentCell.RowIndex);
+            
+            try
+            {
+               //baza.petents.DeleteAllOnSubmit(dokasacji);
+              //  baza.SubmitChanges();
+            }
+            catch
+            {
+                MessageBox.Show("Nie można usunąć pracownika, do którego są podpięci petenci, dokumenty lub świadczenia.  Nie można usunąć głównego administratora.");
+            }
+        }
+
 
     }
 }

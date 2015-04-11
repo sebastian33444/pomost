@@ -38,6 +38,8 @@
             this.edytuj_petenta = new System.Windows.Forms.ToolStripButton();
             this.wyszukaj = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.swiadczenia = new System.Windows.Forms.ToolStripButton();
+            this.dokumenty = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tslabelLogin = new System.Windows.Forms.ToolStripLabel();
@@ -50,9 +52,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.mopsDataSet1 = new POMOST_Lite.mopsDataSet();
             this.dgvPetent = new System.Windows.Forms.DataGridView();
-            this.mopsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.petentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.petentTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.petentTableAdapter();
             this.idpetentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwiskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,14 +65,15 @@
             this.nrmieszkaniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nrtelefonuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpracownikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.swiadczenia = new System.Windows.Forms.ToolStripButton();
-            this.dokumenty = new System.Windows.Forms.ToolStripButton();
+            this.petentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mopsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.petentTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.petentTableAdapter();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPetent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -128,6 +128,7 @@
             this.usun_petenta.Name = "usun_petenta";
             this.usun_petenta.Size = new System.Drawing.Size(112, 23);
             this.usun_petenta.Text = "Usuń petenta";
+            this.usun_petenta.Click += new System.EventHandler(this.usun_petenta_Click);
             // 
             // edytuj_petenta
             // 
@@ -149,6 +150,22 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 26);
+            // 
+            // swiadczenia
+            // 
+            this.swiadczenia.Image = ((System.Drawing.Image)(resources.GetObject("swiadczenia.Image")));
+            this.swiadczenia.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.swiadczenia.Name = "swiadczenia";
+            this.swiadczenia.Size = new System.Drawing.Size(101, 23);
+            this.swiadczenia.Text = "Świadczenia";
+            // 
+            // dokumenty
+            // 
+            this.dokumenty.Image = ((System.Drawing.Image)(resources.GetObject("dokumenty.Image")));
+            this.dokumenty.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dokumenty.Name = "dokumenty";
+            this.dokumenty.Size = new System.Drawing.Size(101, 23);
+            this.dokumenty.Text = "Dokumenty";
             // 
             // toolStrip2
             // 
@@ -257,20 +274,6 @@
             this.dgvPetent.Size = new System.Drawing.Size(1187, 469);
             this.dgvPetent.TabIndex = 6;
             // 
-            // mopsDataSet1BindingSource
-            // 
-            this.mopsDataSet1BindingSource.DataSource = this.mopsDataSet1;
-            this.mopsDataSet1BindingSource.Position = 0;
-            // 
-            // petentBindingSource
-            // 
-            this.petentBindingSource.DataMember = "petent";
-            this.petentBindingSource.DataSource = this.mopsDataSet1BindingSource;
-            // 
-            // petentTableAdapter
-            // 
-            this.petentTableAdapter.ClearBeforeFill = true;
-            // 
             // idpetentDataGridViewTextBoxColumn
             // 
             this.idpetentDataGridViewTextBoxColumn.DataPropertyName = "id_petent";
@@ -362,21 +365,19 @@
             this.idpracownikDataGridViewTextBoxColumn.Name = "idpracownikDataGridViewTextBoxColumn";
             this.idpracownikDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // swiadczenia
+            // petentBindingSource
             // 
-            this.swiadczenia.Image = ((System.Drawing.Image)(resources.GetObject("swiadczenia.Image")));
-            this.swiadczenia.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.swiadczenia.Name = "swiadczenia";
-            this.swiadczenia.Size = new System.Drawing.Size(101, 23);
-            this.swiadczenia.Text = "Świadczenia";
+            this.petentBindingSource.DataMember = "petent";
+            this.petentBindingSource.DataSource = this.mopsDataSet1BindingSource;
             // 
-            // dokumenty
+            // mopsDataSet1BindingSource
             // 
-            this.dokumenty.Image = ((System.Drawing.Image)(resources.GetObject("dokumenty.Image")));
-            this.dokumenty.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.dokumenty.Name = "dokumenty";
-            this.dokumenty.Size = new System.Drawing.Size(101, 23);
-            this.dokumenty.Text = "Dokumenty";
+            this.mopsDataSet1BindingSource.DataSource = this.mopsDataSet1;
+            this.mopsDataSet1BindingSource.Position = 0;
+            // 
+            // petentTableAdapter
+            // 
+            this.petentTableAdapter.ClearBeforeFill = true;
             // 
             // Strona_glowna
             // 
@@ -398,8 +399,8 @@
             this.toolStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPetent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
