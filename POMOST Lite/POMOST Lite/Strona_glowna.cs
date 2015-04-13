@@ -17,7 +17,8 @@ namespace POMOST_Lite
         DataClassesDataContext baza = new DataClassesDataContext();
         private string p;
         private bool admin = false;
-        private int id_prac; 
+        private int id_prac;
+        private string zaznacz;
 
         public Strona_glowna(string p)
         {
@@ -56,19 +57,17 @@ namespace POMOST_Lite
                                        where p.id_pracownik == id_prac
                                        select p;
             }
-
-
         }
 
         private void usun_petenta_Click(object sender, EventArgs e)
-        {
-
-            dgvPetent.Rows.RemoveAt(this.dgvPetent.CurrentCell.RowIndex);
+        {            
             
             try
             {
-               //baza.petents.DeleteAllOnSubmit(dokasacji);
-              //  baza.SubmitChanges();
+                var dokasacji = from p in baza.petents where p.id_petent == Convert.ToInt32(zaznacz) select p;
+                baza.petents.DeleteAllOnSubmit(dokasacji);
+                baza.SubmitChanges();
+                dgvPetent.Rows.RemoveAt(this.dgvPetent.CurrentCell.RowIndex);
             }
             catch
             {
@@ -80,6 +79,18 @@ namespace POMOST_Lite
         {
             Dokumenty d = new Dokumenty();
             d.Show(); 
+        }
+
+        private void dodaj_petenta_Click(object sender, EventArgs e)
+        {
+            Dodaj_petenta add = new Dodaj_petenta(p);
+            add.Show();
+        }
+
+        private void dgvPetent_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            zaznacz = dgvPetent.Rows[e.RowIndex].Cells["idpetentDataGridViewTextBoxColumn"].Value.ToString();
+            MessageBox.Show(zaznacz);
         }
 
 

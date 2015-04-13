@@ -52,9 +52,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.mopsDataSet1 = new POMOST_Lite.mopsDataSet();
             this.dgvPetent = new System.Windows.Forms.DataGridView();
-            this.petentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mopsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.petentTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.petentTableAdapter();
             this.idpetentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwiskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +65,9 @@
             this.nrmieszkaniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nrtelefonuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpracownikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.petentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mopsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.petentTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.petentTableAdapter();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1)).BeginInit();
@@ -120,6 +120,7 @@
             this.dodaj_petenta.Name = "dodaj_petenta";
             this.dodaj_petenta.Size = new System.Drawing.Size(116, 23);
             this.dodaj_petenta.Text = "Dodaj petenta";
+            this.dodaj_petenta.Click += new System.EventHandler(this.dodaj_petenta_Click);
             // 
             // usun_petenta
             // 
@@ -274,20 +275,7 @@
             this.dgvPetent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPetent.Size = new System.Drawing.Size(1187, 469);
             this.dgvPetent.TabIndex = 6;
-            // 
-            // petentBindingSource
-            // 
-            this.petentBindingSource.DataMember = "petent";
-            this.petentBindingSource.DataSource = this.mopsDataSet1BindingSource;
-            // 
-            // mopsDataSet1BindingSource
-            // 
-            this.mopsDataSet1BindingSource.DataSource = this.mopsDataSet1;
-            this.mopsDataSet1BindingSource.Position = 0;
-            // 
-            // petentTableAdapter
-            // 
-            this.petentTableAdapter.ClearBeforeFill = true;
+            this.dgvPetent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPetent_CellClick);
             // 
             // idpetentDataGridViewTextBoxColumn
             // 
@@ -379,6 +367,20 @@
             this.idpracownikDataGridViewTextBoxColumn.HeaderText = "id pracownik";
             this.idpracownikDataGridViewTextBoxColumn.Name = "idpracownikDataGridViewTextBoxColumn";
             this.idpracownikDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // petentBindingSource
+            // 
+            this.petentBindingSource.DataMember = "petent";
+            this.petentBindingSource.DataSource = this.mopsDataSet1BindingSource;
+            // 
+            // mopsDataSet1BindingSource
+            // 
+            this.mopsDataSet1BindingSource.DataSource = this.mopsDataSet1;
+            this.mopsDataSet1BindingSource.Position = 0;
+            // 
+            // petentTableAdapter
+            // 
+            this.petentTableAdapter.ClearBeforeFill = true;
             // 
             // Strona_glowna
             // 

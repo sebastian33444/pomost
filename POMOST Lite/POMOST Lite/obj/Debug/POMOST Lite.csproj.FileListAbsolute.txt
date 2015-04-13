@@ -222,3 +222,4 @@ C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokume
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe.CodeAnalysisLog.xml
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe.lastcodeanalysissucceeded
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty.resources
+D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_petenta.resources

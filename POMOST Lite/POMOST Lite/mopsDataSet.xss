@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:dokumenty" ZOrder="9" X="70" Y="70" Height="191" Width="211" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
     <Shape ID="DesignTable:petent" ZOrder="8" X="351" Y="70" Height="324" Width="182" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
-    <Shape ID="DesignTable:pracownik" ZOrder="7" X="351" Y="445" Height="229" Width="205" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
+    <Shape ID="DesignTable:pracownik" ZOrder="7" X="351" Y="445" Height="248" Width="205" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
     <Shape ID="DesignTable:świadczenie" ZOrder="6" X="351" Y="744" Height="191" Width="214" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
   </Shapes>
   <Connectors>
@@ -72,7 +72,7 @@
       <RoutePoints>
         <Point>
           <X>453</X>
-          <Y>674</Y>
+          <Y>693</Y>
         </Point>
         <Point>
           <X>453</X>

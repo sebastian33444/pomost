@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.tbImie = new System.Windows.Forms.TextBox();
+            this.tbPesel = new System.Windows.Forms.TextBox();
+            this.tbWojewodztwo = new System.Windows.Forms.TextBox();
+            this.tbMiasto = new System.Windows.Forms.TextBox();
+            this.tbKod = new System.Windows.Forms.TextBox();
+            this.tbUlica = new System.Windows.Forms.TextBox();
+            this.tbNrUl = new System.Windows.Forms.TextBox();
+            this.tbTelefon = new System.Windows.Forms.TextBox();
+            this.tbNazwisko = new System.Windows.Forms.TextBox();
+            this.tbMieszkanie = new System.Windows.Forms.TextBox();
             this.bZapisz = new System.Windows.Forms.Button();
             this.bAnuluj = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,125 +54,139 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.cbPracownik = new System.Windows.Forms.ComboBox();
+            this.pracownikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mopsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mopsDataSet = new POMOST_Lite.mopsDataSet();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pracownikTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.pracownikTableAdapter();
+            this.Kalendarz = new System.Windows.Forms.MonthCalendar();
+            ((System.ComponentModel.ISupportInitialize)(this.pracownikBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(225, 9);
+            this.label1.Location = new System.Drawing.Point(275, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dodaj petenta";
             // 
-            // textBox1
+            // tbImie
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(151, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(320, 22);
-            this.textBox1.TabIndex = 1;
+            this.tbImie.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbImie.Location = new System.Drawing.Point(171, 38);
+            this.tbImie.Name = "tbImie";
+            this.tbImie.Size = new System.Drawing.Size(320, 22);
+            this.tbImie.TabIndex = 0;
             // 
-            // textBox2
+            // tbPesel
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.Location = new System.Drawing.Point(151, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(320, 22);
-            this.textBox2.TabIndex = 2;
+            this.tbPesel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbPesel.Location = new System.Drawing.Point(171, 91);
+            this.tbPesel.MaxLength = 11;
+            this.tbPesel.Name = "tbPesel";
+            this.tbPesel.Size = new System.Drawing.Size(320, 22);
+            this.tbPesel.TabIndex = 3;
+            this.tbPesel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPesel_KeyPress);
             // 
-            // textBox3
+            // tbWojewodztwo
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox3.Location = new System.Drawing.Point(151, 116);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(320, 22);
-            this.textBox3.TabIndex = 3;
+            this.tbWojewodztwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbWojewodztwo.Location = new System.Drawing.Point(171, 117);
+            this.tbWojewodztwo.Name = "tbWojewodztwo";
+            this.tbWojewodztwo.Size = new System.Drawing.Size(320, 22);
+            this.tbWojewodztwo.TabIndex = 4;
             // 
-            // textBox4
+            // tbMiasto
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox4.Location = new System.Drawing.Point(151, 142);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(320, 22);
-            this.textBox4.TabIndex = 4;
+            this.tbMiasto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbMiasto.Location = new System.Drawing.Point(171, 143);
+            this.tbMiasto.Name = "tbMiasto";
+            this.tbMiasto.Size = new System.Drawing.Size(320, 22);
+            this.tbMiasto.TabIndex = 5;
             // 
-            // textBox5
+            // tbKod
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox5.Location = new System.Drawing.Point(151, 168);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(320, 22);
-            this.textBox5.TabIndex = 5;
+            this.tbKod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbKod.Location = new System.Drawing.Point(171, 169);
+            this.tbKod.MaxLength = 5;
+            this.tbKod.Name = "tbKod";
+            this.tbKod.Size = new System.Drawing.Size(320, 22);
+            this.tbKod.TabIndex = 6;
+            this.tbKod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbKod_KeyPress);
             // 
-            // textBox6
+            // tbUlica
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox6.Location = new System.Drawing.Point(151, 194);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(320, 22);
-            this.textBox6.TabIndex = 6;
+            this.tbUlica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbUlica.Location = new System.Drawing.Point(171, 195);
+            this.tbUlica.Name = "tbUlica";
+            this.tbUlica.Size = new System.Drawing.Size(320, 22);
+            this.tbUlica.TabIndex = 7;
             // 
-            // textBox7
+            // tbNrUl
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox7.Location = new System.Drawing.Point(151, 220);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(320, 22);
-            this.textBox7.TabIndex = 7;
+            this.tbNrUl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbNrUl.Location = new System.Drawing.Point(171, 221);
+            this.tbNrUl.MaxLength = 3;
+            this.tbNrUl.Name = "tbNrUl";
+            this.tbNrUl.Size = new System.Drawing.Size(320, 22);
+            this.tbNrUl.TabIndex = 8;
+            this.tbNrUl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNrUl_KeyPress);
             // 
-            // textBox8
+            // tbTelefon
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox8.Location = new System.Drawing.Point(151, 246);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(320, 22);
-            this.textBox8.TabIndex = 8;
+            this.tbTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbTelefon.Location = new System.Drawing.Point(171, 273);
+            this.tbTelefon.MaxLength = 10;
+            this.tbTelefon.Name = "tbTelefon";
+            this.tbTelefon.Size = new System.Drawing.Size(320, 22);
+            this.tbTelefon.TabIndex = 10;
+            this.tbTelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbTelefon_KeyPress);
             // 
-            // textBox9
+            // tbNazwisko
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox9.Location = new System.Drawing.Point(151, 298);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(320, 22);
-            this.textBox9.TabIndex = 9;
+            this.tbNazwisko.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbNazwisko.Location = new System.Drawing.Point(171, 64);
+            this.tbNazwisko.Name = "tbNazwisko";
+            this.tbNazwisko.Size = new System.Drawing.Size(320, 22);
+            this.tbNazwisko.TabIndex = 1;
             // 
-            // textBox10
+            // tbMieszkanie
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox10.Location = new System.Drawing.Point(151, 64);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(320, 22);
-            this.textBox10.TabIndex = 10;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox11.Location = new System.Drawing.Point(151, 272);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(320, 22);
-            this.textBox11.TabIndex = 11;
+            this.tbMieszkanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbMieszkanie.Location = new System.Drawing.Point(171, 247);
+            this.tbMieszkanie.MaxLength = 3;
+            this.tbMieszkanie.Name = "tbMieszkanie";
+            this.tbMieszkanie.Size = new System.Drawing.Size(320, 22);
+            this.tbMieszkanie.TabIndex = 9;
+            this.tbMieszkanie.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMieszkanie_KeyPress);
             // 
             // bZapisz
             // 
             this.bZapisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.bZapisz.Location = new System.Drawing.Point(151, 326);
+            this.bZapisz.Location = new System.Drawing.Point(503, 290);
             this.bZapisz.Name = "bZapisz";
             this.bZapisz.Size = new System.Drawing.Size(75, 32);
             this.bZapisz.TabIndex = 12;
             this.bZapisz.Text = "Zapisz";
             this.bZapisz.UseVisualStyleBackColor = true;
+            this.bZapisz.Click += new System.EventHandler(this.bZapisz_Click);
             // 
             // bAnuluj
             // 
             this.bAnuluj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.bAnuluj.Location = new System.Drawing.Point(232, 326);
+            this.bAnuluj.Location = new System.Drawing.Point(585, 290);
             this.bAnuluj.Name = "bAnuluj";
             this.bAnuluj.Size = new System.Drawing.Size(75, 32);
             this.bAnuluj.TabIndex = 13;
             this.bAnuluj.Text = "Anuluj";
             this.bAnuluj.UseVisualStyleBackColor = true;
+            this.bAnuluj.Click += new System.EventHandler(this.bAnuluj_Click);
             // 
             // label2
             // 
@@ -180,25 +194,25 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label2.Location = new System.Drawing.Point(13, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.Size = new System.Drawing.Size(33, 17);
             this.label2.TabIndex = 14;
-            this.label2.Text = "label2";
+            this.label2.Text = "Imię";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(13, 93);
+            this.label3.Location = new System.Drawing.Point(532, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.Size = new System.Drawing.Size(105, 17);
             this.label3.TabIndex = 15;
-            this.label3.Text = "label3";
+            this.label3.Text = "Data urodzenia";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(12, 119);
+            this.label4.Location = new System.Drawing.Point(12, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 16;
@@ -208,81 +222,81 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(13, 119);
+            this.label5.Location = new System.Drawing.Point(13, 94);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 17);
+            this.label5.Size = new System.Drawing.Size(52, 17);
             this.label5.TabIndex = 17;
-            this.label5.Text = "label5";
+            this.label5.Text = "PESEL";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(12, 145);
+            this.label6.Location = new System.Drawing.Point(12, 120);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 17);
+            this.label6.Size = new System.Drawing.Size(93, 17);
             this.label6.TabIndex = 18;
-            this.label6.Text = "label6";
+            this.label6.Text = "Województwo";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(13, 171);
+            this.label7.Location = new System.Drawing.Point(13, 146);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
+            this.label7.Size = new System.Drawing.Size(49, 17);
             this.label7.TabIndex = 19;
-            this.label7.Text = "label7";
+            this.label7.Text = "Miasto";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(12, 197);
+            this.label8.Location = new System.Drawing.Point(12, 172);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 17);
+            this.label8.Size = new System.Drawing.Size(95, 17);
             this.label8.TabIndex = 20;
-            this.label8.Text = "label8";
+            this.label8.Text = "Kod pocztowy";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label9.Location = new System.Drawing.Point(12, 223);
+            this.label9.Location = new System.Drawing.Point(12, 198);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 17);
+            this.label9.Size = new System.Drawing.Size(39, 17);
             this.label9.TabIndex = 21;
-            this.label9.Text = "label9";
+            this.label9.Text = "Ulica";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label10.Location = new System.Drawing.Point(12, 249);
+            this.label10.Location = new System.Drawing.Point(12, 224);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 17);
+            this.label10.Size = new System.Drawing.Size(55, 17);
             this.label10.TabIndex = 22;
-            this.label10.Text = "label10";
+            this.label10.Text = "Nr ulicy";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label11.Location = new System.Drawing.Point(13, 275);
+            this.label11.Location = new System.Drawing.Point(13, 250);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 17);
+            this.label11.Size = new System.Drawing.Size(97, 17);
             this.label11.TabIndex = 23;
-            this.label11.Text = "label11";
+            this.label11.Text = "Nr mieszkania";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label12.Location = new System.Drawing.Point(13, 301);
+            this.label12.Location = new System.Drawing.Point(13, 276);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(54, 17);
+            this.label12.Size = new System.Drawing.Size(78, 17);
             this.label12.TabIndex = 24;
-            this.label12.Text = "label12";
+            this.label12.Text = "Nr telefonu";
             // 
             // label13
             // 
@@ -290,16 +304,65 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label13.Location = new System.Drawing.Point(13, 67);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 17);
+            this.label13.Size = new System.Drawing.Size(67, 17);
             this.label13.TabIndex = 25;
-            this.label13.Text = "label13";
+            this.label13.Text = "Nazwisko";
+            // 
+            // cbPracownik
+            // 
+            this.cbPracownik.DataSource = this.pracownikBindingSource;
+            this.cbPracownik.DisplayMember = "login";
+            this.cbPracownik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbPracownik.FormattingEnabled = true;
+            this.cbPracownik.Location = new System.Drawing.Point(171, 298);
+            this.cbPracownik.Name = "cbPracownik";
+            this.cbPracownik.Size = new System.Drawing.Size(320, 24);
+            this.cbPracownik.TabIndex = 11;
+            // 
+            // pracownikBindingSource
+            // 
+            this.pracownikBindingSource.DataMember = "pracownik";
+            this.pracownikBindingSource.DataSource = this.mopsDataSetBindingSource;
+            // 
+            // mopsDataSetBindingSource
+            // 
+            this.mopsDataSetBindingSource.DataSource = this.mopsDataSet;
+            this.mopsDataSetBindingSource.Position = 0;
+            // 
+            // mopsDataSet
+            // 
+            this.mopsDataSet.DataSetName = "mopsDataSet";
+            this.mopsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label14.Location = new System.Drawing.Point(12, 302);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(151, 17);
+            this.label14.TabIndex = 28;
+            this.label14.Text = "Pracownik prowadzący";
+            // 
+            // pracownikTableAdapter
+            // 
+            this.pracownikTableAdapter.ClearBeforeFill = true;
+            // 
+            // Kalendarz
+            // 
+            this.Kalendarz.Location = new System.Drawing.Point(503, 67);
+            this.Kalendarz.Name = "Kalendarz";
+            this.Kalendarz.TabIndex = 2;
             // 
             // Dodaj_petenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(488, 385);
+            this.ClientSize = new System.Drawing.Size(673, 329);
+            this.Controls.Add(this.Kalendarz);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.cbPracownik);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -314,22 +377,25 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bAnuluj);
             this.Controls.Add(this.bZapisz);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbMieszkanie);
+            this.Controls.Add(this.tbNazwisko);
+            this.Controls.Add(this.tbTelefon);
+            this.Controls.Add(this.tbNrUl);
+            this.Controls.Add(this.tbUlica);
+            this.Controls.Add(this.tbKod);
+            this.Controls.Add(this.tbMiasto);
+            this.Controls.Add(this.tbWojewodztwo);
+            this.Controls.Add(this.tbPesel);
+            this.Controls.Add(this.tbImie);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "Dodaj_petenta";
             this.ShowIcon = false;
             this.Text = "POMOST Lite";
+            this.Load += new System.EventHandler(this.Dodaj_petenta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pracownikBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,17 +404,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox tbImie;
+        private System.Windows.Forms.TextBox tbPesel;
+        private System.Windows.Forms.TextBox tbWojewodztwo;
+        private System.Windows.Forms.TextBox tbMiasto;
+        private System.Windows.Forms.TextBox tbKod;
+        private System.Windows.Forms.TextBox tbUlica;
+        private System.Windows.Forms.TextBox tbNrUl;
+        private System.Windows.Forms.TextBox tbTelefon;
+        private System.Windows.Forms.TextBox tbNazwisko;
+        private System.Windows.Forms.TextBox tbMieszkanie;
         private System.Windows.Forms.Button bZapisz;
         private System.Windows.Forms.Button bAnuluj;
         private System.Windows.Forms.Label label2;
@@ -363,5 +428,12 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cbPracownik;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.BindingSource mopsDataSetBindingSource;
+        private mopsDataSet mopsDataSet;
+        private System.Windows.Forms.BindingSource pracownikBindingSource;
+        private mopsDataSetTableAdapters.pracownikTableAdapter pracownikTableAdapter;
+        private System.Windows.Forms.MonthCalendar Kalendarz;
     }
 }
