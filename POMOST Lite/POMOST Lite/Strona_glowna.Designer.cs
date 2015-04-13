@@ -52,6 +52,9 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.mopsDataSet1 = new POMOST_Lite.mopsDataSet();
             this.dgvPetent = new System.Windows.Forms.DataGridView();
+            this.petentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mopsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.petentTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.petentTableAdapter();
             this.idpetentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwiskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,9 +68,6 @@
             this.nrmieszkaniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nrtelefonuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpracownikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.petentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mopsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.petentTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.petentTableAdapter();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1)).BeginInit();
@@ -275,10 +275,24 @@
             this.dgvPetent.Size = new System.Drawing.Size(1187, 469);
             this.dgvPetent.TabIndex = 6;
             // 
+            // petentBindingSource
+            // 
+            this.petentBindingSource.DataMember = "petent";
+            this.petentBindingSource.DataSource = this.mopsDataSet1BindingSource;
+            // 
+            // mopsDataSet1BindingSource
+            // 
+            this.mopsDataSet1BindingSource.DataSource = this.mopsDataSet1;
+            this.mopsDataSet1BindingSource.Position = 0;
+            // 
+            // petentTableAdapter
+            // 
+            this.petentTableAdapter.ClearBeforeFill = true;
+            // 
             // idpetentDataGridViewTextBoxColumn
             // 
             this.idpetentDataGridViewTextBoxColumn.DataPropertyName = "id_petent";
-            this.idpetentDataGridViewTextBoxColumn.HeaderText = "id_petent";
+            this.idpetentDataGridViewTextBoxColumn.HeaderText = "id petent";
             this.idpetentDataGridViewTextBoxColumn.Name = "idpetentDataGridViewTextBoxColumn";
             this.idpetentDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -299,7 +313,7 @@
             // durDataGridViewTextBoxColumn
             // 
             this.durDataGridViewTextBoxColumn.DataPropertyName = "d_ur";
-            this.durDataGridViewTextBoxColumn.HeaderText = "d_ur";
+            this.durDataGridViewTextBoxColumn.HeaderText = "data urodzenia";
             this.durDataGridViewTextBoxColumn.Name = "durDataGridViewTextBoxColumn";
             this.durDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -327,7 +341,7 @@
             // kodpocztowyDataGridViewTextBoxColumn
             // 
             this.kodpocztowyDataGridViewTextBoxColumn.DataPropertyName = "kod_pocztowy";
-            this.kodpocztowyDataGridViewTextBoxColumn.HeaderText = "kod_pocztowy";
+            this.kodpocztowyDataGridViewTextBoxColumn.HeaderText = "kod pocztowy";
             this.kodpocztowyDataGridViewTextBoxColumn.Name = "kodpocztowyDataGridViewTextBoxColumn";
             this.kodpocztowyDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -341,44 +355,30 @@
             // nrulicyDataGridViewTextBoxColumn
             // 
             this.nrulicyDataGridViewTextBoxColumn.DataPropertyName = "nr_ulicy";
-            this.nrulicyDataGridViewTextBoxColumn.HeaderText = "nr_ulicy";
+            this.nrulicyDataGridViewTextBoxColumn.HeaderText = "nr ulicy";
             this.nrulicyDataGridViewTextBoxColumn.Name = "nrulicyDataGridViewTextBoxColumn";
             this.nrulicyDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nrmieszkaniaDataGridViewTextBoxColumn
             // 
             this.nrmieszkaniaDataGridViewTextBoxColumn.DataPropertyName = "nr_mieszkania";
-            this.nrmieszkaniaDataGridViewTextBoxColumn.HeaderText = "nr_mieszkania";
+            this.nrmieszkaniaDataGridViewTextBoxColumn.HeaderText = "nr mieszkania";
             this.nrmieszkaniaDataGridViewTextBoxColumn.Name = "nrmieszkaniaDataGridViewTextBoxColumn";
             this.nrmieszkaniaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nrtelefonuDataGridViewTextBoxColumn
             // 
             this.nrtelefonuDataGridViewTextBoxColumn.DataPropertyName = "nr_telefonu";
-            this.nrtelefonuDataGridViewTextBoxColumn.HeaderText = "nr_telefonu";
+            this.nrtelefonuDataGridViewTextBoxColumn.HeaderText = "nr telefonu";
             this.nrtelefonuDataGridViewTextBoxColumn.Name = "nrtelefonuDataGridViewTextBoxColumn";
             this.nrtelefonuDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // idpracownikDataGridViewTextBoxColumn
             // 
             this.idpracownikDataGridViewTextBoxColumn.DataPropertyName = "id_pracownik";
-            this.idpracownikDataGridViewTextBoxColumn.HeaderText = "id_pracownik";
+            this.idpracownikDataGridViewTextBoxColumn.HeaderText = "id pracownik";
             this.idpracownikDataGridViewTextBoxColumn.Name = "idpracownikDataGridViewTextBoxColumn";
             this.idpracownikDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // petentBindingSource
-            // 
-            this.petentBindingSource.DataMember = "petent";
-            this.petentBindingSource.DataSource = this.mopsDataSet1BindingSource;
-            // 
-            // mopsDataSet1BindingSource
-            // 
-            this.mopsDataSet1BindingSource.DataSource = this.mopsDataSet1;
-            this.mopsDataSet1BindingSource.Position = 0;
-            // 
-            // petentTableAdapter
-            // 
-            this.petentTableAdapter.ClearBeforeFill = true;
             // 
             // Strona_glowna
             // 
@@ -432,6 +432,8 @@
         private System.Windows.Forms.BindingSource mopsDataSet1BindingSource;
         private System.Windows.Forms.BindingSource petentBindingSource;
         private mopsDataSetTableAdapters.petentTableAdapter petentTableAdapter;
+        private System.Windows.Forms.ToolStripButton swiadczenia;
+        private System.Windows.Forms.ToolStripButton dokumenty;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpetentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imieDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoDataGridViewTextBoxColumn;
@@ -445,7 +447,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nrmieszkaniaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nrtelefonuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpracownikDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripButton swiadczenia;
-        private System.Windows.Forms.ToolStripButton dokumenty;
     }
 }

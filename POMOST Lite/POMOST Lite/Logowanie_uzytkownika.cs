@@ -16,7 +16,7 @@ namespace POMOST_Lite
 {
     public partial class Logowanie_uzytkownika : Form
     {
-        DataClassesDataContext baza = new DataClassesDataContext();
+
         md5 szyfrowanie = new md5();
         Konfiguracja_bazy konfbaza = new Konfiguracja_bazy();
         Dodaj_uzytkownika adduser = new Dodaj_uzytkownika();
@@ -33,6 +33,7 @@ namespace POMOST_Lite
 
         public void zaloguj_Click(object sender, EventArgs e)
         {
+            DataClassesDataContext baza = new DataClassesDataContext();
             bool log = false;
             foreach (pracownik p in baza.pracowniks)
             {
@@ -55,6 +56,7 @@ namespace POMOST_Lite
 
         private void dodaj_uzytkownika_Click(object sender, EventArgs e)
         {
+            DataClassesDataContext baza = new DataClassesDataContext();
             bool log = false;
 
             foreach (pracownik prac in baza.pracowniks.Where(prac => prac.admin == true))
