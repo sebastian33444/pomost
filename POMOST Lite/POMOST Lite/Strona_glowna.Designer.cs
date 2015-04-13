@@ -166,6 +166,7 @@
             this.dokumenty.Name = "dokumenty";
             this.dokumenty.Size = new System.Drawing.Size(101, 23);
             this.dokumenty.Text = "Dokumenty";
+            this.dokumenty.Click += new System.EventHandler(this.dokumenty_Click);
             // 
             // toolStrip2
             // 

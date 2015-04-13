@@ -74,6 +74,12 @@
     <Compile Include="Dodaj_uzytkownika.Designer.cs">
       <DependentUpon>Dodaj_uzytkownika.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dokumenty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dokumenty.Designer.cs">
+      <DependentUpon>Dokumenty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Konfiguracja_bazy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </None>
     <EmbeddedResource Include="Dodaj_uzytkownika.resx">
       <DependentUpon>Dodaj_uzytkownika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dokumenty.resx">
+      <DependentUpon>Dokumenty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Konfiguracja_bazy.resx">
       <DependentUpon>Konfiguracja_bazy.cs</DependentUpon>

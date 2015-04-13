@@ -76,6 +76,12 @@ namespace POMOST_Lite
             }
         }
 
+        private void dokumenty_Click(object sender, EventArgs e)
+        {
+            Dokumenty d = new Dokumenty();
+            d.Show(); 
+        }
+
 
     }
 }
