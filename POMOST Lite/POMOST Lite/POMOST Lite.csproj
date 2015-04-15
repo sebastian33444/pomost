@@ -86,6 +86,12 @@
     <Compile Include="Dokumenty.Designer.cs">
       <DependentUpon>Dokumenty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edytuj_petenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edytuj_petenta.Designer.cs">
+      <DependentUpon>Edytuj_petenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Konfiguracja_bazy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dokumenty.resx">
       <DependentUpon>Dokumenty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edytuj_petenta.resx">
+      <DependentUpon>Edytuj_petenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Konfiguracja_bazy.resx">
       <DependentUpon>Konfiguracja_bazy.cs</DependentUpon>

@@ -245,6 +245,7 @@ namespace POMOST_Lite
                 }
             }
             baza.SubmitChanges();
+            Close();
         }
 
         private void zapisz_dodaj_Click(object sender, EventArgs e)
@@ -278,6 +279,7 @@ namespace POMOST_Lite
                     prac.admin = false;
                 }
                 baza.SubmitChanges();
+                Close();
                 MessageBox.Show("Pomyślnie dodano użytkownika.");
                 nazwa_uzytkownika.Enabled = false;
                 haslol.Enabled = false;
@@ -290,7 +292,6 @@ namespace POMOST_Lite
                 lbPracownicy.Enabled = true;
                 dodaj.Enabled = true;
                 wczytajOsoby();
-
             }
             else
             {

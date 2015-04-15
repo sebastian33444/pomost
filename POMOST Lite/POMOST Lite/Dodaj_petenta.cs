@@ -94,6 +94,7 @@ namespace POMOST_Lite
                 p.id_pracownik = prac.id_pracownik;
             }
             baza.SubmitChanges();
+            Close();
             MessageBox.Show("Pomyślnie dodano petenta.");
         }
 

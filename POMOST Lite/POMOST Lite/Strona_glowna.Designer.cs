@@ -138,6 +138,7 @@
             this.edytuj_petenta.Name = "edytuj_petenta";
             this.edytuj_petenta.Size = new System.Drawing.Size(118, 23);
             this.edytuj_petenta.Text = "Edytuj petenta";
+            this.edytuj_petenta.Click += new System.EventHandler(this.edytuj_petenta_Click);
             // 
             // wyszukaj
             // 
@@ -270,6 +271,7 @@
             this.dgvPetent.DataSource = this.petentBindingSource;
             this.dgvPetent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPetent.Location = new System.Drawing.Point(0, 51);
+            this.dgvPetent.MultiSelect = false;
             this.dgvPetent.Name = "dgvPetent";
             this.dgvPetent.ReadOnly = true;
             this.dgvPetent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -377,6 +379,8 @@
             // 
             this.mopsDataSet1BindingSource.DataSource = this.mopsDataSet1;
             this.mopsDataSet1BindingSource.Position = 0;
+            
+            
             // 
             // petentTableAdapter
             // 

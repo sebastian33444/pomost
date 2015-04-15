@@ -23,7 +23,8 @@ namespace POMOST_Lite
         public Strona_glowna(string p)
         {
             InitializeComponent();
-
+            this.dgvPetent.ClearSelection();
+            this.dgvPetent.Refresh();
             this.p = p;
            foreach(pracownik prac in baza.pracowniks.Where(prac => prac.login == p))
            {
@@ -37,7 +38,9 @@ namespace POMOST_Lite
 
         private void Wyloguj_Click(object sender, EventArgs e)
         {
-
+            Logowanie_uzytkownika log = new Logowanie_uzytkownika();
+            log.Show();
+            this.Hide();
         }
 
         private void Strona_glowna_FormClosed(object sender, FormClosedEventArgs e)
@@ -71,7 +74,7 @@ namespace POMOST_Lite
             }
             catch
             {
-                MessageBox.Show("Nie można usunąć pracownika, do którego są podpięci petenci, dokumenty lub świadczenia.  Nie można usunąć głównego administratora.");
+                MessageBox.Show("Nie można usunąć petenta, do którego są podpięte dokumenty i świadczenia.");
             }
         }
 
@@ -90,7 +93,13 @@ namespace POMOST_Lite
         private void dgvPetent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             zaznacz = dgvPetent.Rows[e.RowIndex].Cells["idpetentDataGridViewTextBoxColumn"].Value.ToString();
-            MessageBox.Show(zaznacz);
+            //MessageBox.Show(zaznacz);
+        }
+
+        private void edytuj_petenta_Click(object sender, EventArgs e)
+        {
+            Edytuj_petenta edit = new Edytuj_petenta(zaznacz, p);
+            edit.Show();
         }
 
 
