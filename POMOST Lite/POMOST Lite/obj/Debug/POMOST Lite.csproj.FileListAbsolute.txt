@@ -224,3 +224,21 @@ C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe.la
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty.resources
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_petenta.resources
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Edytuj_petenta.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe.config
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.pdb
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\bin\Debug\pl-PL\POMOST Lite.resources.dll
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_petenta.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_uzytkownika.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Edytuj_petenta.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Konfiguracja_bazy.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Properties.Resources.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.exe
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.pdb

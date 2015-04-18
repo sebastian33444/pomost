@@ -33,6 +33,9 @@
             this.Kalendarz = new System.Windows.Forms.MonthCalendar();
             this.label14 = new System.Windows.Forms.Label();
             this.cbPracownik = new System.Windows.Forms.ComboBox();
+            this.pracownikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mopsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mopsDataSet = new POMOST_Lite.mopsDataSet();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -57,13 +60,10 @@
             this.tbWojewodztwo = new System.Windows.Forms.TextBox();
             this.tbPesel = new System.Windows.Forms.TextBox();
             this.tbImie = new System.Windows.Forms.TextBox();
-            this.mopsDataSet = new POMOST_Lite.mopsDataSet();
-            this.mopsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pracownikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pracownikTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.pracownikTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pracownikBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label15
@@ -79,6 +79,7 @@
             // Kalendarz
             // 
             this.Kalendarz.Location = new System.Drawing.Point(503, 66);
+            this.Kalendarz.MaxSelectionCount = 1;
             this.Kalendarz.Name = "Kalendarz";
             this.Kalendarz.TabIndex = 33;
             // 
@@ -102,6 +103,21 @@
             this.cbPracownik.Name = "cbPracownik";
             this.cbPracownik.Size = new System.Drawing.Size(320, 24);
             this.cbPracownik.TabIndex = 42;
+            // 
+            // pracownikBindingSource
+            // 
+            this.pracownikBindingSource.DataMember = "pracownik";
+            this.pracownikBindingSource.DataSource = this.mopsDataSetBindingSource;
+            // 
+            // mopsDataSetBindingSource
+            // 
+            this.mopsDataSetBindingSource.DataSource = this.mopsDataSet;
+            this.mopsDataSetBindingSource.Position = 0;
+            // 
+            // mopsDataSet
+            // 
+            this.mopsDataSet.DataSetName = "mopsDataSet";
+            this.mopsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label13
             // 
@@ -335,21 +351,6 @@
             this.tbImie.Size = new System.Drawing.Size(320, 22);
             this.tbImie.TabIndex = 31;
             // 
-            // mopsDataSet
-            // 
-            this.mopsDataSet.DataSetName = "mopsDataSet";
-            this.mopsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mopsDataSetBindingSource
-            // 
-            this.mopsDataSetBindingSource.DataSource = this.mopsDataSet;
-            this.mopsDataSetBindingSource.Position = 0;
-            // 
-            // pracownikBindingSource
-            // 
-            this.pracownikBindingSource.DataMember = "pracownik";
-            this.pracownikBindingSource.DataSource = this.mopsDataSetBindingSource;
-            // 
             // pracownikTableAdapter
             // 
             this.pracownikTableAdapter.ClearBeforeFill = true;
@@ -393,9 +394,9 @@
             this.ShowIcon = false;
             this.Text = "POMOST Lite";
             this.Load += new System.EventHandler(this.Edytuj_petenta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pracownikBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

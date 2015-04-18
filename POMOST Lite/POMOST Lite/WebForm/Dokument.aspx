@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Dokument.aspx.cs" Inherits="Dokument" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Dokument.aspx.cs" Inherits="Dokument" ValidateRequest="false" %>
 
 <!DOCTYPE html>
 
@@ -48,9 +48,20 @@
 <body>
     <form id="form1" runat="server" >
         <textarea id="elm1" name="elm1" style="width: 100%; height: 330px;" runat="server"> Jakaś zawartość   </textarea>
-        <br />        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <br />        
+        <br />
+        <asp:RadioButtonList ID="RBLista" runat="server">
+            <asp:ListItem>wniosek</asp:ListItem>
+            <asp:ListItem>odwołanie</asp:ListItem>
+            <asp:ListItem>decyzja</asp:ListItem>
+        </asp:RadioButtonList>
+        <br />
         <input type="submit" name="save" value="Zapisz" />
-	<input type="reset" name="reset" value="Reset" />    
+	<input type="reset" name="reset" value="Reset" />
+        <br />
+        <br />
+        <asp:Button ID="BZapisz_do_bazy" runat="server" OnClick="BZapisz_do_bazy_Click" Text="Zapisz do bazy" />
+        <br />
      </form>
     
     </body>

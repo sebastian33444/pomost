@@ -20,12 +20,15 @@ namespace POMOST_Lite
         private int id_prac;
         private string zaznacz;
 
+
         public Strona_glowna(string p)
         {
             InitializeComponent();
             this.dgvPetent.ClearSelection();
             this.dgvPetent.Refresh();
             this.p = p;
+          
+
            foreach(pracownik prac in baza.pracowniks.Where(prac => prac.login == p))
            {
                tslabelLogin.Text = prac.login.ToString();
@@ -93,7 +96,6 @@ namespace POMOST_Lite
         private void dgvPetent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             zaznacz = dgvPetent.Rows[e.RowIndex].Cells["idpetentDataGridViewTextBoxColumn"].Value.ToString();
-            //MessageBox.Show(zaznacz);
         }
 
         private void edytuj_petenta_Click(object sender, EventArgs e)
@@ -102,6 +104,6 @@ namespace POMOST_Lite
             edit.Show();
         }
 
-
+        
     }
 }

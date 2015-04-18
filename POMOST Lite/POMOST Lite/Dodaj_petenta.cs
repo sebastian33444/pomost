@@ -86,8 +86,8 @@ namespace POMOST_Lite
             p.miasto = tbMiasto.Text;
             p.kod_pocztowy = tbKod.Text;
             p.ulica = tbUlica.Text;
-            p.nr_ulicy = Convert.ToInt32(tbNrUl.Text); //problem
-            p.nr_mieszkania = Convert.ToInt32(tbMieszkanie.Text); //problem
+            p.nr_ulicy = Convert.ToInt32(tbNrUl.Text); 
+            p.nr_mieszkania = Convert.ToInt32(tbMieszkanie.Text);
             p.nr_telefonu = tbTelefon.Text;
             foreach (pracownik prac in baza.pracowniks.Where(prac => prac.login == cbPracownik.Text))
             {

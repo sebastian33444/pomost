@@ -15,6 +15,8 @@ namespace POMOST_Lite
         private string id_petent;
         private string id_prac;
         DataClassesDataContext baza = new DataClassesDataContext();
+
+        
         public Edytuj_petenta(string id_petent, string id_prac)
         {
             InitializeComponent();
@@ -45,6 +47,7 @@ namespace POMOST_Lite
                 tbNrUl.Text = p.nr_ulicy.ToString();
                 tbMieszkanie.Text = p.nr_mieszkania.ToString();
                 tbTelefon.Text = p.nr_telefonu;
+                Kalendarz.SelectionStart = p.d_ur;
             }
         }
 
@@ -107,6 +110,7 @@ namespace POMOST_Lite
                 p.nr_ulicy = Convert.ToInt32(tbNrUl.Text);
                 p.nr_mieszkania = Convert.ToInt32(tbMieszkanie.Text);
                 p.nr_telefonu = tbTelefon.Text;
+                p.d_ur = Kalendarz.SelectionStart;
                 foreach (pracownik prac in baza.pracowniks.Where(prac => prac.login == cbPracownik.Text))
                 {
                     p.id_pracownik = prac.id_pracownik;
@@ -123,7 +127,6 @@ namespace POMOST_Lite
             this.pracownikTableAdapter.Fill(this.mopsDataSet.pracownik);
             this.cbPracownik.Text = null;
             this.cbPracownik.SelectedText = id_prac;
-
         }
     }
 }

@@ -24,7 +24,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebForm(4)", "http://localh
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		SlnRelativePath = "POMOST Lite\WebForm\"
-		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
 Global
