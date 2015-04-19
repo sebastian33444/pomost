@@ -244,3 +244,4 @@ C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.exe
 C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.pdb
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Wyszukaj.resources
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_dokumenty.resources
+D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_swiadczenia.resources

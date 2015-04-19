@@ -36,7 +36,6 @@
             this.nazwa_uzytkownika = new System.Windows.Forms.TextBox();
             this.haslo = new System.Windows.Forms.TextBox();
             this.zaloguj = new System.Windows.Forms.Button();
-            this.dodaj_uzytkownika = new System.Windows.Forms.Button();
             this.KonfBazy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -82,13 +81,6 @@
             this.zaloguj.UseVisualStyleBackColor = true;
             this.zaloguj.Click += new System.EventHandler(this.zaloguj_Click);
             // 
-            // dodaj_uzytkownika
-            // 
-            resources.ApplyResources(this.dodaj_uzytkownika, "dodaj_uzytkownika");
-            this.dodaj_uzytkownika.Name = "dodaj_uzytkownika";
-            this.dodaj_uzytkownika.UseVisualStyleBackColor = true;
-            this.dodaj_uzytkownika.Click += new System.EventHandler(this.dodaj_uzytkownika_Click);
-            // 
             // KonfBazy
             // 
             resources.ApplyResources(this.KonfBazy, "KonfBazy");
@@ -102,7 +94,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Controls.Add(this.KonfBazy);
-            this.Controls.Add(this.dodaj_uzytkownika);
             this.Controls.Add(this.haslo);
             this.Controls.Add(this.nazwa_uzytkownika);
             this.Controls.Add(this.label_haslo);
@@ -127,7 +118,6 @@
         private System.Windows.Forms.Label label_haslo;
         public System.Windows.Forms.TextBox nazwa_uzytkownika;
         public System.Windows.Forms.TextBox haslo;
-        private System.Windows.Forms.Button dodaj_uzytkownika;
         private System.Windows.Forms.Button KonfBazy;
     }
 }

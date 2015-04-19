@@ -59,8 +59,7 @@ namespace POMOST_Lite
                 dgvPetent.DataSource = from p in baza.petents
                                        where p.id_pracownik == id_prac
                                        select p;
-            }
-            
+            }  
         }
 
         private void usun_petenta_Click(object sender, EventArgs e)
@@ -144,6 +143,28 @@ namespace POMOST_Lite
         {
             Dodaj_dokumenty dok = new Dodaj_dokumenty(zaznacz);
             dok.Show();
+        }
+
+        private void Uzytkownicy_Click(object sender, EventArgs e)
+        {
+            bool log = false;
+            foreach (pracownik prac in baza.pracowniks.Where(prac => prac.login == p))
+            {
+                if (prac.admin == true)
+                {
+                    log = true;
+                }
+            }
+            if (log == true)
+            {
+                this.Hide();
+                Dodaj_uzytkownika adduser = new Dodaj_uzytkownika();
+                adduser.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Brak uprawnień!");
+            }
         }
 
     }

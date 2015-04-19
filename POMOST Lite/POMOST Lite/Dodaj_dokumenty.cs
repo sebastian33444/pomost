@@ -32,7 +32,7 @@ namespace POMOST_Lite
 
         private void tsbDodaj_Click(object sender, EventArgs e)
         {
-
+            ////dodać kod!
         }
 
         private void tsbUsun_Click(object sender, EventArgs e)
@@ -46,13 +46,13 @@ namespace POMOST_Lite
             }
             catch
             {
-              
+                MessageBox.Show("Nie można usunąć dokumentu, który ma podpięte świadczenie.");
             }
         }
 
         private void tsbEdytuj_Click(object sender, EventArgs e)
         {
-
+            ////dodać kod!
         }
 
         private void tsbZamknij_Click(object sender, EventArgs e)

@@ -66,7 +66,7 @@
             this.tsbZamknij});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(669, 26);
+            this.toolStrip1.Size = new System.Drawing.Size(609, 26);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -145,12 +145,12 @@
             this.dgvDokumenty.DataSource = this.dokumentyBindingSource1;
             this.dgvDokumenty.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDokumenty.Location = new System.Drawing.Point(0, 26);
-            this.dgvDokumenty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDokumenty.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDokumenty.MultiSelect = false;
             this.dgvDokumenty.Name = "dgvDokumenty";
             this.dgvDokumenty.ReadOnly = true;
             this.dgvDokumenty.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDokumenty.Size = new System.Drawing.Size(669, 343);
+            this.dgvDokumenty.Size = new System.Drawing.Size(609, 343);
             this.dgvDokumenty.TabIndex = 1;
             this.dgvDokumenty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDokumenty_CellClick);
             // 
@@ -162,7 +162,7 @@
             // iddokumentuDataGridViewTextBoxColumn
             // 
             this.iddokumentuDataGridViewTextBoxColumn.DataPropertyName = "id_dokumentu";
-            this.iddokumentuDataGridViewTextBoxColumn.HeaderText = "id_dokumentu";
+            this.iddokumentuDataGridViewTextBoxColumn.HeaderText = "id dokumentu";
             this.iddokumentuDataGridViewTextBoxColumn.Name = "iddokumentuDataGridViewTextBoxColumn";
             this.iddokumentuDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -176,7 +176,7 @@
             // typdokumentuDataGridViewTextBoxColumn
             // 
             this.typdokumentuDataGridViewTextBoxColumn.DataPropertyName = "typ_dokumentu";
-            this.typdokumentuDataGridViewTextBoxColumn.HeaderText = "typ_dokumentu";
+            this.typdokumentuDataGridViewTextBoxColumn.HeaderText = "typ dokumentu";
             this.typdokumentuDataGridViewTextBoxColumn.Name = "typdokumentuDataGridViewTextBoxColumn";
             this.typdokumentuDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -186,6 +186,7 @@
             this.zawartośćdokumentuDataGridViewTextBoxColumn.HeaderText = "zawartość_dokumentu";
             this.zawartośćdokumentuDataGridViewTextBoxColumn.Name = "zawartośćdokumentuDataGridViewTextBoxColumn";
             this.zawartośćdokumentuDataGridViewTextBoxColumn.ReadOnly = true;
+            this.zawartośćdokumentuDataGridViewTextBoxColumn.Visible = false;
             // 
             // idpetentDataGridViewTextBoxColumn
             // 
@@ -193,6 +194,7 @@
             this.idpetentDataGridViewTextBoxColumn.HeaderText = "id_petent";
             this.idpetentDataGridViewTextBoxColumn.Name = "idpetentDataGridViewTextBoxColumn";
             this.idpetentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idpetentDataGridViewTextBoxColumn.Visible = false;
             // 
             // idpracownikDataGridViewTextBoxColumn
             // 
@@ -200,13 +202,14 @@
             this.idpracownikDataGridViewTextBoxColumn.HeaderText = "id_pracownik";
             this.idpracownikDataGridViewTextBoxColumn.Name = "idpracownikDataGridViewTextBoxColumn";
             this.idpracownikDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idpracownikDataGridViewTextBoxColumn.Visible = false;
             // 
             // Dodaj_dokumenty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(669, 369);
+            this.ClientSize = new System.Drawing.Size(609, 369);
             this.Controls.Add(this.dgvDokumenty);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -238,12 +241,12 @@
         private System.Windows.Forms.BindingSource dokumentyBindingSource;
         private mopsDataSetTableAdapters.dokumentyTableAdapter dokumentyTableAdapter;
         private System.Windows.Forms.DataGridView dgvDokumenty;
+        private System.Windows.Forms.BindingSource dokumentyBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddokumentuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typdokumentuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn zawartośćdokumentuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpetentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpracownikDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource dokumentyBindingSource1;
     }
 }

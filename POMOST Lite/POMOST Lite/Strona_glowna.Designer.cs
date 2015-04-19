@@ -52,9 +52,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.mopsDataSet1 = new POMOST_Lite.mopsDataSet();
             this.dgvPetent = new System.Windows.Forms.DataGridView();
-            this.petentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mopsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.petentTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.petentTableAdapter();
             this.idpetentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwiskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +65,10 @@
             this.nrmieszkaniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nrtelefonuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpracownikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.petentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mopsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.petentTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.petentTableAdapter();
+            this.Uzytkownicy = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1)).BeginInit();
@@ -99,7 +100,8 @@
             // menu
             // 
             this.menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Wyloguj});
+            this.Wyloguj,
+            this.Uzytkownicy});
             this.menu.Image = ((System.Drawing.Image)(resources.GetObject("menu.Image")));
             this.menu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.menu.Name = "menu";
@@ -109,7 +111,7 @@
             // Wyloguj
             // 
             this.Wyloguj.Name = "Wyloguj";
-            this.Wyloguj.Size = new System.Drawing.Size(128, 24);
+            this.Wyloguj.Size = new System.Drawing.Size(155, 24);
             this.Wyloguj.Text = "Wyloguj";
             this.Wyloguj.Click += new System.EventHandler(this.Wyloguj_Click);
             // 
@@ -282,20 +284,6 @@
             this.dgvPetent.TabIndex = 6;
             this.dgvPetent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPetent_CellClick);
             // 
-            // petentBindingSource
-            // 
-            this.petentBindingSource.DataMember = "petent";
-            this.petentBindingSource.DataSource = this.mopsDataSet1BindingSource;
-            // 
-            // mopsDataSet1BindingSource
-            // 
-            this.mopsDataSet1BindingSource.DataSource = this.mopsDataSet1;
-            this.mopsDataSet1BindingSource.Position = 0;
-            // 
-            // petentTableAdapter
-            // 
-            this.petentTableAdapter.ClearBeforeFill = true;
-            // 
             // idpetentDataGridViewTextBoxColumn
             // 
             this.idpetentDataGridViewTextBoxColumn.DataPropertyName = "id_petent";
@@ -389,6 +377,27 @@
             this.idpracownikDataGridViewTextBoxColumn.ReadOnly = true;
             this.idpracownikDataGridViewTextBoxColumn.Visible = false;
             // 
+            // petentBindingSource
+            // 
+            this.petentBindingSource.DataMember = "petent";
+            this.petentBindingSource.DataSource = this.mopsDataSet1BindingSource;
+            // 
+            // mopsDataSet1BindingSource
+            // 
+            this.mopsDataSet1BindingSource.DataSource = this.mopsDataSet1;
+            this.mopsDataSet1BindingSource.Position = 0;
+            // 
+            // petentTableAdapter
+            // 
+            this.petentTableAdapter.ClearBeforeFill = true;
+            // 
+            // Uzytkownicy
+            // 
+            this.Uzytkownicy.Name = "Uzytkownicy";
+            this.Uzytkownicy.Size = new System.Drawing.Size(155, 24);
+            this.Uzytkownicy.Text = "Użytkownicy";
+            this.Uzytkownicy.Click += new System.EventHandler(this.Uzytkownicy_Click);
+            // 
             // Strona_glowna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,5 +466,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nrmieszkaniaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nrtelefonuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpracownikDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripMenuItem Uzytkownicy;
     }
 }

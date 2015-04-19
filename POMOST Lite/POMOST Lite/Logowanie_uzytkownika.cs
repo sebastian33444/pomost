@@ -54,30 +54,6 @@ namespace POMOST_Lite
             }
         }
 
-        private void dodaj_uzytkownika_Click(object sender, EventArgs e)
-        {
-            DataClassesDataContext baza = new DataClassesDataContext();
-            bool log = false;
-
-            foreach (pracownik prac in baza.pracowniks.Where(prac => prac.admin == true))
-            {
-                if (prac.login == nazwa_uzytkownika.Text && prac.haslo.ToUpper() == szyfrowanie.SzyfrujMD5(haslo.Text))
-                {
-                    log = true;
-                }
-            }
-            if (log == true)
-            {
-
-                this.Hide();
-                adduser.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Brak uprawnień! \nSprawdź login i hasło.");
-            }
-        }
-
         private void KonfBazy_Click(object sender, EventArgs e)
         {
             this.Hide();

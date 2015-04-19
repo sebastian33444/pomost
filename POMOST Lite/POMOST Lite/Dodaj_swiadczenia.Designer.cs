@@ -37,8 +37,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbZamknij = new System.Windows.Forms.ToolStripButton();
             this.dgvSwiadczenie = new System.Windows.Forms.DataGridView();
-            this.mopsDataSet = new POMOST_Lite.mopsDataSet();
             this.świadczenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mopsDataSet = new POMOST_Lite.mopsDataSet();
             this.świadczenieTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.świadczenieTableAdapter();
             this.idświadczeniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kwotaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,8 +48,8 @@
             this.iddokumentuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSwiadczenie)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.świadczenieBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -64,7 +64,7 @@
             this.tsbZamknij});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(826, 26);
+            this.toolStrip1.Size = new System.Drawing.Size(569, 26);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -76,6 +76,7 @@
             this.tsbDodaj.Name = "tsbDodaj";
             this.tsbDodaj.Size = new System.Drawing.Size(140, 23);
             this.tsbDodaj.Text = "Dodaj świadczenie";
+            this.tsbDodaj.Click += new System.EventHandler(this.tsbDodaj_Click);
             // 
             // tsbUsun
             // 
@@ -85,6 +86,7 @@
             this.tsbUsun.Name = "tsbUsun";
             this.tsbUsun.Size = new System.Drawing.Size(136, 23);
             this.tsbUsun.Text = "Usuń świadczenie";
+            this.tsbUsun.Click += new System.EventHandler(this.tsbUsun_Click);
             // 
             // tsbEdytuj
             // 
@@ -94,6 +96,7 @@
             this.tsbEdytuj.Name = "tsbEdytuj";
             this.tsbEdytuj.Size = new System.Drawing.Size(142, 23);
             this.tsbEdytuj.Text = "Edytuj świadczenie";
+            this.tsbEdytuj.Click += new System.EventHandler(this.tsbEdytuj_Click);
             // 
             // toolStripSeparator1
             // 
@@ -107,6 +110,7 @@
             this.tsbZamknij.Name = "tsbZamknij";
             this.tsbZamknij.Size = new System.Drawing.Size(70, 23);
             this.tsbZamknij.Text = "Zamknij";
+            this.tsbZamknij.Click += new System.EventHandler(this.tsbZamknij_Click);
             // 
             // dgvSwiadczenie
             // 
@@ -129,18 +133,19 @@
             this.dgvSwiadczenie.Name = "dgvSwiadczenie";
             this.dgvSwiadczenie.ReadOnly = true;
             this.dgvSwiadczenie.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSwiadczenie.Size = new System.Drawing.Size(826, 426);
+            this.dgvSwiadczenie.Size = new System.Drawing.Size(569, 426);
             this.dgvSwiadczenie.TabIndex = 2;
-            // 
-            // mopsDataSet
-            // 
-            this.mopsDataSet.DataSetName = "mopsDataSet";
-            this.mopsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dgvSwiadczenie.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSwiadczenie_CellClick);
             // 
             // świadczenieBindingSource
             // 
             this.świadczenieBindingSource.DataMember = "świadczenie";
             this.świadczenieBindingSource.DataSource = this.mopsDataSet;
+            // 
+            // mopsDataSet
+            // 
+            this.mopsDataSet.DataSetName = "mopsDataSet";
+            this.mopsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // świadczenieTableAdapter
             // 
@@ -152,6 +157,7 @@
             this.idświadczeniaDataGridViewTextBoxColumn.HeaderText = "id_świadczenia";
             this.idświadczeniaDataGridViewTextBoxColumn.Name = "idświadczeniaDataGridViewTextBoxColumn";
             this.idświadczeniaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idświadczeniaDataGridViewTextBoxColumn.Visible = false;
             // 
             // kwotaDataGridViewTextBoxColumn
             // 
@@ -180,11 +186,12 @@
             this.idpracownikDataGridViewTextBoxColumn.HeaderText = "id_pracownik";
             this.idpracownikDataGridViewTextBoxColumn.Name = "idpracownikDataGridViewTextBoxColumn";
             this.idpracownikDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idpracownikDataGridViewTextBoxColumn.Visible = false;
             // 
             // iddokumentuDataGridViewTextBoxColumn
             // 
             this.iddokumentuDataGridViewTextBoxColumn.DataPropertyName = "id_dokumentu";
-            this.iddokumentuDataGridViewTextBoxColumn.HeaderText = "id_dokumentu";
+            this.iddokumentuDataGridViewTextBoxColumn.HeaderText = "id dokumentu";
             this.iddokumentuDataGridViewTextBoxColumn.Name = "iddokumentuDataGridViewTextBoxColumn";
             this.iddokumentuDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -193,7 +200,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(826, 452);
+            this.ClientSize = new System.Drawing.Size(569, 452);
             this.Controls.Add(this.dgvSwiadczenie);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Dodaj_swiadczenia";
@@ -203,8 +210,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSwiadczenie)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.świadczenieBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

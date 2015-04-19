@@ -132,10 +132,12 @@ namespace POMOST_Lite
                 if (p.admin == true)
                 {
                     checkBoxAdmin.Checked = true;
+                    lCzyAdmin.Text = "TAK";
                 }
                 else
                 {
                     checkBoxAdmin.Checked = false;
+                    lCzyAdmin.Text = "NIE";
                 }
         }
         }

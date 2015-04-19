@@ -59,6 +59,8 @@
             this.pracownikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pracownikTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.pracownikTableAdapter();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lCzyAdmin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pracownikBindingSource)).BeginInit();
@@ -68,7 +70,7 @@
             // 
             this.dodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dodaj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dodaj.Location = new System.Drawing.Point(474, 257);
+            this.dodaj.Location = new System.Drawing.Point(473, 285);
             this.dodaj.Name = "dodaj";
             this.dodaj.Size = new System.Drawing.Size(75, 32);
             this.dodaj.TabIndex = 0;
@@ -121,7 +123,7 @@
             // 
             this.wroc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.wroc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.wroc.Location = new System.Drawing.Point(551, 294);
+            this.wroc.Location = new System.Drawing.Point(550, 322);
             this.wroc.Name = "wroc";
             this.wroc.Size = new System.Drawing.Size(75, 32);
             this.wroc.TabIndex = 3;
@@ -220,7 +222,7 @@
             // 
             this.edytuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.edytuj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.edytuj.Location = new System.Drawing.Point(474, 294);
+            this.edytuj.Location = new System.Drawing.Point(473, 322);
             this.edytuj.Name = "edytuj";
             this.edytuj.Size = new System.Drawing.Size(76, 32);
             this.edytuj.TabIndex = 2;
@@ -232,7 +234,7 @@
             // 
             this.usun.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.usun.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.usun.Location = new System.Drawing.Point(551, 256);
+            this.usun.Location = new System.Drawing.Point(550, 284);
             this.usun.Name = "usun";
             this.usun.Size = new System.Drawing.Size(76, 32);
             this.usun.TabIndex = 1;
@@ -246,7 +248,7 @@
             this.lbPracownicy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbPracownicy.FormattingEnabled = true;
             this.lbPracownicy.ItemHeight = 16;
-            this.lbPracownicy.Location = new System.Drawing.Point(474, 58);
+            this.lbPracownicy.Location = new System.Drawing.Point(473, 55);
             this.lbPracownicy.Name = "lbPracownicy";
             this.lbPracownicy.Size = new System.Drawing.Size(153, 196);
             this.lbPracownicy.TabIndex = 35;
@@ -354,18 +356,41 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(474, 39);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label6.Location = new System.Drawing.Point(471, 38);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 13);
+            this.label6.Size = new System.Drawing.Size(85, 17);
             this.label6.TabIndex = 36;
-            this.label6.Text = "Użytkownik:";
+            this.label6.Text = "Użytkownicy";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.Location = new System.Drawing.Point(474, 258);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 17);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Administrator:";
+            // 
+            // lCzyAdmin
+            // 
+            this.lCzyAdmin.AutoSize = true;
+            this.lCzyAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lCzyAdmin.Location = new System.Drawing.Point(575, 257);
+            this.lCzyAdmin.Name = "lCzyAdmin";
+            this.lCzyAdmin.Size = new System.Drawing.Size(23, 17);
+            this.lCzyAdmin.TabIndex = 38;
+            this.lCzyAdmin.Text = "---";
             // 
             // Dodaj_uzytkownika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(639, 328);
+            this.ClientSize = new System.Drawing.Size(639, 360);
+            this.Controls.Add(this.lCzyAdmin);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.hasloponl);
             this.Controls.Add(this.label2);
@@ -439,5 +464,7 @@
         private System.Windows.Forms.BindingSource pracownikBindingSource;
         private mopsDataSetTableAdapters.pracownikTableAdapter pracownikTableAdapter;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lCzyAdmin;
     }
 }
