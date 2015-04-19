@@ -12,16 +12,61 @@ namespace POMOST_Lite
 {
     public partial class Dodaj_dokumenty : Form
     {
-        public Dodaj_dokumenty()
+        DataClassesDataContext baza = new DataClassesDataContext();
+        private string zaznacz;
+        private string zaznaczony_dok;
+
+        public Dodaj_dokumenty(string zaznacz)
         {
             InitializeComponent();
+            this.zaznacz = zaznacz;
+            Shown += delegate { dgvDokumenty.ClearSelection(); };
         }
 
         private void Dodaj_dokumenty_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'mopsDataSet.dokumenty' table. You can move, or remove it, as needed.
-            this.dokumentyTableAdapter.Fill(this.mopsDataSet.dokumenty);
+             dgvDokumenty.DataSource = from p in baza.dokumenties
+                                       where p.id_petent == Convert.ToInt32(zaznacz)
+                                       select p;
+        }
 
+        private void tsbDodaj_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbUsun_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var dokasacji = from p in baza.dokumenties where p.id_dokumentu == Convert.ToInt32(zaznaczony_dok) select p;
+                baza.dokumenties.DeleteAllOnSubmit(dokasacji);
+                baza.SubmitChanges();
+                dgvDokumenty.Rows.RemoveAt(this.dgvDokumenty.CurrentCell.RowIndex);
+            }
+            catch
+            {
+              
+            }
+        }
+
+        private void tsbEdytuj_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbZamknij_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void dgvDokumenty_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                zaznaczony_dok = dgvDokumenty.Rows[e.RowIndex].Cells["iddokumentuDataGridViewTextBoxColumn"].Value.ToString();
+            }
+            catch { }
         }
     }
 }

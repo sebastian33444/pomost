@@ -106,7 +106,6 @@ namespace POMOST_Lite
 
         private void Dodaj_petenta_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'mopsDataSet.pracownik' table. You can move, or remove it, as needed.
             this.pracownikTableAdapter.Fill(this.mopsDataSet.pracownik);
             this.cbPracownik.Text = null;
             this.cbPracownik.SelectedText = p;

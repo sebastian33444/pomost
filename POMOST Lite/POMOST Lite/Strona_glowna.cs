@@ -25,7 +25,7 @@ namespace POMOST_Lite
         {
             InitializeComponent();
             this.p = p;
-
+            Shown += delegate { dgvPetent.ClearSelection(); };
            foreach(pracownik prac in baza.pracowniks.Where(prac => prac.login == p))
            {
                tslabelLogin.Text = prac.login.ToString();
@@ -60,6 +60,7 @@ namespace POMOST_Lite
                                        where p.id_pracownik == id_prac
                                        select p;
             }
+            
         }
 
         private void usun_petenta_Click(object sender, EventArgs e)
@@ -86,9 +87,16 @@ namespace POMOST_Lite
 
         private void add_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide();
-            Strona_glowna str = new Strona_glowna(p);
-            str.Show();
+            if (admin == true)
+            {
+                this.petentTableAdapter.Fill(this.mopsDataSet1.petent);
+            }
+            else
+            {
+                dgvPetent.DataSource = from p in baza.petents
+                                       where p.id_pracownik == id_prac
+                                       select p;
+            }
         }
 
         private void dgvPetent_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -109,25 +117,33 @@ namespace POMOST_Lite
 
         private void edit_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide();
-            Strona_glowna str = new Strona_glowna(p);
-            str.Show();
+            if (admin == true)
+            {
+                this.petentTableAdapter.Fill(this.mopsDataSet1.petent);
+            }
+            else
+            {
+                dgvPetent.DataSource = from p in baza.petents
+                                       where p.id_pracownik == id_prac
+                                       select p;
+            }
         }
 
         private void wyszukaj_Click(object sender, EventArgs e)
         {
-
+            ////dodać kod !
         }
 
         private void swiadczenia_Click(object sender, EventArgs e)
         {
-
+            Dodaj_swiadczenia swiad = new Dodaj_swiadczenia(zaznacz);
+            swiad.Show();
         }
 
         private void dokumenty_Click(object sender, EventArgs e)
         {
-            Dokumenty d = new Dokumenty();
-            d.Show();
+            Dodaj_dokumenty dok = new Dodaj_dokumenty(zaznacz);
+            dok.Show();
         }
 
     }
