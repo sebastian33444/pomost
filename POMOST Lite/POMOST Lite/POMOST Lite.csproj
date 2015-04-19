@@ -71,6 +71,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Dodaj_dokumenty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dodaj_dokumenty.Designer.cs">
+      <DependentUpon>Dodaj_dokumenty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dodaj_petenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,18 @@
     <Compile Include="Strona_glowna.Designer.cs">
       <DependentUpon>Strona_glowna.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wyszukaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wyszukaj.Designer.cs">
+      <DependentUpon>Wyszukaj.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dodaj_dokumenty.resx">
+      <DependentUpon>Dodaj_dokumenty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wyszukaj.resx">
+      <DependentUpon>Wyszukaj.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataClasses.dbml.layout">
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </None>

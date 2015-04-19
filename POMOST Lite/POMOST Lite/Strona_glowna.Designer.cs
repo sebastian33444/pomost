@@ -52,6 +52,9 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.mopsDataSet1 = new POMOST_Lite.mopsDataSet();
             this.dgvPetent = new System.Windows.Forms.DataGridView();
+            this.petentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mopsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.petentTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.petentTableAdapter();
             this.idpetentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwiskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,9 +68,6 @@
             this.nrmieszkaniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nrtelefonuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpracownikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.petentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mopsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.petentTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.petentTableAdapter();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1)).BeginInit();
@@ -147,6 +147,7 @@
             this.wyszukaj.Name = "wyszukaj";
             this.wyszukaj.Size = new System.Drawing.Size(86, 23);
             this.wyszukaj.Text = "Wyszukaj";
+            this.wyszukaj.Click += new System.EventHandler(this.wyszukaj_Click);
             // 
             // toolStripSeparator1
             // 
@@ -160,6 +161,7 @@
             this.swiadczenia.Name = "swiadczenia";
             this.swiadczenia.Size = new System.Drawing.Size(101, 23);
             this.swiadczenia.Text = "Świadczenia";
+            this.swiadczenia.Click += new System.EventHandler(this.swiadczenia_Click);
             // 
             // dokumenty
             // 
@@ -249,6 +251,7 @@
             // 
             // dgvPetent
             // 
+            this.dgvPetent.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.dgvPetent.AllowUserToAddRows = false;
             this.dgvPetent.AllowUserToDeleteRows = false;
             this.dgvPetent.AutoGenerateColumns = false;
@@ -279,12 +282,27 @@
             this.dgvPetent.TabIndex = 6;
             this.dgvPetent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPetent_CellClick);
             // 
+            // petentBindingSource
+            // 
+            this.petentBindingSource.DataMember = "petent";
+            this.petentBindingSource.DataSource = this.mopsDataSet1BindingSource;
+            // 
+            // mopsDataSet1BindingSource
+            // 
+            this.mopsDataSet1BindingSource.DataSource = this.mopsDataSet1;
+            this.mopsDataSet1BindingSource.Position = 0;
+            // 
+            // petentTableAdapter
+            // 
+            this.petentTableAdapter.ClearBeforeFill = true;
+            // 
             // idpetentDataGridViewTextBoxColumn
             // 
             this.idpetentDataGridViewTextBoxColumn.DataPropertyName = "id_petent";
             this.idpetentDataGridViewTextBoxColumn.HeaderText = "id petent";
             this.idpetentDataGridViewTextBoxColumn.Name = "idpetentDataGridViewTextBoxColumn";
             this.idpetentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idpetentDataGridViewTextBoxColumn.Visible = false;
             // 
             // imieDataGridViewTextBoxColumn
             // 
@@ -369,22 +387,7 @@
             this.idpracownikDataGridViewTextBoxColumn.HeaderText = "id pracownik";
             this.idpracownikDataGridViewTextBoxColumn.Name = "idpracownikDataGridViewTextBoxColumn";
             this.idpracownikDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // petentBindingSource
-            // 
-            this.petentBindingSource.DataMember = "petent";
-            this.petentBindingSource.DataSource = this.mopsDataSet1BindingSource;
-            // 
-            // mopsDataSet1BindingSource
-            // 
-            this.mopsDataSet1BindingSource.DataSource = this.mopsDataSet1;
-            this.mopsDataSet1BindingSource.Position = 0;
-            
-            
-            // 
-            // petentTableAdapter
-            // 
-            this.petentTableAdapter.ClearBeforeFill = true;
+            this.idpracownikDataGridViewTextBoxColumn.Visible = false;
             // 
             // Strona_glowna
             // 
@@ -397,6 +400,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "Strona_glowna";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POMOST Lite";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Strona_glowna_FormClosed);
             this.Load += new System.EventHandler(this.Strona_glowna_Load);

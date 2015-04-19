@@ -12,22 +12,19 @@ using System.IO;
 
 namespace POMOST_Lite
 {
+
     public partial class Strona_glowna : Form
     {
         DataClassesDataContext baza = new DataClassesDataContext();
-        private string p;
+        private string p; //login pracownika
         private bool admin = false;
         private int id_prac;
         private string zaznacz;
-
-
+          
         public Strona_glowna(string p)
         {
             InitializeComponent();
-            this.dgvPetent.ClearSelection();
-            this.dgvPetent.Refresh();
             this.p = p;
-          
 
            foreach(pracownik prac in baza.pracowniks.Where(prac => prac.login == p))
            {
@@ -67,7 +64,6 @@ namespace POMOST_Lite
 
         private void usun_petenta_Click(object sender, EventArgs e)
         {            
-            
             try
             {
                 var dokasacji = from p in baza.petents where p.id_petent == Convert.ToInt32(zaznacz) select p;
@@ -81,29 +77,58 @@ namespace POMOST_Lite
             }
         }
 
-        private void dokumenty_Click(object sender, EventArgs e)
-        {
-            Dokumenty d = new Dokumenty();
-            d.Show(); 
-        }
-
         private void dodaj_petenta_Click(object sender, EventArgs e)
         {
             Dodaj_petenta add = new Dodaj_petenta(p);
+            add.FormClosed += add_FormClosed;
             add.Show();
+        }
+
+        private void add_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            Strona_glowna str = new Strona_glowna(p);
+            str.Show();
         }
 
         private void dgvPetent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            zaznacz = dgvPetent.Rows[e.RowIndex].Cells["idpetentDataGridViewTextBoxColumn"].Value.ToString();
+            try
+            {
+                zaznacz = dgvPetent.Rows[e.RowIndex].Cells["idpetentDataGridViewTextBoxColumn"].Value.ToString();
+            }
+            catch { }
         }
 
         private void edytuj_petenta_Click(object sender, EventArgs e)
         {
             Edytuj_petenta edit = new Edytuj_petenta(zaznacz, p);
+            edit.FormClosed += edit_FormClosed;
             edit.Show();
         }
 
-        
+        private void edit_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            Strona_glowna str = new Strona_glowna(p);
+            str.Show();
+        }
+
+        private void wyszukaj_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void swiadczenia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dokumenty_Click(object sender, EventArgs e)
+        {
+            Dokumenty d = new Dokumenty();
+            d.Show();
+        }
+
     }
 }

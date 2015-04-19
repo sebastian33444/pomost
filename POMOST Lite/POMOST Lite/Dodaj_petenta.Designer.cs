@@ -61,7 +61,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.pracownikTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.pracownikTableAdapter();
             this.Kalendarz = new System.Windows.Forms.MonthCalendar();
-            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pracownikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
@@ -355,23 +354,12 @@
             this.Kalendarz.Name = "Kalendarz";
             this.Kalendarz.TabIndex = 2;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label15.Location = new System.Drawing.Point(398, 9);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(107, 16);
-            this.label15.TabIndex = 29;
-            this.label15.Text = "Edytuj petenta";
-            // 
             // Dodaj_petenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(673, 329);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.Kalendarz);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.cbPracownik);
@@ -447,6 +435,5 @@
         private System.Windows.Forms.BindingSource pracownikBindingSource;
         private mopsDataSetTableAdapters.pracownikTableAdapter pracownikTableAdapter;
         private System.Windows.Forms.MonthCalendar Kalendarz;
-        private System.Windows.Forms.Label label15;
     }
 }

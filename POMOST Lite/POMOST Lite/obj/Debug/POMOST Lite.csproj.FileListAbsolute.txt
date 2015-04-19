@@ -242,3 +242,4 @@ C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateRe
 C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
 C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.exe
 C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.pdb
+D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Wyszukaj.resources

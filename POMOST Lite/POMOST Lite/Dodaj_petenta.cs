@@ -96,6 +96,7 @@ namespace POMOST_Lite
             baza.SubmitChanges();
             Close();
             MessageBox.Show("Pomyślnie dodano petenta.");
+
         }
 
         private void bAnuluj_Click(object sender, EventArgs e)
