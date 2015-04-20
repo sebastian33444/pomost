@@ -142,10 +142,6 @@ namespace POMOST_Lite
             }
         }
 
-        private void wyszukaj_Click(object sender, EventArgs e)
-        {
-            ////dodać kod !
-        }
 
         private void swiadczenia_Click(object sender, EventArgs e)
         {

@@ -33,10 +33,10 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.menu = new System.Windows.Forms.ToolStripDropDownButton();
             this.Wyloguj = new System.Windows.Forms.ToolStripMenuItem();
+            this.Uzytkownicy = new System.Windows.Forms.ToolStripMenuItem();
             this.dodaj_petenta = new System.Windows.Forms.ToolStripButton();
             this.usun_petenta = new System.Windows.Forms.ToolStripButton();
             this.edytuj_petenta = new System.Windows.Forms.ToolStripButton();
-            this.wyszukaj = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.swiadczenia = new System.Windows.Forms.ToolStripButton();
             this.dokumenty = new System.Windows.Forms.ToolStripButton();
@@ -68,7 +68,6 @@
             this.petentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mopsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.petentTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.petentTableAdapter();
-            this.Uzytkownicy = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1)).BeginInit();
@@ -87,7 +86,6 @@
             this.dodaj_petenta,
             this.usun_petenta,
             this.edytuj_petenta,
-            this.wyszukaj,
             this.toolStripSeparator1,
             this.swiadczenia,
             this.dokumenty});
@@ -115,6 +113,13 @@
             this.Wyloguj.Text = "Wyloguj";
             this.Wyloguj.Click += new System.EventHandler(this.Wyloguj_Click);
             // 
+            // Uzytkownicy
+            // 
+            this.Uzytkownicy.Name = "Uzytkownicy";
+            this.Uzytkownicy.Size = new System.Drawing.Size(155, 24);
+            this.Uzytkownicy.Text = "Użytkownicy";
+            this.Uzytkownicy.Click += new System.EventHandler(this.Uzytkownicy_Click);
+            // 
             // dodaj_petenta
             // 
             this.dodaj_petenta.Image = ((System.Drawing.Image)(resources.GetObject("dodaj_petenta.Image")));
@@ -141,15 +146,6 @@
             this.edytuj_petenta.Size = new System.Drawing.Size(118, 23);
             this.edytuj_petenta.Text = "Edytuj petenta";
             this.edytuj_petenta.Click += new System.EventHandler(this.edytuj_petenta_Click);
-            // 
-            // wyszukaj
-            // 
-            this.wyszukaj.Image = ((System.Drawing.Image)(resources.GetObject("wyszukaj.Image")));
-            this.wyszukaj.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.wyszukaj.Name = "wyszukaj";
-            this.wyszukaj.Size = new System.Drawing.Size(86, 23);
-            this.wyszukaj.Text = "Wyszukaj";
-            this.wyszukaj.Click += new System.EventHandler(this.wyszukaj_Click);
             // 
             // toolStripSeparator1
             // 
@@ -391,13 +387,6 @@
             // 
             this.petentTableAdapter.ClearBeforeFill = true;
             // 
-            // Uzytkownicy
-            // 
-            this.Uzytkownicy.Name = "Uzytkownicy";
-            this.Uzytkownicy.Size = new System.Drawing.Size(155, 24);
-            this.Uzytkownicy.Text = "Użytkownicy";
-            this.Uzytkownicy.Click += new System.EventHandler(this.Uzytkownicy_Click);
-            // 
             // Strona_glowna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,7 +424,6 @@
         private System.Windows.Forms.ToolStripButton usun_petenta;
         private System.Windows.Forms.ToolStripButton edytuj_petenta;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton wyszukaj;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel tslabelLogin;

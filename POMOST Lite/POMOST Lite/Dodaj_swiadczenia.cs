@@ -16,7 +16,7 @@ namespace POMOST_Lite
         private string zaznacz; //id petenta
         private string zaznaczone_swiad = null;
         private string zaznaczony_dok ;
-        private string p;
+        private string p = null;
         private bool czydodac = false;
 
         public Dodaj_swiadczenia(string zaznacz)
@@ -74,31 +74,28 @@ namespace POMOST_Lite
         private void tsbDodaj_Click(object sender, EventArgs e)
         {
             czydodac = true;
-            if (zaznaczone_swiad != null)
             {
                 Swiadczenie addswiad = new Swiadczenie(zaznacz, zaznaczone_swiad, zaznaczony_dok, czydodac );
                 addswiad.FormClosed += addswiad_FormClosed;
                 addswiad.Show();
             }
-            else
-            {
-                MessageBox.Show("Nie wybrano świadczenia.");
-            }
         }
 
         private void addswiad_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide();
             if (p == "dokument")
             {
-                Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznaczony_dok, "dokument");
+                this.Hide();
+                Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznaczony_dok, p);
                 s.Show();
             }
             else
             {
+                this.Hide();
                 Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznacz);
                 s.Show();
             }
+
         }
 
         private void tsbEdytuj_Click(object sender, EventArgs e)
@@ -117,14 +114,15 @@ namespace POMOST_Lite
 
         private void editswiad_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide();
             if(p == "dokument")
             {
-                Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznaczony_dok, "dokument");
+                this.Hide();
+                Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznaczony_dok, p);
                 s.Show();
             }
             else
             {
+                this.Hide();
                 Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznacz);
                 s.Show();
             }

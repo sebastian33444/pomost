@@ -35,6 +35,7 @@
             this.tsbUsun = new System.Windows.Forms.ToolStripButton();
             this.tsbEdytuj = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbOtworzSwiad = new System.Windows.Forms.ToolStripButton();
             this.tsbZamknij = new System.Windows.Forms.ToolStripButton();
             this.dokumentyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mopsDataSet = new POMOST_Lite.mopsDataSet();
@@ -47,7 +48,6 @@
             this.idpetentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpracownikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dokumentyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tsbOtworzSwiad = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dokumentyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
@@ -106,6 +106,15 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 26);
+            // 
+            // tsbOtworzSwiad
+            // 
+            this.tsbOtworzSwiad.Image = ((System.Drawing.Image)(resources.GetObject("tsbOtworzSwiad.Image")));
+            this.tsbOtworzSwiad.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbOtworzSwiad.Name = "tsbOtworzSwiad";
+            this.tsbOtworzSwiad.Size = new System.Drawing.Size(131, 23);
+            this.tsbOtworzSwiad.Text = "Otwórz świadczenia";
+            this.tsbOtworzSwiad.Click += new System.EventHandler(this.tsbOtworzSwiad_Click);
             // 
             // tsbZamknij
             // 
@@ -206,15 +215,6 @@
             this.dokumentyBindingSource1.DataMember = "dokumenty";
             this.dokumentyBindingSource1.DataSource = this.mopsDataSet;
             // 
-            // tsbOtworzSwiad
-            // 
-            this.tsbOtworzSwiad.Image = ((System.Drawing.Image)(resources.GetObject("tsbOtworzSwiad.Image")));
-            this.tsbOtworzSwiad.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbOtworzSwiad.Name = "tsbOtworzSwiad";
-            this.tsbOtworzSwiad.Size = new System.Drawing.Size(131, 23);
-            this.tsbOtworzSwiad.Text = "Otwórz świadczenia";
-            this.tsbOtworzSwiad.Click += new System.EventHandler(this.tsbOtworzSwiad_Click);
-            // 
             // Dodaj_dokumenty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,6 +227,7 @@
             this.MaximizeBox = false;
             this.Name = "Dodaj_dokumenty";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POMOST Lite";
             this.Load += new System.EventHandler(this.Dodaj_dokumenty_Load);
             this.toolStrip1.ResumeLayout(false);

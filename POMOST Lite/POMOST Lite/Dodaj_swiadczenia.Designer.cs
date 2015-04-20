@@ -35,6 +35,7 @@
             this.tsbUsun = new System.Windows.Forms.ToolStripButton();
             this.tsbEdytuj = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbOtworzDok = new System.Windows.Forms.ToolStripButton();
             this.tsbZamknij = new System.Windows.Forms.ToolStripButton();
             this.dgvSwiadczenie = new System.Windows.Forms.DataGridView();
             this.idświadczeniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +47,6 @@
             this.świadczenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mopsDataSet = new POMOST_Lite.mopsDataSet();
             this.świadczenieTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.świadczenieTableAdapter();
-            this.tsbOtworzDok = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSwiadczenie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.świadczenieBindingSource)).BeginInit();
@@ -104,6 +104,15 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 26);
+            // 
+            // tsbOtworzDok
+            // 
+            this.tsbOtworzDok.Image = ((System.Drawing.Image)(resources.GetObject("tsbOtworzDok.Image")));
+            this.tsbOtworzDok.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbOtworzDok.Name = "tsbOtworzDok";
+            this.tsbOtworzDok.Size = new System.Drawing.Size(123, 23);
+            this.tsbOtworzDok.Text = "Otwórz dokument";
+            this.tsbOtworzDok.Click += new System.EventHandler(this.tsbOtworzDok_Click);
             // 
             // tsbZamknij
             // 
@@ -197,15 +206,6 @@
             // 
             this.świadczenieTableAdapter.ClearBeforeFill = true;
             // 
-            // tsbOtworzDok
-            // 
-            this.tsbOtworzDok.Image = ((System.Drawing.Image)(resources.GetObject("tsbOtworzDok.Image")));
-            this.tsbOtworzDok.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbOtworzDok.Name = "tsbOtworzDok";
-            this.tsbOtworzDok.Size = new System.Drawing.Size(123, 23);
-            this.tsbOtworzDok.Text = "Otwórz dokument";
-            this.tsbOtworzDok.Click += new System.EventHandler(this.tsbOtworzDok_Click);
-            // 
             // Dodaj_swiadczenia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,6 +216,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "Dodaj_swiadczenia";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POMOST Lite";
             this.Load += new System.EventHandler(this.Dodaj_swiadczenia_Load);
             this.toolStrip1.ResumeLayout(false);
