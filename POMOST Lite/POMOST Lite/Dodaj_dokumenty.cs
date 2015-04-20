@@ -33,6 +33,8 @@ namespace POMOST_Lite
         private void tsbDodaj_Click(object sender, EventArgs e)
         {
             ////dodać kod!
+            Dokumenty d = new Dokumenty();
+            d.Show();
         }
 
         private void tsbUsun_Click(object sender, EventArgs e)

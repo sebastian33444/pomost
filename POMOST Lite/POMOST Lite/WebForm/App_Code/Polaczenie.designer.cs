@@ -21,7 +21,8 @@ using System.Reflection;
 
 
 
-public partial class polaczenieDataContext : System.Data.Linq.DataContext
+[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="mops")]
+public partial class PolaczenieDataContext : System.Data.Linq.DataContext
 {
 	
 	private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -30,25 +31,31 @@ public partial class polaczenieDataContext : System.Data.Linq.DataContext
   partial void OnCreated();
   #endregion
 	
-	public polaczenieDataContext(string connection) : 
+	public PolaczenieDataContext() : 
+			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["mopsConnectionString1"].ConnectionString, mappingSource)
+	{
+		OnCreated();
+	}
+	
+	public PolaczenieDataContext(string connection) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public polaczenieDataContext(System.Data.IDbConnection connection) : 
+	public PolaczenieDataContext(System.Data.IDbConnection connection) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public polaczenieDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+	public PolaczenieDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public polaczenieDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+	public PolaczenieDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();

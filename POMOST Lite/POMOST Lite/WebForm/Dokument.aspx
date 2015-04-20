@@ -55,6 +55,7 @@
             <asp:ListItem>odwołanie</asp:ListItem>
             <asp:ListItem>decyzja</asp:ListItem>
         </asp:RadioButtonList>
+        <asp:TextBox ID="TextBox1" runat="server" Height="90px" style="margin-top: 0px" Width="330px"></asp:TextBox>
         <br />
         <input type="submit" name="save" value="Zapisz" />
 	<input type="reset" name="reset" value="Reset" />

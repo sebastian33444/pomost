@@ -1,1 +1,3 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="mops" Class="PolaczenieDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\mops.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="mopsConnectionString1" Provider="System.Data.SqlClient" />
+</Database>
