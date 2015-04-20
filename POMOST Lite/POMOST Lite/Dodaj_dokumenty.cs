@@ -14,7 +14,7 @@ namespace POMOST_Lite
     {
         DataClassesDataContext baza = new DataClassesDataContext();
         private string zaznacz;
-        private string zaznaczony_dok;
+        private string zaznaczony_dok = null;
 
         public Dodaj_dokumenty(string zaznacz)
         {
@@ -37,16 +37,23 @@ namespace POMOST_Lite
 
         private void tsbUsun_Click(object sender, EventArgs e)
         {
-            try
+            if (zaznaczony_dok != null)
             {
-                var dokasacji = from p in baza.dokumenties where p.id_dokumentu == Convert.ToInt32(zaznaczony_dok) select p;
-                baza.dokumenties.DeleteAllOnSubmit(dokasacji);
-                baza.SubmitChanges();
-                dgvDokumenty.Rows.RemoveAt(this.dgvDokumenty.CurrentCell.RowIndex);
+                try
+                {
+                    var dokasacji = from p in baza.dokumenties where p.id_dokumentu == Convert.ToInt32(zaznaczony_dok) select p;
+                    baza.dokumenties.DeleteAllOnSubmit(dokasacji);
+                    baza.SubmitChanges();
+                    dgvDokumenty.Rows.RemoveAt(this.dgvDokumenty.CurrentCell.RowIndex);
+                }
+                catch
+                {
+                    MessageBox.Show("Nie można usunąć dokumentu, który ma podpięte świadczenie.");
+                }
             }
-            catch
+            else
             {
-                MessageBox.Show("Nie można usunąć dokumentu, który ma podpięte świadczenie.");
+                MessageBox.Show("Nie wybrano dokumentu.");
             }
         }
 
@@ -67,6 +74,19 @@ namespace POMOST_Lite
                 zaznaczony_dok = dgvDokumenty.Rows[e.RowIndex].Cells["iddokumentuDataGridViewTextBoxColumn"].Value.ToString();
             }
             catch { }
+        }
+
+        private void tsbOtworzSwiad_Click(object sender, EventArgs e)
+        {
+            if (zaznaczony_dok != null)
+            {
+                Dodaj_swiadczenia swiad = new Dodaj_swiadczenia(zaznaczony_dok, "dokument");
+                swiad.Show();
+            }
+            else
+            {
+                MessageBox.Show("Nie wybrano dokumentu.");
+            }
         }
     }
 }

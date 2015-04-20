@@ -19,7 +19,7 @@ namespace POMOST_Lite
         private string p; //login pracownika
         private bool admin = false;
         private int id_prac;
-        private string zaznacz;
+        private string zaznacz = null;
           
         public Strona_glowna(string p)
         {
@@ -63,17 +63,24 @@ namespace POMOST_Lite
         }
 
         private void usun_petenta_Click(object sender, EventArgs e)
-        {            
-            try
+        {
+            if (zaznacz != null)
             {
-                var dokasacji = from p in baza.petents where p.id_petent == Convert.ToInt32(zaznacz) select p;
-                baza.petents.DeleteAllOnSubmit(dokasacji);
-                baza.SubmitChanges();
-                dgvPetent.Rows.RemoveAt(this.dgvPetent.CurrentCell.RowIndex);
+                try
+                {
+                    var dokasacji = from p in baza.petents where p.id_petent == Convert.ToInt32(zaznacz) select p;
+                    baza.petents.DeleteAllOnSubmit(dokasacji);
+                    baza.SubmitChanges();
+                    dgvPetent.Rows.RemoveAt(this.dgvPetent.CurrentCell.RowIndex);
+                }
+                catch
+                {
+                    MessageBox.Show("Nie można usunąć petenta, do którego są podpięte dokumenty i świadczenia.");
+                }
             }
-            catch
+            else
             {
-                MessageBox.Show("Nie można usunąć petenta, do którego są podpięte dokumenty i świadczenia.");
+                MessageBox.Show("Nie zaznaczono petenta.");
             }
         }
 
@@ -109,9 +116,16 @@ namespace POMOST_Lite
 
         private void edytuj_petenta_Click(object sender, EventArgs e)
         {
-            Edytuj_petenta edit = new Edytuj_petenta(zaznacz, p);
-            edit.FormClosed += edit_FormClosed;
-            edit.Show();
+            if (zaznacz != null)
+            {
+                Edytuj_petenta edit = new Edytuj_petenta(zaznacz, p);
+                edit.FormClosed += edit_FormClosed;
+                edit.Show();
+            }
+            else
+            {
+                MessageBox.Show("Nie zaznaczono petenta.");
+            }
         }
 
         private void edit_FormClosed(object sender, FormClosedEventArgs e)
@@ -135,14 +149,28 @@ namespace POMOST_Lite
 
         private void swiadczenia_Click(object sender, EventArgs e)
         {
-            Dodaj_swiadczenia swiad = new Dodaj_swiadczenia(zaznacz);
-            swiad.Show();
+            if (zaznacz != null)
+            {
+                Dodaj_swiadczenia swiad = new Dodaj_swiadczenia(zaznacz);
+                swiad.Show();
+            }
+            else
+            {
+                MessageBox.Show("Nie zaznaczono petenta.");
+            }
         }
 
         private void dokumenty_Click(object sender, EventArgs e)
         {
-            Dodaj_dokumenty dok = new Dodaj_dokumenty(zaznacz);
-            dok.Show();
+            if (zaznacz != null)
+            {
+                Dodaj_dokumenty dok = new Dodaj_dokumenty(zaznacz);
+                dok.Show();
+            }
+            else
+            {
+                MessageBox.Show("Nie zaznaczono petenta.");
+            }
         }
 
         private void Uzytkownicy_Click(object sender, EventArgs e)

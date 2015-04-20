@@ -40,13 +40,14 @@
             this.mopsDataSet = new POMOST_Lite.mopsDataSet();
             this.dokumentyTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.dokumentyTableAdapter();
             this.dgvDokumenty = new System.Windows.Forms.DataGridView();
-            this.dokumentyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.iddokumentuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typdokumentuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zawartośćdokumentuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpetentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpracownikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dokumentyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tsbOtworzSwiad = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dokumentyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
@@ -63,10 +64,11 @@
             this.tsbUsun,
             this.tsbEdytuj,
             this.toolStripSeparator1,
+            this.tsbOtworzSwiad,
             this.tsbZamknij});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(609, 26);
+            this.toolStrip1.Size = new System.Drawing.Size(647, 26);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -150,14 +152,9 @@
             this.dgvDokumenty.Name = "dgvDokumenty";
             this.dgvDokumenty.ReadOnly = true;
             this.dgvDokumenty.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDokumenty.Size = new System.Drawing.Size(609, 343);
+            this.dgvDokumenty.Size = new System.Drawing.Size(647, 343);
             this.dgvDokumenty.TabIndex = 1;
             this.dgvDokumenty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDokumenty_CellClick);
-            // 
-            // dokumentyBindingSource1
-            // 
-            this.dokumentyBindingSource1.DataMember = "dokumenty";
-            this.dokumentyBindingSource1.DataSource = this.mopsDataSet;
             // 
             // iddokumentuDataGridViewTextBoxColumn
             // 
@@ -204,12 +201,26 @@
             this.idpracownikDataGridViewTextBoxColumn.ReadOnly = true;
             this.idpracownikDataGridViewTextBoxColumn.Visible = false;
             // 
+            // dokumentyBindingSource1
+            // 
+            this.dokumentyBindingSource1.DataMember = "dokumenty";
+            this.dokumentyBindingSource1.DataSource = this.mopsDataSet;
+            // 
+            // tsbOtworzSwiad
+            // 
+            this.tsbOtworzSwiad.Image = ((System.Drawing.Image)(resources.GetObject("tsbOtworzSwiad.Image")));
+            this.tsbOtworzSwiad.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbOtworzSwiad.Name = "tsbOtworzSwiad";
+            this.tsbOtworzSwiad.Size = new System.Drawing.Size(131, 23);
+            this.tsbOtworzSwiad.Text = "Otwórz świadczenia";
+            this.tsbOtworzSwiad.Click += new System.EventHandler(this.tsbOtworzSwiad_Click);
+            // 
             // Dodaj_dokumenty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(609, 369);
+            this.ClientSize = new System.Drawing.Size(647, 369);
             this.Controls.Add(this.dgvDokumenty);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -248,5 +259,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn zawartośćdokumentuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpetentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpracownikDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripButton tsbOtworzSwiad;
     }
 }

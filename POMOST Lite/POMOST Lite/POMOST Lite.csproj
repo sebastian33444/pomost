@@ -139,6 +139,12 @@
     <Compile Include="Strona_glowna.Designer.cs">
       <DependentUpon>Strona_glowna.cs</DependentUpon>
     </Compile>
+    <Compile Include="Swiadczenie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Swiadczenie.Designer.cs">
+      <DependentUpon>Swiadczenie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wyszukaj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dodaj_swiadczenia.resx">
       <DependentUpon>Dodaj_swiadczenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Swiadczenie.resx">
+      <DependentUpon>Swiadczenie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wyszukaj.resx">
       <DependentUpon>Wyszukaj.cs</DependentUpon>
