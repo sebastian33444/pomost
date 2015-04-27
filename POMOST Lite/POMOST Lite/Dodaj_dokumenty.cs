@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
+using System.IO;
 
 namespace POMOST_Lite
 {
@@ -25,14 +27,13 @@ namespace POMOST_Lite
 
         private void Dodaj_dokumenty_Load(object sender, EventArgs e)
         {
-             dgvDokumenty.DataSource = from p in baza.dokumenties
+            dgvDokumenty.DataSource = from p in baza.dokumenties
                                        where p.id_petent == Convert.ToInt32(zaznacz)
                                        select p;
-        }
+       }
 
         private void tsbDodaj_Click(object sender, EventArgs e)
         {
-            ////dodać kod!
             Dokumenty d = new Dokumenty();
             d.Show();
         }
@@ -76,7 +77,11 @@ namespace POMOST_Lite
                 zaznaczony_dok = dgvDokumenty.Rows[e.RowIndex].Cells["iddokumentuDataGridViewTextBoxColumn"].Value.ToString();
             }
             catch { }
-        }
+
+            WBPodglad_dokumentu.DocumentText = baza.dokumenties.Single(d => d.id_dokumentu == Convert.ToInt32(zaznaczony_dok)).zawartość_dokumentu.ToString();
+               
+       
+       }
 
         private void tsbOtworzSwiad_Click(object sender, EventArgs e)
         {
@@ -90,5 +95,31 @@ namespace POMOST_Lite
                 MessageBox.Show("Nie wybrano dokumentu.");
             }
         }
+
+        private void Odswierz_Click(object sender, EventArgs e)
+        {
+            dgvDokumenty.DataSource = from p in baza.dokumenties
+                                      where p.id_petent == Convert.ToInt32(zaznacz)
+                                      select p;
+
+        }
+
+        private void tsbDrukuj_Click(object sender, EventArgs e)
+        {
+            printDialog1.Document = printDocument1;
+            printDialog1.ShowDialog();
+            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+            printDocument1.Print();
+        }
+
+        void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            string textprint = WBPodglad_dokumentu.Document.Body.OuterText;
+            g.DrawString(textprint, this.Font, Brushes.Black, 50, 50);
+        }
+
+
+
     }
 }

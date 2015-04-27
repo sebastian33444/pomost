@@ -37,7 +37,7 @@
             this.WebBrowser.Location = new System.Drawing.Point(0, 0);
             this.WebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.WebBrowser.Name = "WebBrowser";
-            this.WebBrowser.Size = new System.Drawing.Size(930, 389);
+            this.WebBrowser.Size = new System.Drawing.Size(792, 523);
             this.WebBrowser.TabIndex = 0;
             // 
             // Dokumenty
@@ -45,7 +45,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(930, 389);
+            this.ClientSize = new System.Drawing.Size(792, 523);
             this.Controls.Add(this.WebBrowser);
             this.Name = "Dokumenty";
             this.Text = "Dokumenty";

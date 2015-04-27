@@ -47,22 +47,22 @@
 </head>
 <body>
     <form id="form1" runat="server" >
-        <textarea id="elm1" name="elm1" style="width: 100%; height: 330px;" runat="server"> Jakaś zawartość   </textarea>
+        <textarea id="elm1" name="elm1" style="width: 100%; height: 330px;" runat="server"> </textarea>
         <br />        
-        <br />
         <asp:RadioButtonList ID="RBLista" runat="server">
             <asp:ListItem>wniosek</asp:ListItem>
             <asp:ListItem>odwołanie</asp:ListItem>
             <asp:ListItem>decyzja</asp:ListItem>
         </asp:RadioButtonList>
-        <asp:TextBox ID="TextBox1" runat="server" Height="90px" style="margin-top: 0px" Width="330px"></asp:TextBox>
+        Pesel petenta:
+        <asp:ListBox ID="LBPesel_petenta" runat="server" DataSourceID="MOPS" DataTextField="pesel" DataValueField="pesel" Rows="1"></asp:ListBox>
+&nbsp; Login pracownika:<asp:ListBox ID="LBLogin_pracownika" runat="server" DataSourceID="MOPS2" DataTextField="login" DataValueField="login" Rows="1"></asp:ListBox>
+        <asp:SqlDataSource ID="MOPS" runat="server" ConnectionString="<%$ ConnectionStrings:mopsbazaConnectionString %>" SelectCommand="SELECT [pesel] FROM [petent]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="MOPS2" runat="server" ConnectionString="<%$ ConnectionStrings:mopsbazaConnectionString %>" SelectCommand="SELECT [login] FROM [pracownik]"></asp:SqlDataSource>
         <br />
-        <input type="submit" name="save" value="Zapisz" />
-	<input type="reset" name="reset" value="Reset" />
         <br />
-        <br />
-        <asp:Button ID="BZapisz_do_bazy" runat="server" OnClick="BZapisz_do_bazy_Click" Text="Zapisz do bazy" />
-        <br />
+        <asp:Button ID="BZapisz_do_bazy" runat="server" OnClick="BZapisz_do_bazy_Click" Text="Zapisz do bazy" Width="132px" />
+	<input type="reset" name="reset" value="Reset" style="width: 128px" /><br />
      </form>
     
     </body>

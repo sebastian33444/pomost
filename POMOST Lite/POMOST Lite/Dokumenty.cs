@@ -17,7 +17,7 @@ namespace POMOST_Lite
             InitializeComponent();
             for (int i = 0; i < 1; i++)
             {
-                WebBrowser.Navigate("http://localhost:49286/Dokument.aspx");
+                WebBrowser.Navigate("http://localhost:49286/Dokument.aspx?");
             }
         }
     }

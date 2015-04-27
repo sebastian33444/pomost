@@ -1,3 +1,62 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="mops" Class="PolaczenieDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\mops.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="mopsConnectionString1" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="mopsbaza" Class="PolaczenieDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=MICHAL-KOMPUTER\SQLEXPRESS;Initial Catalog=mopsbaza;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="mopsbazaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.dokumenty" Member="dokumenties">
+    <Type Name="dokumenty">
+      <Column Name="id_dokumentu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="typ_dokumentu" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="zawartość_dokumentu" Type="System.String" DbType="NVarChar(1500) NOT NULL" CanBeNull="false" />
+      <Column Name="id_petent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_pracownik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="dokumenty_świadczenie" Member="świadczenies" ThisKey="id_dokumentu" OtherKey="id_dokumentu" Type="świadczenie" />
+      <Association Name="petent_dokumenty" Member="petent" ThisKey="id_petent" OtherKey="id_petent" Type="petent" IsForeignKey="true" />
+      <Association Name="pracownik_dokumenty" Member="pracownik" ThisKey="id_pracownik" OtherKey="id_pracownik" Type="pracownik" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.petent" Member="petents">
+    <Type Name="petent">
+      <Column Name="id_petent" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="imie" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="nazwisko" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="d_ur" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="pesel" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="województwo" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="miasto" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="kod_pocztowy" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ulica" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="nr_ulicy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nr_mieszkania" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nr_telefonu" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="id_pracownik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="petent_dokumenty" Member="dokumenties" ThisKey="id_petent" OtherKey="id_petent" Type="dokumenty" />
+      <Association Name="pracownik_petent" Member="pracownik" ThisKey="id_pracownik" OtherKey="id_pracownik" Type="pracownik" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pracownik" Member="pracowniks">
+    <Type Name="pracownik">
+      <Column Name="id_pracownik" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="imie" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="nazwisko" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="login" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="haslo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dzielnica" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="miasto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="admin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="pracownik_dokumenty" Member="dokumenties" ThisKey="id_pracownik" OtherKey="id_pracownik" Type="dokumenty" />
+      <Association Name="pracownik_petent" Member="petents" ThisKey="id_pracownik" OtherKey="id_pracownik" Type="petent" />
+      <Association Name="pracownik_świadczenie" Member="świadczenies" ThisKey="id_pracownik" OtherKey="id_pracownik" Type="świadczenie" />
+    </Type>
+  </Table>
+  <Table Name="dbo.świadczenie" Member="świadczenies">
+    <Type Name="świadczenie">
+      <Column Name="id_świadczenia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="kwota" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="operacja" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="id_pracownik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_dokumentu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="dokumenty_świadczenie" Member="dokumenty" ThisKey="id_dokumentu" OtherKey="id_dokumentu" Type="dokumenty" IsForeignKey="true" />
+      <Association Name="pracownik_świadczenie" Member="pracownik" ThisKey="id_pracownik" OtherKey="id_pracownik" Type="pracownik" IsForeignKey="true" />
+    </Type>
+  </Table>
 </Database>

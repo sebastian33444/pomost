@@ -1,4 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Polaczenie">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 8.5" name="Polaczenie">
   <DataContextMoniker Name="/PolaczenieDataContext" />
+  <nestedChildShapes>
+    <classShape Id="300bc843-63ac-48c8-8bcd-9b6f70495dd3" absoluteBounds="6.25, 4.375, 2, 1.7535424804687505">
+      <DataClassMoniker Name="/PolaczenieDataContext/dokumenty" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9cdfeea6-f94b-4faf-9e21-29662c375757" absoluteBounds="6.265, 4.835, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0653f54d-bc21-4226-93f6-1461866d4c28" absoluteBounds="3.5, 4.875, 2, 2.9039737955729166">
+      <DataClassMoniker Name="/PolaczenieDataContext/petent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0dec414b-2648-4aa7-8096-37514145633c" absoluteBounds="3.515, 5.335, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3cb4828d-23f5-4878-ae41-6670980c9650" absoluteBounds="0.75, 2.75, 2, 2.0822371419270835">
+      <DataClassMoniker Name="/PolaczenieDataContext/pracownik" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9736ac79-6b33-4d59-9d27-8210571aa9ab" absoluteBounds="0.765, 3.21, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f562af2f-a854-4c3a-9b61-e6f7277d1a65" absoluteBounds="9, 3.625, 2, 1.7535424804687505">
+      <DataClassMoniker Name="/PolaczenieDataContext/świadczenie" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83debcb6-2e8c-4da6-b141-df5db0532946" absoluteBounds="9.015, 4.085, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 5.50177124023438); (6.25 : 5.50177124023438)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PolaczenieDataContext/petent/petent_dokumenty" />
+      <nodes>
+        <classShapeMoniker Id="0653f54d-bc21-4226-93f6-1461866d4c28" />
+        <classShapeMoniker Id="300bc843-63ac-48c8-8bcd-9b6f70495dd3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.60361857096354); (4.41666666666667 : 4.60361857096354 : JumpStart); (4.58333333333333 : 4.60361857096354 : JumpEnd); (6.25 : 4.60361857096354)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PolaczenieDataContext/pracownik/pracownik_dokumenty" />
+      <nodes>
+        <classShapeMoniker Id="3cb4828d-23f5-4878-ae41-6670980c9650" />
+        <classShapeMoniker Id="300bc843-63ac-48c8-8bcd-9b6f70495dd3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.64555678548177); (4.5 : 3.64555678548177); (4.5 : 4.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PolaczenieDataContext/pracownik/pracownik_petent" />
+      <nodes>
+        <classShapeMoniker Id="3cb4828d-23f5-4878-ae41-6670980c9650" />
+        <classShapeMoniker Id="0653f54d-bc21-4226-93f6-1461866d4c28" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 4.87677124023438); (9 : 4.87677124023438)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PolaczenieDataContext/dokumenty/dokumenty_świadczenie" />
+      <nodes>
+        <classShapeMoniker Id="300bc843-63ac-48c8-8bcd-9b6f70495dd3" />
+        <classShapeMoniker Id="f562af2f-a854-4c3a-9b61-e6f7277d1a65" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.04152839274089); (4.41666666666667 : 4.04152839274088 : JumpStart); (4.58333333333333 : 4.04152839274089 : JumpEnd); (9 : 4.04152839274089)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PolaczenieDataContext/pracownik/pracownik_świadczenie" />
+      <nodes>
+        <classShapeMoniker Id="3cb4828d-23f5-4878-ae41-6670980c9650" />
+        <classShapeMoniker Id="f562af2f-a854-4c3a-9b61-e6f7277d1a65" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
 </ordesignerObjectsDiagram>

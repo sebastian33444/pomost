@@ -30,12 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dodaj_dokumenty));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbDodaj = new System.Windows.Forms.ToolStripButton();
             this.tsbUsun = new System.Windows.Forms.ToolStripButton();
             this.tsbEdytuj = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbOtworzSwiad = new System.Windows.Forms.ToolStripButton();
+            this.Odswierz = new System.Windows.Forms.ToolStripButton();
             this.tsbZamknij = new System.Windows.Forms.ToolStripButton();
             this.dokumentyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mopsDataSet = new POMOST_Lite.mopsDataSet();
@@ -48,6 +50,11 @@
             this.idpetentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpracownikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dokumentyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.WBPodglad_dokumentu = new System.Windows.Forms.WebBrowser();
+            this.tsbDrukuj = new System.Windows.Forms.ToolStripButton();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dokumentyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
@@ -63,12 +70,14 @@
             this.tsbDodaj,
             this.tsbUsun,
             this.tsbEdytuj,
+            this.tsbDrukuj,
             this.toolStripSeparator1,
             this.tsbOtworzSwiad,
+            this.Odswierz,
             this.tsbZamknij});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(647, 26);
+            this.toolStrip1.Size = new System.Drawing.Size(1019, 26);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -116,6 +125,15 @@
             this.tsbOtworzSwiad.Text = "Otwórz świadczenia";
             this.tsbOtworzSwiad.Click += new System.EventHandler(this.tsbOtworzSwiad_Click);
             // 
+            // Odswierz
+            // 
+            this.Odswierz.Image = ((System.Drawing.Image)(resources.GetObject("Odswierz.Image")));
+            this.Odswierz.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Odswierz.Name = "Odswierz";
+            this.Odswierz.Size = new System.Drawing.Size(75, 23);
+            this.Odswierz.Text = "Odświerz";
+            this.Odswierz.Click += new System.EventHandler(this.Odswierz_Click);
+            // 
             // tsbZamknij
             // 
             this.tsbZamknij.Image = ((System.Drawing.Image)(resources.GetObject("tsbZamknij.Image")));
@@ -143,6 +161,9 @@
             // 
             this.dgvDokumenty.AllowUserToAddRows = false;
             this.dgvDokumenty.AllowUserToDeleteRows = false;
+            this.dgvDokumenty.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDokumenty.AutoGenerateColumns = false;
             this.dgvDokumenty.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvDokumenty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -154,14 +175,22 @@
             this.idpetentDataGridViewTextBoxColumn,
             this.idpracownikDataGridViewTextBoxColumn});
             this.dgvDokumenty.DataSource = this.dokumentyBindingSource1;
-            this.dgvDokumenty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDokumenty.GridColor = System.Drawing.SystemColors.Control;
             this.dgvDokumenty.Location = new System.Drawing.Point(0, 26);
             this.dgvDokumenty.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDokumenty.MultiSelect = false;
             this.dgvDokumenty.Name = "dgvDokumenty";
             this.dgvDokumenty.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDokumenty.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDokumenty.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDokumenty.Size = new System.Drawing.Size(647, 343);
+            this.dgvDokumenty.Size = new System.Drawing.Size(349, 343);
             this.dgvDokumenty.TabIndex = 1;
             this.dgvDokumenty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDokumenty_CellClick);
             // 
@@ -215,12 +244,45 @@
             this.dokumentyBindingSource1.DataMember = "dokumenty";
             this.dokumentyBindingSource1.DataSource = this.mopsDataSet;
             // 
+            // WBPodglad_dokumentu
+            // 
+            this.WBPodglad_dokumentu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.WBPodglad_dokumentu.Location = new System.Drawing.Point(354, 26);
+            this.WBPodglad_dokumentu.MinimumSize = new System.Drawing.Size(20, 20);
+            this.WBPodglad_dokumentu.Name = "WBPodglad_dokumentu";
+            this.WBPodglad_dokumentu.Size = new System.Drawing.Size(665, 343);
+            this.WBPodglad_dokumentu.TabIndex = 4;
+            // 
+            // tsbDrukuj
+            // 
+            this.tsbDrukuj.Image = ((System.Drawing.Image)(resources.GetObject("tsbDrukuj.Image")));
+            this.tsbDrukuj.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDrukuj.Name = "tsbDrukuj";
+            this.tsbDrukuj.Size = new System.Drawing.Size(62, 23);
+            this.tsbDrukuj.Text = "Drukuj";
+            this.tsbDrukuj.Click += new System.EventHandler(this.tsbDrukuj_Click);
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // Dodaj_dokumenty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(647, 369);
+            this.ClientSize = new System.Drawing.Size(1019, 369);
+            this.Controls.Add(this.WBPodglad_dokumentu);
             this.Controls.Add(this.dgvDokumenty);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -261,5 +323,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idpetentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpracownikDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripButton tsbOtworzSwiad;
+        private System.Windows.Forms.ToolStripButton Odswierz;
+        private System.Windows.Forms.WebBrowser WBPodglad_dokumentu;
+        private System.Windows.Forms.ToolStripButton tsbDrukuj;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

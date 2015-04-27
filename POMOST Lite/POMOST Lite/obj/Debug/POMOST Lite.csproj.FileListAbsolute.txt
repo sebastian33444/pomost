@@ -246,3 +246,7 @@ D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_dokumenty.resources
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_swiadczenia.resources
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenie.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_dokumenty.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_swiadczenia.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenie.resources
+C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Wyszukaj.resources

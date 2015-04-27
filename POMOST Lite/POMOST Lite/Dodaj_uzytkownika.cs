@@ -122,7 +122,8 @@ namespace POMOST_Lite
 
         private void wroc_Click(object sender, EventArgs e)
         {
-            this.Close();    
+            this.Close();
+          
         }
 
         private void lbPracownicy_Click(object sender, EventArgs e)
