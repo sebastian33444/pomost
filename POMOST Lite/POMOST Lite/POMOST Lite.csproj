@@ -71,11 +71,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Dodaj_dokumenty.cs">
+    <Compile Include="Dokumenty_Edycja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dodaj_dokumenty.Designer.cs">
-      <DependentUpon>Dodaj_dokumenty.cs</DependentUpon>
+    <Compile Include="Dokumenty_Edycja.Designer.cs">
+      <DependentUpon>Dokumenty_Edycja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dokumenty_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dokumenty_Menu.Designer.cs">
+      <DependentUpon>Dokumenty_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Dodaj_petenta.cs">
       <SubType>Form</SubType>
@@ -95,11 +101,11 @@
     <Compile Include="Dodaj_uzytkownika.Designer.cs">
       <DependentUpon>Dodaj_uzytkownika.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dokumenty.cs">
+    <Compile Include="Dokumenty_Dodaj.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dokumenty.Designer.cs">
-      <DependentUpon>Dokumenty.cs</DependentUpon>
+    <Compile Include="Dokumenty_Dodaj.Designer.cs">
+      <DependentUpon>Dokumenty_Dodaj.cs</DependentUpon>
     </Compile>
     <Compile Include="Edytuj_petenta.cs">
       <SubType>Form</SubType>
@@ -151,8 +157,11 @@
     <Compile Include="Wyszukaj.Designer.cs">
       <DependentUpon>Wyszukaj.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Dodaj_dokumenty.resx">
-      <DependentUpon>Dodaj_dokumenty.cs</DependentUpon>
+    <EmbeddedResource Include="Dokumenty_Edycja.resx">
+      <DependentUpon>Dokumenty_Edycja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dokumenty_Menu.resx">
+      <DependentUpon>Dokumenty_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dodaj_swiadczenia.resx">
       <DependentUpon>Dodaj_swiadczenia.cs</DependentUpon>
@@ -172,8 +181,8 @@
     <EmbeddedResource Include="Dodaj_uzytkownika.resx">
       <DependentUpon>Dodaj_uzytkownika.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dokumenty.resx">
-      <DependentUpon>Dokumenty.cs</DependentUpon>
+    <EmbeddedResource Include="Dokumenty_Dodaj.resx">
+      <DependentUpon>Dokumenty_Dodaj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edytuj_petenta.resx">
       <DependentUpon>Edytuj_petenta.cs</DependentUpon>

@@ -160,7 +160,7 @@ namespace POMOST_Lite
         {
             if (zaznacz != null)
             {
-                Dodaj_dokumenty dok = new Dodaj_dokumenty(zaznacz);
+                Dokumenty_Menu dok = new Dokumenty_Menu(zaznacz);
                 dok.Show();
             }
             else

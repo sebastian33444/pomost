@@ -1,6 +1,6 @@
 ﻿namespace POMOST_Lite
 {
-    partial class Dokumenty
+    partial class Dokumenty_Edycja
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.WebBrowser = new System.Windows.Forms.WebBrowser();
+            this.WBDokumenty_Edycja = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
-            // WebBrowser
+            // WBDokumenty_Edycja
             // 
-            this.WebBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WebBrowser.Location = new System.Drawing.Point(0, 0);
-            this.WebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.WebBrowser.Name = "WebBrowser";
-            this.WebBrowser.Size = new System.Drawing.Size(792, 523);
-            this.WebBrowser.TabIndex = 0;
+            this.WBDokumenty_Edycja.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WBDokumenty_Edycja.Location = new System.Drawing.Point(0, 0);
+            this.WBDokumenty_Edycja.MinimumSize = new System.Drawing.Size(20, 20);
+            this.WBDokumenty_Edycja.Name = "WBDokumenty_Edycja";
+            this.WBDokumenty_Edycja.Size = new System.Drawing.Size(792, 473);
+            this.WBDokumenty_Edycja.TabIndex = 0;
             // 
-            // Dokumenty
+            // Dokumenty_Edycja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(792, 523);
-            this.Controls.Add(this.WebBrowser);
-            this.Name = "Dokumenty";
-            this.Text = "Dokumenty";
+            this.ClientSize = new System.Drawing.Size(792, 473);
+            this.Controls.Add(this.WBDokumenty_Edycja);
+            this.Name = "Dokumenty_Edycja";
+            this.Text = "Dokumenty_Edycja";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.WebBrowser WebBrowser;
+        private System.Windows.Forms.WebBrowser WBDokumenty_Edycja;
     }
 }

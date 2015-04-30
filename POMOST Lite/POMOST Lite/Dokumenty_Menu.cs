@@ -12,13 +12,13 @@ using System.IO;
 
 namespace POMOST_Lite
 {
-    public partial class Dodaj_dokumenty : Form
+    public partial class Dokumenty_Menu : Form
     {
         DataClassesDataContext baza = new DataClassesDataContext();
         private string zaznacz;
         private string zaznaczony_dok = null;
 
-        public Dodaj_dokumenty(string zaznacz)
+        public Dokumenty_Menu(string zaznacz)
         {
             InitializeComponent();
             this.zaznacz = zaznacz;
@@ -34,7 +34,7 @@ namespace POMOST_Lite
 
         private void tsbDodaj_Click(object sender, EventArgs e)
         {
-            Dokumenty d = new Dokumenty();
+            Dokumenty_Dodaj d = new Dokumenty_Dodaj();
             d.Show();
         }
 
@@ -62,7 +62,8 @@ namespace POMOST_Lite
 
         private void tsbEdytuj_Click(object sender, EventArgs e)
         {
-            ////dodać kod!
+            Dokumenty_Edycja de = new Dokumenty_Edycja();
+            de.Show();
         }
 
         private void tsbZamknij_Click(object sender, EventArgs e)

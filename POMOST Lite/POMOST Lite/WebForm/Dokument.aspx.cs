@@ -14,6 +14,8 @@ public partial class Dokument : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        Response.Write(Request["zmienna"]);
+        //Response.End();
        
     }
     

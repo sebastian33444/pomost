@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace POMOST_Lite
 {
-    public partial class Dokumenty : Form
+    public partial class Dokumenty_Edycja : Form
     {
-        public Dokumenty()
+        public Dokumenty_Edycja()
         {
             InitializeComponent();
             for (int i = 0; i < 1; i++)
             {
-                WebBrowser.Navigate("http://localhost:49286/Dokument.aspx?");
+                WBDokumenty_Edycja.Navigate("http://localhost:49286/Dokumenty_Edycja.aspx");
             }
         }
     }
