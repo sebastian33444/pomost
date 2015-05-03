@@ -59,7 +59,7 @@
         </asp:RadioButtonList>
         <br />
         <br />
-        <asp:Button ID="BZapisz_do_bazy" runat="server" Text="Zapisz do bazy" Width="128px" />
+        <asp:Button ID="BZapisz_do_bazy" runat="server" Text="Zapisz do bazy" Width="128px" OnClick="BZapisz_do_bazy_Click" />
        
     
 

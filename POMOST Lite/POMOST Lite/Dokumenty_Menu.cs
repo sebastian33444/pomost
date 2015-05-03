@@ -17,11 +17,13 @@ namespace POMOST_Lite
         DataClassesDataContext baza = new DataClassesDataContext();
         private string zaznacz;
         private string zaznaczony_dok = null;
+        private string p;
 
-        public Dokumenty_Menu(string zaznacz)
+        public Dokumenty_Menu(string zaznacz, string p)
         {
             InitializeComponent();
             this.zaznacz = zaznacz;
+            this.p = p;
             Shown += delegate { dgvDokumenty.ClearSelection(); };
         }
 
@@ -34,7 +36,7 @@ namespace POMOST_Lite
 
         private void tsbDodaj_Click(object sender, EventArgs e)
         {
-            Dokumenty_Dodaj d = new Dokumenty_Dodaj();
+            Dokumenty_Dodaj d = new Dokumenty_Dodaj(zaznacz,p);
             d.Show();
         }
 
@@ -62,8 +64,16 @@ namespace POMOST_Lite
 
         private void tsbEdytuj_Click(object sender, EventArgs e)
         {
-            Dokumenty_Edycja de = new Dokumenty_Edycja();
-            de.Show();
+            if (zaznaczony_dok != null)
+            {
+                            
+                Dokumenty_Edycja de = new Dokumenty_Edycja(zaznaczony_dok);
+                de.Show();
+             }
+            else
+            {
+                MessageBox.Show("Nie zaznaczono dokumentu.");
+            }
         }
 
         private void tsbZamknij_Click(object sender, EventArgs e)

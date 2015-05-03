@@ -54,12 +54,6 @@
             <asp:ListItem>odwołanie</asp:ListItem>
             <asp:ListItem>decyzja</asp:ListItem>
         </asp:RadioButtonList>
-        Pesel petenta:
-        <asp:ListBox ID="LBPesel_petenta" runat="server" DataSourceID="MOPS" DataTextField="pesel" DataValueField="pesel" Rows="1"></asp:ListBox>
-&nbsp; Login pracownika:<asp:ListBox ID="LBLogin_pracownika" runat="server" DataSourceID="MOPS2" DataTextField="login" DataValueField="login" Rows="1"></asp:ListBox>
-        <asp:SqlDataSource ID="MOPS" runat="server" ConnectionString="<%$ ConnectionStrings:mopsbazaConnectionString %>" SelectCommand="SELECT [pesel] FROM [petent]"></asp:SqlDataSource>
-        <asp:SqlDataSource ID="MOPS2" runat="server" ConnectionString="<%$ ConnectionStrings:mopsbazaConnectionString %>" SelectCommand="SELECT [login] FROM [pracownik]"></asp:SqlDataSource>
-        <br />
         <br />
         <asp:Button ID="BZapisz_do_bazy" runat="server" OnClick="BZapisz_do_bazy_Click" Text="Zapisz do bazy" Width="132px" />
 	<input type="reset" name="reset" value="Reset" style="width: 128px" /><br />

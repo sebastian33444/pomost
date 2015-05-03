@@ -160,7 +160,7 @@ namespace POMOST_Lite
         {
             if (zaznacz != null)
             {
-                Dokumenty_Menu dok = new Dokumenty_Menu(zaznacz);
+                Dokumenty_Menu dok = new Dokumenty_Menu(zaznacz,p);
                 dok.Show();
             }
             else
