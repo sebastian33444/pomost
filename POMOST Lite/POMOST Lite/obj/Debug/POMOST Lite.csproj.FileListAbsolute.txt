@@ -218,7 +218,6 @@ C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Strona
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
-D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty.resources
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_petenta.resources
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Edytuj_petenta.resources
 C:\GitHub\pomost\POMOST Lite\POMOST Lite\bin\Debug\POMOST Lite.exe.config
@@ -240,7 +239,6 @@ C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.d
 C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.exe
 C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.pdb
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Wyszukaj.resources
-D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_dokumenty.resources
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_swiadczenia.resources
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenie.resources
 C:\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_dokumenty.resources
@@ -304,3 +302,6 @@ C:\Users\SQL\Desktop\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Strona_glowna
 C:\Users\SQL\Desktop\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Logowanie_uzytkownika.pl-PL.resources
 C:\Users\SQL\Desktop\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csproj.GenerateResource.Cache
 C:\Users\SQL\Desktop\POMOST Lite\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resources.dll
+D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Edycja.resources
+D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Menu.resources
+D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Dodaj.resources

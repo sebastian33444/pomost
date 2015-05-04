@@ -117,10 +117,13 @@ namespace POMOST_Lite
 
         private void tsbDrukuj_Click(object sender, EventArgs e)
         {
-            printDialog1.Document = printDocument1;
-            printDialog1.ShowDialog();
-            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
-            printDocument1.Print();
+
+            if(printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDialog1.Document = printDocument1;
+                printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+                printDocument1.Print();
+            }
         }
 
         void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
