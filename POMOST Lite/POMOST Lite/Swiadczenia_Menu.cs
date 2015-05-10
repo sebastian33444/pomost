@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace POMOST_Lite
 {
-    public partial class Dodaj_swiadczenia : Form
+    public partial class Swiadczenia_Menu : Form
     {
         DataClassesDataContext baza = new DataClassesDataContext();
         private string zaznacz; //id petenta
@@ -19,7 +19,7 @@ namespace POMOST_Lite
         private string p = null;
         private bool czydodac = false;
 
-        public Dodaj_swiadczenia(string zaznacz)
+        public Swiadczenia_Menu(string zaznacz)
         {
             InitializeComponent();
             this.zaznacz = zaznacz;
@@ -31,7 +31,7 @@ namespace POMOST_Lite
                                         select swi;
         }
 
-        public Dodaj_swiadczenia(string zaznaczony_dok, string p)
+        public Swiadczenia_Menu(string zaznaczony_dok, string p)
         {
             InitializeComponent();
             this.zaznaczony_dok = zaznaczony_dok;
@@ -75,7 +75,7 @@ namespace POMOST_Lite
         {
             czydodac = true;
             {
-                Swiadczenie addswiad = new Swiadczenie(zaznacz, zaznaczone_swiad, zaznaczony_dok, czydodac );
+                Swiadczenie_Dodaj addswiad = new Swiadczenie_Dodaj(zaznacz, zaznaczone_swiad, zaznaczony_dok, czydodac );
                 addswiad.FormClosed += addswiad_FormClosed;
                 addswiad.Show();
             }
@@ -86,13 +86,13 @@ namespace POMOST_Lite
             if (p == "dokument")
             {
                 this.Hide();
-                Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznaczony_dok, p);
+                Swiadczenia_Menu s = new Swiadczenia_Menu(zaznaczony_dok, p);
                 s.Show();
             }
             else
             {
                 this.Hide();
-                Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznacz);
+                Swiadczenia_Menu s = new Swiadczenia_Menu(zaznacz);
                 s.Show();
             }
 
@@ -102,7 +102,7 @@ namespace POMOST_Lite
         {
             if (zaznaczone_swiad != null)
             {
-                Swiadczenie editswiad = new Swiadczenie(zaznacz, zaznaczone_swiad, zaznaczony_dok, czydodac);
+                Swiadczenie_Dodaj editswiad = new Swiadczenie_Dodaj(zaznacz, zaznaczone_swiad, zaznaczony_dok, czydodac);
                 editswiad.FormClosed += editswiad_FormClosed;
                 editswiad.Show();
             }
@@ -117,13 +117,13 @@ namespace POMOST_Lite
             if(p == "dokument")
             {
                 this.Hide();
-                Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznaczony_dok, p);
+                Swiadczenia_Menu s = new Swiadczenia_Menu(zaznaczony_dok, p);
                 s.Show();
             }
             else
             {
                 this.Hide();
-                Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznacz);
+                Swiadczenia_Menu s = new Swiadczenia_Menu(zaznacz);
                 s.Show();
             }
         }
@@ -140,6 +140,8 @@ namespace POMOST_Lite
 
         private void tsbOtworzDok_Click(object sender, EventArgs e)
         {
+            Swiadczenie_Podglad sp = new Swiadczenie_Podglad(zaznaczony_dok);
+            sp.Show();
 
         }
     }

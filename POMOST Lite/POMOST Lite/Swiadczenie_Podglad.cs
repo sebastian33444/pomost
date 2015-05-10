@@ -10,14 +10,17 @@ using System.Windows.Forms;
 
 namespace POMOST_Lite
 {
-    public partial class Dokumenty_Edycja : Form
+    public partial class Swiadczenie_Podglad : Form
     {
-        public Dokumenty_Edycja(string q,string w, string e)
+        DataClassesDataContext p = new DataClassesDataContext();
+
+        public Swiadczenie_Podglad(string q)
         {
             InitializeComponent();
-            for (int i = 0; i < 1; i++)
+           foreach(dokumenty d in p.dokumenties.Where(d=>d.id_dokumentu==Convert.ToInt32(q)))
             {
-                WBDokumenty_Edycja.Navigate("http://localhost:49286/Dokumenty_Edycja.aspx?zmienna="+q+" "+w+" "+e);
+                WBSwiadczenia_Podglad.DocumentText = d.zawartość_dokumentu;
+
             }
         }
     }

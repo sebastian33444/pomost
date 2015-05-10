@@ -66,8 +66,8 @@ namespace POMOST_Lite
         {
             if (zaznaczony_dok != null)
             {
-                            
-                Dokumenty_Edycja de = new Dokumenty_Edycja(zaznaczony_dok);
+
+                Dokumenty_Edycja de = new Dokumenty_Edycja(zaznaczony_dok, zaznacz, p);
                 de.Show();
              }
             else
@@ -98,7 +98,7 @@ namespace POMOST_Lite
         {
             if (zaznaczony_dok != null)
             {
-                Dodaj_swiadczenia swiad = new Dodaj_swiadczenia(zaznaczony_dok, "dokument");
+                Swiadczenia_Menu swiad = new Swiadczenia_Menu(zaznaczony_dok, "dokument");
                 swiad.Show();
             }
             else

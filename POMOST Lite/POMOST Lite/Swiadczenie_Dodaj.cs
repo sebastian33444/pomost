@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace POMOST_Lite
 {
-    public partial class Swiadczenie : Form
+    public partial class Swiadczenie_Dodaj : Form
     {
         private bool czydodac = false;
         private string zaznacz;
@@ -19,7 +19,7 @@ namespace POMOST_Lite
         DataClassesDataContext baza = new DataClassesDataContext();
 
 
-        public Swiadczenie(string zaznacz, string zaznaczone_swiad, string zaznaczony_dok, bool czydodac)
+        public Swiadczenie_Dodaj(string zaznacz, string zaznaczone_swiad, string zaznaczony_dok, bool czydodac)
         {
             InitializeComponent();
             this.zaznacz = zaznacz;
@@ -36,7 +36,7 @@ namespace POMOST_Lite
                 monthCalendar1.SelectionStart = s.data;
             }
             }
-        }
+      }
 
         
         private void Swiadczenie_Load(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace POMOST_Lite
                     swiad.operacja = cbSwiadczenie.Text;
                     swiad.data = monthCalendar1.SelectionStart;
                     swiad.id_dokumentu = Convert.ToInt32(zaznaczony_dok);
-                    swiad.id_pracownik = 9;
+                    swiad.id_pracownik = Convert.ToInt32(zaznacz) ;// bylo 9
                     baza.SubmitChanges();
                     Close();
                     MessageBox.Show("Dodano świadczenie.");

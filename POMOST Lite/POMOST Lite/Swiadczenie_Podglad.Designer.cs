@@ -1,6 +1,6 @@
 ﻿namespace POMOST_Lite
 {
-    partial class Dokumenty_Edycja
+    partial class Swiadczenie_Podglad
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.WBDokumenty_Edycja = new System.Windows.Forms.WebBrowser();
+            this.WBSwiadczenia_Podglad = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
-            // WBDokumenty_Edycja
+            // WBSwiadczenia_Podglad
             // 
-            this.WBDokumenty_Edycja.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WBDokumenty_Edycja.Location = new System.Drawing.Point(0, 0);
-            this.WBDokumenty_Edycja.MinimumSize = new System.Drawing.Size(20, 20);
-            this.WBDokumenty_Edycja.Name = "WBDokumenty_Edycja";
-            this.WBDokumenty_Edycja.Size = new System.Drawing.Size(792, 473);
-            this.WBDokumenty_Edycja.TabIndex = 0;
+            this.WBSwiadczenia_Podglad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WBSwiadczenia_Podglad.Location = new System.Drawing.Point(0, 0);
+            this.WBSwiadczenia_Podglad.MinimumSize = new System.Drawing.Size(20, 20);
+            this.WBSwiadczenia_Podglad.Name = "WBSwiadczenia_Podglad";
+            this.WBSwiadczenia_Podglad.Size = new System.Drawing.Size(887, 506);
+            this.WBSwiadczenia_Podglad.TabIndex = 0;
             // 
-            // Dokumenty_Edycja
+            // Swiadczenie_Podglad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 473);
-            this.Controls.Add(this.WBDokumenty_Edycja);
-            this.Name = "Dokumenty_Edycja";
+            this.ClientSize = new System.Drawing.Size(887, 506);
+            this.Controls.Add(this.WBSwiadczenia_Podglad);
+            this.Name = "Swiadczenie_Podglad";
             this.Text = "POMOST Lite";
             this.ResumeLayout(false);
 
@@ -54,6 +54,6 @@
 
         #endregion
 
-        private System.Windows.Forms.WebBrowser WBDokumenty_Edycja;
+        private System.Windows.Forms.WebBrowser WBSwiadczenia_Podglad;
     }
 }

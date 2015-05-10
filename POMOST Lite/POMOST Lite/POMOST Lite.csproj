@@ -89,11 +89,11 @@
     <Compile Include="Dodaj_petenta.Designer.cs">
       <DependentUpon>Dodaj_petenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dodaj_swiadczenia.cs">
+    <Compile Include="Swiadczenia_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dodaj_swiadczenia.Designer.cs">
-      <DependentUpon>Dodaj_swiadczenia.cs</DependentUpon>
+    <Compile Include="Swiadczenia_Menu.Designer.cs">
+      <DependentUpon>Swiadczenia_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Dodaj_uzytkownika.cs">
       <SubType>Form</SubType>
@@ -145,11 +145,17 @@
     <Compile Include="Strona_glowna.Designer.cs">
       <DependentUpon>Strona_glowna.cs</DependentUpon>
     </Compile>
-    <Compile Include="Swiadczenie.cs">
+    <Compile Include="Swiadczenie_Podglad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Swiadczenie.Designer.cs">
-      <DependentUpon>Swiadczenie.cs</DependentUpon>
+    <Compile Include="Swiadczenie_Podglad.Designer.cs">
+      <DependentUpon>Swiadczenie_Podglad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Swiadczenie_Dodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Swiadczenie_Dodaj.Designer.cs">
+      <DependentUpon>Swiadczenie_Dodaj.cs</DependentUpon>
     </Compile>
     <Compile Include="Wyszukaj.cs">
       <SubType>Form</SubType>
@@ -163,11 +169,14 @@
     <EmbeddedResource Include="Dokumenty_Menu.resx">
       <DependentUpon>Dokumenty_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dodaj_swiadczenia.resx">
-      <DependentUpon>Dodaj_swiadczenia.cs</DependentUpon>
+    <EmbeddedResource Include="Swiadczenia_Menu.resx">
+      <DependentUpon>Swiadczenia_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Swiadczenie.resx">
-      <DependentUpon>Swiadczenie.cs</DependentUpon>
+    <EmbeddedResource Include="Swiadczenie_Dodaj.resx">
+      <DependentUpon>Swiadczenie_Dodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Swiadczenie_Podglad.resx">
+      <DependentUpon>Swiadczenie_Podglad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wyszukaj.resx">
       <DependentUpon>Wyszukaj.cs</DependentUpon>

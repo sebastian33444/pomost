@@ -147,7 +147,7 @@ namespace POMOST_Lite
         {
             if (zaznacz != null)
             {
-                Dodaj_swiadczenia swiad = new Dodaj_swiadczenia(zaznacz);
+                Swiadczenia_Menu swiad = new Swiadczenia_Menu(zaznacz);
                 swiad.Show();
             }
             else
