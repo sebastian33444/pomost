@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Swiadczenia_Menu));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbDodaj = new System.Windows.Forms.ToolStripButton();
             this.tsbUsun = new System.Windows.Forms.ToolStripButton();
@@ -38,15 +39,15 @@
             this.tsbOtworzDok = new System.Windows.Forms.ToolStripButton();
             this.tsbZamknij = new System.Windows.Forms.ToolStripButton();
             this.dgvSwiadczenie = new System.Windows.Forms.DataGridView();
+            this.świadczenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mopsDataSet = new POMOST_Lite.mopsDataSet();
+            this.świadczenieTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.świadczenieTableAdapter();
             this.idświadczeniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kwotaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.operacjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpracownikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iddokumentuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.świadczenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mopsDataSet = new POMOST_Lite.mopsDataSet();
-            this.świadczenieTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.świadczenieTableAdapter();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSwiadczenie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.świadczenieBindingSource)).BeginInit();
@@ -138,7 +139,16 @@
             this.idpracownikDataGridViewTextBoxColumn,
             this.iddokumentuDataGridViewTextBoxColumn});
             this.dgvSwiadczenie.DataSource = this.świadczenieBindingSource;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSwiadczenie.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSwiadczenie.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSwiadczenie.GridColor = System.Drawing.Color.DarkRed;
             this.dgvSwiadczenie.Location = new System.Drawing.Point(0, 26);
             this.dgvSwiadczenie.MultiSelect = false;
             this.dgvSwiadczenie.Name = "dgvSwiadczenie";
@@ -147,6 +157,20 @@
             this.dgvSwiadczenie.Size = new System.Drawing.Size(684, 426);
             this.dgvSwiadczenie.TabIndex = 2;
             this.dgvSwiadczenie.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSwiadczenie_CellClick);
+            // 
+            // świadczenieBindingSource
+            // 
+            this.świadczenieBindingSource.DataMember = "świadczenie";
+            this.świadczenieBindingSource.DataSource = this.mopsDataSet;
+            // 
+            // mopsDataSet
+            // 
+            this.mopsDataSet.DataSetName = "mopsDataSet";
+            this.mopsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // świadczenieTableAdapter
+            // 
+            this.świadczenieTableAdapter.ClearBeforeFill = true;
             // 
             // idświadczeniaDataGridViewTextBoxColumn
             // 
@@ -158,8 +182,8 @@
             // 
             // kwotaDataGridViewTextBoxColumn
             // 
-            this.kwotaDataGridViewTextBoxColumn.DataPropertyName = "kwota";
-            this.kwotaDataGridViewTextBoxColumn.HeaderText = "kwota";
+            this.kwotaDataGridViewTextBoxColumn.DataPropertyName = "kwota ";
+            this.kwotaDataGridViewTextBoxColumn.HeaderText = "kwota (zł)";
             this.kwotaDataGridViewTextBoxColumn.Name = "kwotaDataGridViewTextBoxColumn";
             this.kwotaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -192,21 +216,7 @@
             this.iddokumentuDataGridViewTextBoxColumn.Name = "iddokumentuDataGridViewTextBoxColumn";
             this.iddokumentuDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // świadczenieBindingSource
-            // 
-            this.świadczenieBindingSource.DataMember = "świadczenie";
-            this.świadczenieBindingSource.DataSource = this.mopsDataSet;
-            // 
-            // mopsDataSet
-            // 
-            this.mopsDataSet.DataSetName = "mopsDataSet";
-            this.mopsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // świadczenieTableAdapter
-            // 
-            this.świadczenieTableAdapter.ClearBeforeFill = true;
-            // 
-            // Dodaj_swiadczenia
+            // Swiadczenia_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,7 +224,7 @@
             this.ClientSize = new System.Drawing.Size(684, 452);
             this.Controls.Add(this.dgvSwiadczenie);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "Dodaj_swiadczenia";
+            this.Name = "Swiadczenia_Menu";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POMOST Lite";
@@ -241,12 +251,12 @@
         private mopsDataSet mopsDataSet;
         private System.Windows.Forms.BindingSource świadczenieBindingSource;
         private mopsDataSetTableAdapters.świadczenieTableAdapter świadczenieTableAdapter;
+        private System.Windows.Forms.ToolStripButton tsbOtworzDok;
         private System.Windows.Forms.DataGridViewTextBoxColumn idświadczeniaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kwotaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn operacjaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpracownikDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddokumentuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripButton tsbOtworzDok;
     }
 }

@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Strona_glowna));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.menu = new System.Windows.Forms.ToolStripDropDownButton();
             this.Wyloguj = new System.Windows.Forms.ToolStripMenuItem();
@@ -254,6 +256,14 @@
             this.dgvPetent.AllowUserToDeleteRows = false;
             this.dgvPetent.AutoGenerateColumns = false;
             this.dgvPetent.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPetent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPetent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPetent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idpetentDataGridViewTextBoxColumn,
@@ -270,11 +280,21 @@
             this.nrtelefonuDataGridViewTextBoxColumn,
             this.idpracownikDataGridViewTextBoxColumn});
             this.dgvPetent.DataSource = this.petentBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPetent.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPetent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPetent.GridColor = System.Drawing.Color.DarkRed;
             this.dgvPetent.Location = new System.Drawing.Point(0, 51);
             this.dgvPetent.MultiSelect = false;
             this.dgvPetent.Name = "dgvPetent";
             this.dgvPetent.ReadOnly = true;
+            this.dgvPetent.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dgvPetent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPetent.Size = new System.Drawing.Size(1187, 469);
             this.dgvPetent.TabIndex = 6;

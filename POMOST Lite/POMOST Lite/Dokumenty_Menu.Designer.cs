@@ -31,10 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dokumenty_Menu));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbDodaj = new System.Windows.Forms.ToolStripButton();
             this.tsbUsun = new System.Windows.Forms.ToolStripButton();
             this.tsbEdytuj = new System.Windows.Forms.ToolStripButton();
+            this.tsbDrukuj = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbOtworzSwiad = new System.Windows.Forms.ToolStripButton();
             this.Odswierz = new System.Windows.Forms.ToolStripButton();
@@ -51,7 +53,6 @@
             this.idpracownikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dokumentyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.WBPodglad_dokumentu = new System.Windows.Forms.WebBrowser();
-            this.tsbDrukuj = new System.Windows.Forms.ToolStripButton();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
@@ -110,6 +111,15 @@
             this.tsbEdytuj.Size = new System.Drawing.Size(134, 23);
             this.tsbEdytuj.Text = "Edytuj dokument";
             this.tsbEdytuj.Click += new System.EventHandler(this.tsbEdytuj_Click);
+            // 
+            // tsbDrukuj
+            // 
+            this.tsbDrukuj.Image = ((System.Drawing.Image)(resources.GetObject("tsbDrukuj.Image")));
+            this.tsbDrukuj.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDrukuj.Name = "tsbDrukuj";
+            this.tsbDrukuj.Size = new System.Drawing.Size(62, 23);
+            this.tsbDrukuj.Text = "Drukuj";
+            this.tsbDrukuj.Click += new System.EventHandler(this.tsbDrukuj_Click);
             // 
             // toolStripSeparator1
             // 
@@ -175,20 +185,28 @@
             this.idpetentDataGridViewTextBoxColumn,
             this.idpracownikDataGridViewTextBoxColumn});
             this.dgvDokumenty.DataSource = this.dokumentyBindingSource1;
-            this.dgvDokumenty.GridColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDokumenty.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDokumenty.GridColor = System.Drawing.Color.DarkRed;
             this.dgvDokumenty.Location = new System.Drawing.Point(0, 26);
             this.dgvDokumenty.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDokumenty.MultiSelect = false;
             this.dgvDokumenty.Name = "dgvDokumenty";
             this.dgvDokumenty.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDokumenty.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDokumenty.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDokumenty.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDokumenty.Size = new System.Drawing.Size(349, 343);
             this.dgvDokumenty.TabIndex = 1;
@@ -253,15 +271,6 @@
             this.WBPodglad_dokumentu.Size = new System.Drawing.Size(665, 343);
             this.WBPodglad_dokumentu.TabIndex = 4;
             // 
-            // tsbDrukuj
-            // 
-            this.tsbDrukuj.Image = ((System.Drawing.Image)(resources.GetObject("tsbDrukuj.Image")));
-            this.tsbDrukuj.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbDrukuj.Name = "tsbDrukuj";
-            this.tsbDrukuj.Size = new System.Drawing.Size(62, 23);
-            this.tsbDrukuj.Text = "Drukuj";
-            this.tsbDrukuj.Click += new System.EventHandler(this.tsbDrukuj_Click);
-            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
@@ -276,7 +285,7 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // Dodaj_dokumenty
+            // Dokumenty_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -287,7 +296,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.MaximizeBox = false;
-            this.Name = "Dodaj_dokumenty";
+            this.Name = "Dokumenty_Menu";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POMOST Lite";

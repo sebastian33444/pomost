@@ -306,3 +306,12 @@ D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenie_Podglad.resources
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenia_Menu.resources
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenie_Dodaj.resources
+D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Edycja.resources
+D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Menu.resources
+D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenia_Menu.resources
+D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenie_Dodaj.resources
+D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenie_Podglad.resources
+D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Wyszukaj.resources
+D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_petenta.resources
+D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Dodaj.resources
+D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Edytuj_petenta.resources
