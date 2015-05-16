@@ -422,7 +422,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POMOST Lite";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dodaj_uzytkownika_FormClosing);
             this.Load += new System.EventHandler(this.Dodaj_uzytkownika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).EndInit();

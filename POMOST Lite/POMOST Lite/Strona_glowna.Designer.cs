@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Strona_glowna));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.menu = new System.Windows.Forms.ToolStripDropDownButton();
             this.Wyloguj = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,6 +70,13 @@
             this.petentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mopsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.petentTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.petentTableAdapter();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.dodajPetentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuńPetentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edytujPetentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.świadczeniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dokumentyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet1)).BeginInit();
@@ -90,7 +97,9 @@
             this.edytuj_petenta,
             this.toolStripSeparator1,
             this.swiadczenia,
-            this.dokumenty});
+            this.dokumenty,
+            this.toolStripDropDownButton1,
+            this.toolStripDropDownButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1187, 26);
@@ -256,14 +265,14 @@
             this.dgvPetent.AllowUserToDeleteRows = false;
             this.dgvPetent.AutoGenerateColumns = false;
             this.dgvPetent.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPetent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPetent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvPetent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPetent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idpetentDataGridViewTextBoxColumn,
@@ -280,14 +289,14 @@
             this.nrtelefonuDataGridViewTextBoxColumn,
             this.idpracownikDataGridViewTextBoxColumn});
             this.dgvPetent.DataSource = this.petentBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Firebrick;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPetent.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPetent.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvPetent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPetent.GridColor = System.Drawing.Color.DarkRed;
             this.dgvPetent.Location = new System.Drawing.Point(0, 51);
@@ -407,6 +416,65 @@
             // 
             this.petentTableAdapter.ClearBeforeFill = true;
             // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dodajPetentaToolStripMenuItem,
+            this.usuńPetentaToolStripMenuItem,
+            this.edytujPetentaToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(82, 23);
+            this.toolStripDropDownButton1.Text = "Petenci";
+            // 
+            // dodajPetentaToolStripMenuItem
+            // 
+            this.dodajPetentaToolStripMenuItem.Name = "dodajPetentaToolStripMenuItem";
+            this.dodajPetentaToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.dodajPetentaToolStripMenuItem.Text = "Dodaj petenta";
+            this.dodajPetentaToolStripMenuItem.Click += new System.EventHandler(this.dodajPetentaToolStripMenuItem_Click);
+            // 
+            // usuńPetentaToolStripMenuItem
+            // 
+            this.usuńPetentaToolStripMenuItem.Name = "usuńPetentaToolStripMenuItem";
+            this.usuńPetentaToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.usuńPetentaToolStripMenuItem.Text = "Usuń petenta";
+            this.usuńPetentaToolStripMenuItem.Click += new System.EventHandler(this.usuńPetentaToolStripMenuItem_Click);
+            // 
+            // edytujPetentaToolStripMenuItem
+            // 
+            this.edytujPetentaToolStripMenuItem.Name = "edytujPetentaToolStripMenuItem";
+            this.edytujPetentaToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.edytujPetentaToolStripMenuItem.Text = "Edytuj petenta";
+            this.edytujPetentaToolStripMenuItem.Click += new System.EventHandler(this.edytujPetentaToolStripMenuItem_Click);
+            // 
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.świadczeniaToolStripMenuItem,
+            this.dokumentyToolStripMenuItem});
+            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(97, 23);
+            this.toolStripDropDownButton2.Text = "Załączniki";
+            this.toolStripDropDownButton2.ToolTipText = "toolStripDropDownButton2";
+            // 
+            // świadczeniaToolStripMenuItem
+            // 
+            this.świadczeniaToolStripMenuItem.Name = "świadczeniaToolStripMenuItem";
+            this.świadczeniaToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.świadczeniaToolStripMenuItem.Text = "Świadczenia";
+            this.świadczeniaToolStripMenuItem.Click += new System.EventHandler(this.świadczeniaToolStripMenuItem_Click);
+            // 
+            // dokumentyToolStripMenuItem
+            // 
+            this.dokumentyToolStripMenuItem.Name = "dokumentyToolStripMenuItem";
+            this.dokumentyToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.dokumentyToolStripMenuItem.Text = "Dokumenty";
+            this.dokumentyToolStripMenuItem.Click += new System.EventHandler(this.dokumentyToolStripMenuItem_Click);
+            // 
             // Strona_glowna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,5 +543,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nrtelefonuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpracownikDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripMenuItem Uzytkownicy;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem dodajPetentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuńPetentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem edytujPetentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
+        private System.Windows.Forms.ToolStripMenuItem świadczeniaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dokumentyToolStripMenuItem;
     }
 }

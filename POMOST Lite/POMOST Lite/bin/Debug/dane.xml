@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <konf_baza xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <nazwa_serwera>LAPTOPA-GUMIS\SQLEXPRESS</nazwa_serwera>
+  <nazwa_serwera>MICHAL-KOMPUTER\SQLEXPRESS</nazwa_serwera>
   <nazwa_bazy>mopsbaza</nazwa_bazy>
 </konf_baza>

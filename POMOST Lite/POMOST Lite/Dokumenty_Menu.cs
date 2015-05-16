@@ -37,7 +37,7 @@ namespace POMOST_Lite
         private void tsbDodaj_Click(object sender, EventArgs e)
         {
             Dokumenty_Dodaj d = new Dokumenty_Dodaj(zaznacz,p);
-            d.Show();
+            d.ShowDialog();
         }
 
         private void tsbUsun_Click(object sender, EventArgs e)
@@ -68,7 +68,7 @@ namespace POMOST_Lite
             {
 
                 Dokumenty_Edycja de = new Dokumenty_Edycja(zaznaczony_dok, zaznacz, p);
-                de.Show();
+                de.ShowDialog();
              }
             else
             {

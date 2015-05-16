@@ -77,7 +77,7 @@ namespace POMOST_Lite
             {
                 Swiadczenie_Dodaj addswiad = new Swiadczenie_Dodaj(zaznacz, zaznaczone_swiad, zaznaczony_dok, czydodac );
                 addswiad.FormClosed += addswiad_FormClosed;
-                addswiad.Show();
+                addswiad.ShowDialog();
             }
         }
 
@@ -104,7 +104,7 @@ namespace POMOST_Lite
             {
                 Swiadczenie_Dodaj editswiad = new Swiadczenie_Dodaj(zaznacz, zaznaczone_swiad, zaznaczony_dok, czydodac);
                 editswiad.FormClosed += editswiad_FormClosed;
-                editswiad.Show();
+                editswiad.ShowDialog(); 
             }
             else
             {
