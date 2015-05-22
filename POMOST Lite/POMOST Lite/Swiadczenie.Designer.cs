@@ -141,6 +141,7 @@
             this.cbDokument.Name = "cbDokument";
             this.cbDokument.Size = new System.Drawing.Size(157, 24);
             this.cbDokument.TabIndex = 8;
+            this.cbDokument.ValueMember = "id_dokumentu";
             // 
             // dokumentyBindingSource
             // 

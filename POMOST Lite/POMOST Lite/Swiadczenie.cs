@@ -40,6 +40,7 @@ namespace POMOST_Lite
         private void Swiadczenie_Load(object sender, EventArgs e)
         {
             this.świadczenieTableAdapter.Fill(this.mopsDataSet.świadczenie);
+            this.dokumentyTableAdapter.Fill(this.mopsDataSet.dokumenty);
             this.cbDokument.Text = null;
             this.cbDokument.Text = zaznaczony_dok;
         }

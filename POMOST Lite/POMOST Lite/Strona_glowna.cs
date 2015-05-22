@@ -84,13 +84,14 @@ namespace POMOST_Lite
             }
         }
 
+        
         private void dodaj_petenta_Click(object sender, EventArgs e)
         {
             Dodaj_petenta add = new Dodaj_petenta(p);
             add.FormClosed += add_FormClosed;
             add.ShowDialog();
         }
-
+        
         private void add_FormClosed(object sender, FormClosedEventArgs e)
         {
             zaznacz = dgvPetent.Rows[0].Cells["idpetentDataGridViewTextBoxColumn"].Value.ToString(); 
@@ -105,7 +106,7 @@ namespace POMOST_Lite
                                        select p;
             }
         }
-
+        
         private void dgvPetent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -183,7 +184,6 @@ namespace POMOST_Lite
             }
             if (log == true)
             {
-                this.Hide();
                 Dodaj_uzytkownika adduser = new Dodaj_uzytkownika();
                 adduser.ShowDialog();
             }
