@@ -40,15 +40,15 @@
             this.WebBrowser.Size = new System.Drawing.Size(792, 523);
             this.WebBrowser.TabIndex = 0;
             // 
-            // Dokumenty_Dodaj
+            // Dokumenty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(792, 523);
             this.Controls.Add(this.WebBrowser);
-            this.Name = "Dokumenty_Dodaj";
-            this.Text = "POMOST Lite";
+            this.Name = "Dokumenty";
+            this.Text = "Dokumenty";
             this.ResumeLayout(false);
 
         }

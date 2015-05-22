@@ -12,12 +12,13 @@ namespace POMOST_Lite
 {
     public partial class Dokumenty_Edycja : Form
     {
-        public Dokumenty_Edycja(string q,string w, string e)
+        public Dokumenty_Edycja(string q)
         {
             InitializeComponent();
+            int a = Convert.ToInt32(q);
             for (int i = 0; i < 1; i++)
             {
-                WBDokumenty_Edycja.Navigate("http://localhost:49286/Dokumenty_Edycja.aspx?zmienna="+q+" "+w+" "+e);
+                WBDokumenty_Edycja.Navigate("http://localhost:49286/Dokumenty_Edycja.aspx?zmienna="+a);
             }
         }
     }

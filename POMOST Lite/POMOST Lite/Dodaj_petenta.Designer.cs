@@ -114,7 +114,7 @@
             // 
             this.tbKod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tbKod.Location = new System.Drawing.Point(171, 169);
-            this.tbKod.MaxLength = 6;
+            this.tbKod.MaxLength = 5;
             this.tbKod.Name = "tbKod";
             this.tbKod.Size = new System.Drawing.Size(320, 22);
             this.tbKod.TabIndex = 6;

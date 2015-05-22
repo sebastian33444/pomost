@@ -25,7 +25,9 @@ public partial class Dokument : System.Web.UI.Page
         string b;
         b = Request["zmienna"];
         string[] tab = b.Split(new char[] { ' ' });
-        string a = elm1.InnerText;
+     
+
+        String a = elm1.InnerText;
         dokumenty d = new dokumenty();
         p.dokumenties.InsertOnSubmit(d);
         d.zawartość_dokumentu = a;

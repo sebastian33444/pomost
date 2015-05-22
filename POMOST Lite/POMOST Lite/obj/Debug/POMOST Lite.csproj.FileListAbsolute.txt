@@ -273,6 +273,8 @@ C:\Users\SQL\Desktop\pomost aktualny\pomost\POMOST Lite\POMOST Lite\obj\Debug\pl
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST Lite.csprojResolveAssemblyReference.cache
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Edycja.resources
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Menu.resources
+C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_swiadczenia.resources
+C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenie.resources
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Wyszukaj.resources
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_petenta.resources
 C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Dodaj.resources
@@ -303,14 +305,10 @@ C:\Users\SQL\Desktop\POMOST Lite\POMOST Lite\obj\Debug\pl-PL\POMOST Lite.resourc
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Edycja.resources
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Menu.resources
 D:\Pliki użytkownika\Documents\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Dodaj.resources
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenie_Podglad.resources
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenia_Menu.resources
-C:\Users\SQL\Desktop\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenie_Dodaj.resources
 D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Edycja.resources
 D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Menu.resources
-D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenia_Menu.resources
-D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenie_Dodaj.resources
-D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenie_Podglad.resources
+D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_swiadczenia.resources
+D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Swiadczenie.resources
 D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Wyszukaj.resources
 D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dodaj_petenta.resources
 D:\Pliki użytkownika\Documents\GitHub\pomost\POMOST Lite\POMOST Lite\obj\Debug\POMOST_Lite.Dokumenty_Dodaj.resources

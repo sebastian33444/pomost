@@ -70,7 +70,13 @@ namespace POMOST_Lite
                 lbPracownicy.Enabled = false;
                 dodaj.Enabled = false;
          }
-            
+
+        private void Dodaj_uzytkownika_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Logowanie_uzytkownika log = new Logowanie_uzytkownika();
+            log.ShowDialog();
+        }
+
         private void edytuj_Click(object sender, EventArgs e)
         {
             lbPracownicy.Enabled = true;
@@ -116,8 +122,7 @@ namespace POMOST_Lite
 
         private void wroc_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            
+            this.Close();
           
         }
 

@@ -14,10 +14,8 @@ public partial class Dokumenty_Edycja : System.Web.UI.Page
     {
         string b;
         b = Request["zmienna"];
-       // Response.Write(Request["zmienna"]); // id_dok, id_pet, log_prac
-        string[] tab = b.Split(new char[] { ' ' });
-       
-        foreach(dokumenty d in p.dokumenties.Where(d=>d.id_dokumentu==Convert.ToInt32(tab[0])))
+            
+        foreach(dokumenty d in p.dokumenties.Where(d=>d.id_dokumentu==Convert.ToInt32(b)))
          {
         elm1.InnerText = d.zawartość_dokumentu;
         RBLista.Items.FindByText(d.typ_dokumentu).Selected=true;     
@@ -31,18 +29,17 @@ public partial class Dokumenty_Edycja : System.Web.UI.Page
     {
         string b;
         b = Request["zmienna"];
-        string[] tab = b.Split(new char[] { ' ' });
        
 
-        string a = elm1.InnerText;
-        foreach (dokumenty d in p.dokumenties.Where(d => d.id_dokumentu == Convert.ToInt32(tab[0])))
-        {            
+        String a = elm1.InnerText;
+        foreach (dokumenty d in p.dokumenties.Where(d => d.id_dokumentu == Convert.ToInt32(b)))
+        {  
             d.zawartość_dokumentu = a;
             d.data = DateTime.Now.Date;
             d.typ_dokumentu = RBLista.SelectedItem.Text;
-                        
+           // zmienic / dopisac 
         }
-
         p.SubmitChanges();
+
     }
 }

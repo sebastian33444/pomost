@@ -39,7 +39,7 @@ namespace POMOST_Lite
         private void Wyloguj_Click(object sender, EventArgs e)
         {
             Logowanie_uzytkownika log = new Logowanie_uzytkownika();
-            log.Show();
+            log.ShowDialog();
             this.Hide();
         }
 
@@ -147,7 +147,7 @@ namespace POMOST_Lite
         {
             if (zaznacz != null)
             {
-                Swiadczenia_Menu swiad = new Swiadczenia_Menu(zaznacz);
+                Dodaj_swiadczenia swiad = new Dodaj_swiadczenia(zaznacz);
                 swiad.ShowDialog();
             }
             else
@@ -181,93 +181,15 @@ namespace POMOST_Lite
             }
             if (log == true)
             {
-                //this.Hide();
+                this.Hide();
                 Dodaj_uzytkownika adduser = new Dodaj_uzytkownika();
                 adduser.ShowDialog();
-               
             }
             else
             {
                 MessageBox.Show("Brak uprawnień!");
-             
             }
         }
-
-        private void dodajPetentaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Dodaj_petenta add = new Dodaj_petenta(p);
-            add.FormClosed += add_FormClosed;
-            add.ShowDialog();
-        }
-
-        private void usuńPetentaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (zaznacz != null)
-            {
-                try
-                {
-                    var dokasacji = from p in baza.petents where p.id_petent == Convert.ToInt32(zaznacz) select p;
-                    baza.petents.DeleteAllOnSubmit(dokasacji);
-                    baza.SubmitChanges();
-                    dgvPetent.Rows.RemoveAt(this.dgvPetent.CurrentCell.RowIndex);
-                }
-                catch
-                {
-                    MessageBox.Show("Nie można usunąć petenta, do którego są podpięte dokumenty i świadczenia.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Nie zaznaczono petenta.");
-            }
-
-        }
-
-        private void edytujPetentaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            if (zaznacz != null)
-            {
-                Edytuj_petenta edit = new Edytuj_petenta(zaznacz, p);
-                edit.FormClosed += edit_FormClosed;
-                edit.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Nie zaznaczono petenta.");
-            }
-
-        }
-
-        private void świadczeniaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            if (zaznacz != null)
-            {
-                Swiadczenia_Menu swiad = new Swiadczenia_Menu(zaznacz);
-                swiad.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Nie zaznaczono petenta.");
-            }
-
-        }
-
-        private void dokumentyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (zaznacz != null)
-            {
-                Dokumenty_Menu dok = new Dokumenty_Menu(zaznacz, p);
-                dok.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Nie zaznaczono petenta.");
-            }
-        }
-
-        
 
     }
 }
