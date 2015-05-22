@@ -250,7 +250,6 @@
         private System.Windows.Forms.DataGridView dgvSwiadczenie;
         private mopsDataSet mopsDataSet;
         private System.Windows.Forms.BindingSource świadczenieBindingSource;
-        private mopsDataSetTableAdapters.świadczenieTableAdapter świadczenieTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idświadczeniaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kwotaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn operacjaDataGridViewTextBoxColumn;
@@ -258,5 +257,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idpracownikDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddokumentuDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripButton tsbOtworzDok;
+        public mopsDataSetTableAdapters.świadczenieTableAdapter świadczenieTableAdapter;
     }
 }

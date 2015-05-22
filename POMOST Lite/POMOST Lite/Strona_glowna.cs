@@ -25,7 +25,6 @@ namespace POMOST_Lite
         {
             InitializeComponent();
             this.p = p;
-            Shown += delegate { dgvPetent.ClearSelection(); };
            foreach(pracownik prac in baza.pracowniks.Where(prac => prac.login == p))
            {
                tslabelLogin.Text = prac.login.ToString();
@@ -39,7 +38,7 @@ namespace POMOST_Lite
         private void Wyloguj_Click(object sender, EventArgs e)
         {
             Logowanie_uzytkownika log = new Logowanie_uzytkownika();
-            log.ShowDialog();
+            log.Show();
             this.Hide();
         }
 
@@ -50,6 +49,7 @@ namespace POMOST_Lite
 
         private void Strona_glowna_Load(object sender, EventArgs e)
         {
+            Shown += delegate { dgvPetent.ClearSelection(); };
             if(admin == true)
             {
                 this.petentTableAdapter.Fill(this.mopsDataSet1.petent);
@@ -93,6 +93,7 @@ namespace POMOST_Lite
 
         private void add_FormClosed(object sender, FormClosedEventArgs e)
         {
+            zaznacz = dgvPetent.Rows[0].Cells["idpetentDataGridViewTextBoxColumn"].Value.ToString(); 
             if (admin == true)
             {
                 this.petentTableAdapter.Fill(this.mopsDataSet1.petent);
@@ -130,6 +131,7 @@ namespace POMOST_Lite
 
         private void edit_FormClosed(object sender, FormClosedEventArgs e)
         {
+            zaznacz = dgvPetent.Rows[0].Cells["idpetentDataGridViewTextBoxColumn"].Value.ToString();
             if (admin == true)
             {
                 this.petentTableAdapter.Fill(this.mopsDataSet1.petent);

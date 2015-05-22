@@ -36,11 +36,10 @@ namespace POMOST_Lite
             }
             }
         }
-
-        
+                
         private void Swiadczenie_Load(object sender, EventArgs e)
         {
-            this.dokumentyTableAdapter.Fill(this.mopsDataSet.dokumenty);
+            this.świadczenieTableAdapter.Fill(this.mopsDataSet.świadczenie);
             this.cbDokument.Text = null;
             this.cbDokument.Text = zaznaczony_dok;
         }
@@ -57,14 +56,14 @@ namespace POMOST_Lite
                 try
                 {
                     świadczenie swiad = new świadczenie();
-                    baza.świadczenies.InsertOnSubmit(swiad);
                     swiad.kwota = Convert.ToDecimal(tbKwota.Text);
                     swiad.operacja = cbSwiadczenie.Text;
                     swiad.data = monthCalendar1.SelectionStart;
                     swiad.id_dokumentu = Convert.ToInt32(zaznaczony_dok);
+                    baza.świadczenies.InsertOnSubmit(swiad);
                     baza.SubmitChanges();
                     Close();
-                    MessageBox.Show("Dodano świadczenie.");
+                    this.świadczenieTableAdapter.Fill(this.mopsDataSet.świadczenie);
                     this.Hide();
                 }
                 catch
@@ -80,10 +79,31 @@ namespace POMOST_Lite
                     s.operacja = cbSwiadczenie.Text;
                     s.data = monthCalendar1.SelectionStart;
                 }
-                baza.SubmitChanges();
-                Close();
+                try
+                {
+                    var dokasacji = from p in baza.świadczenies where p.id_świadczenia == Convert.ToInt32(zaznaczone_swiad) select p;
+                    baza.świadczenies.DeleteAllOnSubmit(dokasacji);
+                    baza.SubmitChanges();
+
+                    świadczenie swiad = new świadczenie();
+                    swiad.kwota = Convert.ToDecimal(tbKwota.Text);
+                    swiad.operacja = cbSwiadczenie.Text;
+                    swiad.data = monthCalendar1.SelectionStart;
+                    swiad.id_dokumentu = Convert.ToInt32(zaznaczony_dok);
+                    baza.świadczenies.InsertOnSubmit(swiad);
+                    baza.SubmitChanges();
+                    Close();
+                    this.świadczenieTableAdapter.Fill(this.mopsDataSet.świadczenie);
+                    this.Hide();
+                }
+                catch
+                {
+                    MessageBox.Show("Bład");
+                }
+                this.świadczenieTableAdapter.Fill(this.mopsDataSet.świadczenie);
                 this.Hide();
             }
+
         }
     }
 }

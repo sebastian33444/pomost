@@ -77,7 +77,6 @@ namespace POMOST_Lite
         private void bZapisz_Click(object sender, EventArgs e) 
         {
             petent p = new petent();
-            baza.petents.InsertOnSubmit(p);
             p.imie = tbImie.Text;
             p.nazwisko = tbNazwisko.Text;
             p.d_ur = Kalendarz.SelectionStart;
@@ -93,6 +92,7 @@ namespace POMOST_Lite
             {
                 p.id_pracownik = prac.id_pracownik;
             }
+            baza.petents.InsertOnSubmit(p);
             baza.SubmitChanges();
             Close();
             MessageBox.Show("Pomyślnie dodano petenta.");

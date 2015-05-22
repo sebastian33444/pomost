@@ -82,15 +82,23 @@ namespace POMOST_Lite
 
         private void addswiad_FormClosed(object sender, FormClosedEventArgs e)
         {
+            zaznaczone_swiad = dgvSwiadczenie.Rows[0].Cells["idświadczeniaDataGridViewTextBoxColumn"].Value.ToString();
+            zaznaczony_dok = dgvSwiadczenie.Rows[0].Cells["iddokumentuDataGridViewTextBoxColumn"].Value.ToString();
             if (p == "dokument")
             {
-                  //  Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznaczony_dok, p);
-                  //  s.Show();
+                Shown += delegate { dgvSwiadczenie.ClearSelection(); };
+                dgvSwiadczenie.DataSource = from swiad in baza.świadczenies
+                                            where swiad.id_dokumentu == Convert.ToInt32(zaznaczony_dok)
+                                            select swiad;
             }
             else
             {
-               // Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznacz);
-               // s.Show();
+                Shown += delegate { dgvSwiadczenie.ClearSelection(); };
+                dgvSwiadczenie.DataSource = from pet in baza.petents
+                                            join dok in baza.dokumenties on pet.id_petent equals dok.id_petent
+                                            join swi in baza.świadczenies on dok.id_dokumentu equals swi.id_dokumentu
+                                            where pet.id_petent == Convert.ToInt32(zaznacz)
+                                            select swi;
             }
 
         }
@@ -111,18 +119,23 @@ namespace POMOST_Lite
 
         private void editswiad_FormClosed(object sender, FormClosedEventArgs e)
         {
+            zaznaczone_swiad = dgvSwiadczenie.Rows[0].Cells["idświadczeniaDataGridViewTextBoxColumn"].Value.ToString();
+            zaznaczony_dok = dgvSwiadczenie.Rows[0].Cells["iddokumentuDataGridViewTextBoxColumn"].Value.ToString();
             if(p == "dokument")
             {
-               
-               // Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznaczony_dok, p);
-               // s.Show();
+                Shown += delegate { dgvSwiadczenie.ClearSelection(); };
+                dgvSwiadczenie.DataSource = from swiad in baza.świadczenies
+                                            where swiad.id_dokumentu == Convert.ToInt32(zaznaczony_dok)
+                                            select swiad;
             }
             else
             {
-
-                //Dodaj_swiadczenia s = new Dodaj_swiadczenia(zaznacz);
-                //s.Show();
-               
+                Shown += delegate { dgvSwiadczenie.ClearSelection(); };
+                dgvSwiadczenie.DataSource = from pet in baza.petents
+                                            join dok in baza.dokumenties on pet.id_petent equals dok.id_petent
+                                            join swi in baza.świadczenies on dok.id_dokumentu equals swi.id_dokumentu
+                                            where pet.id_petent == Convert.ToInt32(zaznacz)
+                                            select swi;
             }
         }
 
@@ -138,7 +151,7 @@ namespace POMOST_Lite
 
         private void tsbOtworzDok_Click(object sender, EventArgs e)
         {
-
+            //Tutaj KOD!
         }
     }
 }

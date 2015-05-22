@@ -38,15 +38,18 @@
             this.bZapisz = new System.Windows.Forms.Button();
             this.bAnuluj = new System.Windows.Forms.Button();
             this.cbDokument = new System.Windows.Forms.ComboBox();
-            this.tbKwota = new System.Windows.Forms.TextBox();
-            this.mopsDataSet = new POMOST_Lite.mopsDataSet();
             this.dokumentyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mopsDataSet = new POMOST_Lite.mopsDataSet();
+            this.tbKwota = new System.Windows.Forms.TextBox();
             this.dokumentyTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.dokumentyTableAdapter();
             this.dokumentyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cbSwiadczenie = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
+            this.świadczenieBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.świadczenieTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.świadczenieTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dokumentyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dokumentyBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.świadczenieBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -139,6 +142,16 @@
             this.cbDokument.Size = new System.Drawing.Size(157, 24);
             this.cbDokument.TabIndex = 8;
             // 
+            // dokumentyBindingSource
+            // 
+            this.dokumentyBindingSource.DataMember = "dokumenty";
+            this.dokumentyBindingSource.DataSource = this.mopsDataSet;
+            // 
+            // mopsDataSet
+            // 
+            this.mopsDataSet.DataSetName = "mopsDataSet";
+            this.mopsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tbKwota
             // 
             this.tbKwota.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -146,16 +159,6 @@
             this.tbKwota.Name = "tbKwota";
             this.tbKwota.Size = new System.Drawing.Size(157, 23);
             this.tbKwota.TabIndex = 10;
-            // 
-            // mopsDataSet
-            // 
-            this.mopsDataSet.DataSetName = "mopsDataSet";
-            this.mopsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dokumentyBindingSource
-            // 
-            this.dokumentyBindingSource.DataMember = "dokumenty";
-            this.dokumentyBindingSource.DataSource = this.mopsDataSet;
             // 
             // dokumentyTableAdapter
             // 
@@ -174,6 +177,15 @@
             this.cbSwiadczenie.Name = "cbSwiadczenie";
             this.cbSwiadczenie.Size = new System.Drawing.Size(155, 24);
             this.cbSwiadczenie.TabIndex = 11;
+            // 
+            // świadczenieBindingSource
+            // 
+            this.świadczenieBindingSource.DataMember = "świadczenie";
+            this.świadczenieBindingSource.DataSource = this.mopsDataSet;
+            // 
+            // świadczenieTableAdapter
+            // 
+            this.świadczenieTableAdapter.ClearBeforeFill = true;
             // 
             // Swiadczenie
             // 
@@ -197,9 +209,10 @@
             this.ShowIcon = false;
             this.Text = "POMOST LIte";
             this.Load += new System.EventHandler(this.Swiadczenie_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dokumentyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dokumentyBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.świadczenieBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +235,7 @@
         private mopsDataSetTableAdapters.dokumentyTableAdapter dokumentyTableAdapter;
         private System.Windows.Forms.BindingSource dokumentyBindingSource1;
         private System.Windows.Forms.ComboBox cbSwiadczenie;
+        private System.Windows.Forms.BindingSource świadczenieBindingSource;
+        public mopsDataSetTableAdapters.świadczenieTableAdapter świadczenieTableAdapter;
     }
 }
