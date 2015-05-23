@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace POMOST_Lite
 {
-    public partial class Dodaj_swiadczenia : Form
+    public partial class Swiadczenia_Menu : Form
     {
         DataClassesDataContext baza = new DataClassesDataContext();
         private string zaznacz; //id petenta
@@ -19,7 +19,7 @@ namespace POMOST_Lite
         private string p = null;
         private bool czydodac = false;
 
-        public Dodaj_swiadczenia(string zaznacz)
+        public Swiadczenia_Menu(string zaznacz)
         {
             InitializeComponent();
             this.zaznacz = zaznacz;
@@ -31,7 +31,7 @@ namespace POMOST_Lite
                                         select swi;
         }
 
-        public Dodaj_swiadczenia(string zaznaczony_dok, string p)
+        public Swiadczenia_Menu(string zaznaczony_dok, string p)
         {
             InitializeComponent();
             this.zaznaczony_dok = zaznaczony_dok;
@@ -74,7 +74,7 @@ namespace POMOST_Lite
         private void tsbDodaj_Click(object sender, EventArgs e)
         {
             {
-                Swiadczenie addswiad = new Swiadczenie(zaznaczone_swiad, zaznaczony_dok, true );
+                Swiadczenie_Dodaj addswiad = new Swiadczenie_Dodaj(zaznaczone_swiad, zaznaczony_dok, true );
                 addswiad.FormClosed += addswiad_FormClosed;
                 addswiad.ShowDialog();
             }
@@ -107,7 +107,7 @@ namespace POMOST_Lite
         {
             if (zaznaczone_swiad != null)
             {
-                Swiadczenie editswiad = new Swiadczenie(zaznaczone_swiad, zaznaczony_dok, false);
+                Swiadczenie_Dodaj editswiad = new Swiadczenie_Dodaj(zaznaczone_swiad, zaznaczony_dok, false);
                 editswiad.FormClosed += editswiad_FormClosed;
                 editswiad.ShowDialog();
             }
@@ -151,7 +151,9 @@ namespace POMOST_Lite
 
         private void tsbOtworzDok_Click(object sender, EventArgs e)
         {
-            //Tutaj KOD!
+            Swiadczenie_Podglad sp = new Swiadczenie_Podglad(zaznaczony_dok);
+            sp.ShowDialog();
+
         }
     }
 }

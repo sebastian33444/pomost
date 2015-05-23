@@ -1,6 +1,6 @@
 ﻿namespace POMOST_Lite
 {
-    partial class Swiadczenie
+    partial class Swiadczenie_Dodaj
     {
         /// <summary>
         /// Required designer variable.

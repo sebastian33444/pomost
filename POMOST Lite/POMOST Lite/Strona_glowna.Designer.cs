@@ -35,12 +35,13 @@
             this.menu = new System.Windows.Forms.ToolStripDropDownButton();
             this.Wyloguj = new System.Windows.Forms.ToolStripMenuItem();
             this.Uzytkownicy = new System.Windows.Forms.ToolStripMenuItem();
-            this.dodaj_petenta = new System.Windows.Forms.ToolStripButton();
-            this.usun_petenta = new System.Windows.Forms.ToolStripButton();
-            this.edytuj_petenta = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.swiadczenia = new System.Windows.Forms.ToolStripButton();
-            this.dokumenty = new System.Windows.Forms.ToolStripButton();
+            this.TSPetenci = new System.Windows.Forms.ToolStripDropDownButton();
+            this.TSMDodajPetenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMUsuńPetenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMEdytujPetenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSZalaczniki = new System.Windows.Forms.ToolStripDropDownButton();
+            this.TSMSwiadczenia = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMDokumenty = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tslabelLogin = new System.Windows.Forms.ToolStripLabel();
@@ -84,12 +85,8 @@
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu,
-            this.dodaj_petenta,
-            this.usun_petenta,
-            this.edytuj_petenta,
-            this.toolStripSeparator1,
-            this.swiadczenia,
-            this.dokumenty});
+            this.TSPetenci,
+            this.TSZalaczniki});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1187, 26);
@@ -121,55 +118,64 @@
             this.Uzytkownicy.Text = "Użytkownicy";
             this.Uzytkownicy.Click += new System.EventHandler(this.Uzytkownicy_Click);
             // 
-            // dodaj_petenta
+            // TSPetenci
             // 
-            this.dodaj_petenta.Image = ((System.Drawing.Image)(resources.GetObject("dodaj_petenta.Image")));
-            this.dodaj_petenta.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.dodaj_petenta.Name = "dodaj_petenta";
-            this.dodaj_petenta.Size = new System.Drawing.Size(116, 23);
-            this.dodaj_petenta.Text = "Dodaj petenta";
-            this.dodaj_petenta.Click += new System.EventHandler(this.dodaj_petenta_Click);
+            this.TSPetenci.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSMDodajPetenta,
+            this.TSMUsuńPetenta,
+            this.TSMEdytujPetenta});
+            this.TSPetenci.Image = ((System.Drawing.Image)(resources.GetObject("TSPetenci.Image")));
+            this.TSPetenci.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TSPetenci.Name = "TSPetenci";
+            this.TSPetenci.Size = new System.Drawing.Size(82, 23);
+            this.TSPetenci.Text = "Petenci";
             // 
-            // usun_petenta
+            // TSMDodajPetenta
             // 
-            this.usun_petenta.Image = ((System.Drawing.Image)(resources.GetObject("usun_petenta.Image")));
-            this.usun_petenta.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.usun_petenta.Name = "usun_petenta";
-            this.usun_petenta.Size = new System.Drawing.Size(112, 23);
-            this.usun_petenta.Text = "Usuń petenta";
-            this.usun_petenta.Click += new System.EventHandler(this.usun_petenta_Click);
+            this.TSMDodajPetenta.Name = "TSMDodajPetenta";
+            this.TSMDodajPetenta.Size = new System.Drawing.Size(167, 24);
+            this.TSMDodajPetenta.Text = "Dodaj petenta";
+            this.TSMDodajPetenta.Click += new System.EventHandler(this.TSMDodajPetenta_Click);
             // 
-            // edytuj_petenta
+            // TSMUsuńPetenta
             // 
-            this.edytuj_petenta.Image = ((System.Drawing.Image)(resources.GetObject("edytuj_petenta.Image")));
-            this.edytuj_petenta.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.edytuj_petenta.Name = "edytuj_petenta";
-            this.edytuj_petenta.Size = new System.Drawing.Size(118, 23);
-            this.edytuj_petenta.Text = "Edytuj petenta";
-            this.edytuj_petenta.Click += new System.EventHandler(this.edytuj_petenta_Click);
+            this.TSMUsuńPetenta.Name = "TSMUsuńPetenta";
+            this.TSMUsuńPetenta.Size = new System.Drawing.Size(167, 24);
+            this.TSMUsuńPetenta.Text = "Usuń petenta";
+            this.TSMUsuńPetenta.Click += new System.EventHandler(this.TSMUsuńPetenta_Click);
             // 
-            // toolStripSeparator1
+            // TSMEdytujPetenta
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 26);
+            this.TSMEdytujPetenta.Name = "TSMEdytujPetenta";
+            this.TSMEdytujPetenta.Size = new System.Drawing.Size(167, 24);
+            this.TSMEdytujPetenta.Text = "Edytuj petenta";
+            this.TSMEdytujPetenta.Click += new System.EventHandler(this.TSMEdytujPetenta_Click);
             // 
-            // swiadczenia
+            // TSZalaczniki
             // 
-            this.swiadczenia.Image = ((System.Drawing.Image)(resources.GetObject("swiadczenia.Image")));
-            this.swiadczenia.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.swiadczenia.Name = "swiadczenia";
-            this.swiadczenia.Size = new System.Drawing.Size(101, 23);
-            this.swiadczenia.Text = "Świadczenia";
-            this.swiadczenia.Click += new System.EventHandler(this.swiadczenia_Click);
+            this.TSZalaczniki.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSMSwiadczenia,
+            this.TSMDokumenty});
+            this.TSZalaczniki.Image = ((System.Drawing.Image)(resources.GetObject("TSZalaczniki.Image")));
+            this.TSZalaczniki.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TSZalaczniki.Name = "TSZalaczniki";
+            this.TSZalaczniki.Size = new System.Drawing.Size(97, 23);
+            this.TSZalaczniki.Text = "Załączniki";
+            this.TSZalaczniki.ToolTipText = "toolStripDropDownButton2";
             // 
-            // dokumenty
+            // TSMSwiadczenia
             // 
-            this.dokumenty.Image = ((System.Drawing.Image)(resources.GetObject("dokumenty.Image")));
-            this.dokumenty.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.dokumenty.Name = "dokumenty";
-            this.dokumenty.Size = new System.Drawing.Size(101, 23);
-            this.dokumenty.Text = "Dokumenty";
-            this.dokumenty.Click += new System.EventHandler(this.dokumenty_Click);
+            this.TSMSwiadczenia.Name = "TSMSwiadczenia";
+            this.TSMSwiadczenia.Size = new System.Drawing.Size(150, 24);
+            this.TSMSwiadczenia.Text = "Świadczenia";
+            this.TSMSwiadczenia.Click += new System.EventHandler(this.TSMSwiadczenia_Click);
+            // 
+            // TSMDokumenty
+            // 
+            this.TSMDokumenty.Name = "TSMDokumenty";
+            this.TSMDokumenty.Size = new System.Drawing.Size(150, 24);
+            this.TSMDokumenty.Text = "Dokumenty";
+            this.TSMDokumenty.Click += new System.EventHandler(this.TSMDokumenty_Click);
             // 
             // toolStrip2
             // 
@@ -430,10 +436,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton menu;
         private System.Windows.Forms.ToolStripMenuItem Wyloguj;
-        private System.Windows.Forms.ToolStripButton dodaj_petenta;
-        private System.Windows.Forms.ToolStripButton usun_petenta;
-        private System.Windows.Forms.ToolStripButton edytuj_petenta;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel tslabelLogin;
@@ -449,8 +451,6 @@
         private System.Windows.Forms.BindingSource mopsDataSet1BindingSource;
         private System.Windows.Forms.BindingSource petentBindingSource;
         private mopsDataSetTableAdapters.petentTableAdapter petentTableAdapter;
-        private System.Windows.Forms.ToolStripButton swiadczenia;
-        private System.Windows.Forms.ToolStripButton dokumenty;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpetentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imieDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoDataGridViewTextBoxColumn;
@@ -465,5 +465,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nrtelefonuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpracownikDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripMenuItem Uzytkownicy;
+        private System.Windows.Forms.ToolStripDropDownButton TSPetenci;
+        private System.Windows.Forms.ToolStripMenuItem TSMDodajPetenta;
+        private System.Windows.Forms.ToolStripMenuItem TSMUsuńPetenta;
+        private System.Windows.Forms.ToolStripMenuItem TSMEdytujPetenta;
+        private System.Windows.Forms.ToolStripDropDownButton TSZalaczniki;
+        private System.Windows.Forms.ToolStripMenuItem TSMSwiadczenia;
+        private System.Windows.Forms.ToolStripMenuItem TSMDokumenty;
     }
 }

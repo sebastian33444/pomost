@@ -66,8 +66,8 @@ namespace POMOST_Lite
         {
             if (zaznaczony_dok != null)
             {
-                            
-                Dokumenty_Edycja de = new Dokumenty_Edycja(zaznaczony_dok);
+
+                Dokumenty_Edycja de = new Dokumenty_Edycja(zaznaczony_dok, zaznacz, p);
                 de.ShowDialog();
              }
             else
@@ -98,7 +98,7 @@ namespace POMOST_Lite
         {
             if (zaznaczony_dok != null)
             {
-                Dodaj_swiadczenia swiad = new Dodaj_swiadczenia(zaznaczony_dok, "dokument");
+                Swiadczenia_Menu swiad = new Swiadczenia_Menu(zaznaczony_dok, "dokument");
                 swiad.ShowDialog();
             }
             else
@@ -109,10 +109,16 @@ namespace POMOST_Lite
 
         private void Odswierz_Click(object sender, EventArgs e)
         {
+            /*
             dgvDokumenty.DataSource = from p in baza.dokumenties
                                       where p.id_petent == Convert.ToInt32(zaznacz)
                                       select p;
+            */
 
+            this.Hide();
+            Dokumenty_Menu dm = new Dokumenty_Menu(zaznacz, this.p);
+            dm.ShowDialog();
+            
         }
 
         private void tsbDrukuj_Click(object sender, EventArgs e)

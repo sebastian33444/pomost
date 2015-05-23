@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace POMOST_Lite
 {
-    public partial class Swiadczenie : Form
+    public partial class Swiadczenie_Dodaj : Form
     {
         private bool czydodac;
         private string zaznaczone_swiad;
@@ -18,7 +18,7 @@ namespace POMOST_Lite
         DataClassesDataContext baza = new DataClassesDataContext();
 
 
-        public Swiadczenie(string zaznaczone_swiad, string zaznaczony_dok, bool czydodac)
+        public Swiadczenie_Dodaj(string zaznaczone_swiad, string zaznaczony_dok, bool czydodac)
         {
             InitializeComponent();
             this.zaznaczone_swiad = zaznaczone_swiad;
