@@ -73,22 +73,24 @@ namespace POMOST_Lite
 
         private void edytuj_Click(object sender, EventArgs e)
         {
-            lbPracownicy.Enabled = true;
-            anuluj_edycja.Visible = true;
-            zapisz_edycja.Visible = true;
-            nazwa_uzytkownika.Enabled = true;
-            haslol.Enabled = true;
-            hasloponl.Enabled = true;
-            imiel.Enabled = true;
-            nazwiskol.Enabled = true;
-            dzielnical.Enabled = true;
-            miastol.Enabled = true;
-            checkBoxAdmin.Enabled = true;
-            anuluj_edycja.Visible = true;
-            zapisz_edycja.Visible = true;
-            dodaj.Enabled = false;
-            usun.Enabled = false;
-                foreach(pracownik p in baza.pracowniks.Where(p => p.login == lbPracownicy.Text))
+            if (lbPracownicy.SelectedItem!=null)
+            {
+                lbPracownicy.Enabled = true;
+                anuluj_edycja.Visible = true;
+                zapisz_edycja.Visible = true;
+                nazwa_uzytkownika.Enabled = true;
+                haslol.Enabled = true;
+                hasloponl.Enabled = true;
+                imiel.Enabled = true;
+                nazwiskol.Enabled = true;
+                dzielnical.Enabled = true;
+                miastol.Enabled = true;
+                checkBoxAdmin.Enabled = true;
+                anuluj_edycja.Visible = true;
+                zapisz_edycja.Visible = true;
+                dodaj.Enabled = false;
+                usun.Enabled = false;
+                foreach (pracownik p in baza.pracowniks.Where(p => p.login == lbPracownicy.Text))
                 {
                     nazwa_uzytkownika.Text = p.login;
                     imiel.Text = p.imie;
@@ -97,10 +99,14 @@ namespace POMOST_Lite
                     miastol.Text = p.miasto;
                     checkBoxAdmin.Checked = p.admin;
                 }
+            }
+            else { MessageBox.Show("Zaznacz pracownika by edytować"); }
         }
 
         private void usun_Click(object sender, EventArgs e)
         {
+            if (lbPracownicy.SelectedItem != null)
+            {
                 var dokasacji = from p in baza.pracowniks where p.login == lbPracownicy.Text && p.login != "admin" select p;
                 try
                 {
@@ -112,6 +118,8 @@ namespace POMOST_Lite
                     MessageBox.Show("Nie można usunąć pracownika, do którego są podpięci petenci, dokumenty lub świadczenia.  Nie można usunąć głównego administratora.");
                 }
                 wczytajOsoby();
+            }
+            else { MessageBox.Show("Zaznacz pracownika by usunąć"); }    
         }
 
         private void wroc_Click(object sender, EventArgs e)

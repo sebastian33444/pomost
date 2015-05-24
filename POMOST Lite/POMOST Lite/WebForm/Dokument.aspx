@@ -50,7 +50,7 @@
         <textarea id="elm1" name="elm1" style="width: 100%; height: 330px;" runat="server"> </textarea>
         <br />        
         <asp:RadioButtonList ID="RBLista" runat="server">
-            <asp:ListItem>wniosek</asp:ListItem>
+            <asp:ListItem Selected="True">wniosek</asp:ListItem>
             <asp:ListItem>odwołanie</asp:ListItem>
             <asp:ListItem>decyzja</asp:ListItem>
         </asp:RadioButtonList>

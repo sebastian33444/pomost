@@ -76,11 +76,16 @@ namespace POMOST_Lite
 
         private void tsbDodaj_Click(object sender, EventArgs e)
         {
-            {
-                Swiadczenie_Dodaj addswiad = new Swiadczenie_Dodaj(zaznaczone_swiad, zaznaczony_dok, true, petentOrDok, zaznacz);
-                addswiad.FormClosed += addswiad_FormClosed;
-                addswiad.ShowDialog();
-            }
+            int flaga = 0;
+           foreach (dokumenty d in baza.dokumenties.Where(d => d.id_petent == Convert.ToInt32(zaznacz)))
+                flaga = 1;
+           if (flaga == 1)
+           {
+               Swiadczenie_Dodaj addswiad = new Swiadczenie_Dodaj(zaznaczone_swiad, zaznaczony_dok, true, petentOrDok, zaznacz);
+               addswiad.FormClosed += addswiad_FormClosed;
+               addswiad.ShowDialog();
+           }
+           else { MessageBox.Show("Wybrany petent nie ma przypisanego dokumentu."); }
         }
 
         private void addswiad_FormClosed(object sender, FormClosedEventArgs e)
@@ -154,8 +159,12 @@ namespace POMOST_Lite
 
         private void tsbOtworzDok_Click(object sender, EventArgs e)
         {
-            Swiadczenie_Podglad sp = new Swiadczenie_Podglad(zaznaczony_dok);
-            sp.ShowDialog();
+            if (zaznaczone_swiad != null) 
+            {
+                Swiadczenie_Podglad sp = new Swiadczenie_Podglad(zaznaczony_dok);
+                sp.ShowDialog();
+            }
+            else { MessageBox.Show("Nie wybrano świadczenia."); }
 
         }
     }

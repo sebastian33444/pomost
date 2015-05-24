@@ -123,13 +123,16 @@ namespace POMOST_Lite
 
         private void tsbDrukuj_Click(object sender, EventArgs e)
         {
-
-            if(printDialog1.ShowDialog() == DialogResult.OK)
+            if (zaznaczony_dok != null)
             {
-                printDialog1.Document = printDocument1;
-                printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
-                printDocument1.Print();
+                if (printDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    printDialog1.Document = printDocument1;
+                    printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+                    printDocument1.Print();
+                }
             }
+            else { MessageBox.Show("Nie wybrano dokumentu."); }
         }
 
         void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
