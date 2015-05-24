@@ -13,17 +13,21 @@ namespace POMOST_Lite
     public partial class Swiadczenie_Dodaj : Form
     {
         private bool czydodac;
+        private bool petentOrDok;
         private string zaznaczone_swiad;
         private string zaznaczony_dok;
+        private string zaznacz;
         DataClassesDataContext baza = new DataClassesDataContext();
 
 
-        public Swiadczenie_Dodaj(string zaznaczone_swiad, string zaznaczony_dok, bool czydodac)
+        public Swiadczenie_Dodaj(string zaznaczone_swiad, string zaznaczony_dok, bool czydodac, bool swiadOrDok, string zazancz)
         {
             InitializeComponent();
             this.zaznaczone_swiad = zaznaczone_swiad;
             this.zaznaczony_dok = zaznaczony_dok;
             this.czydodac = czydodac;
+            this.petentOrDok = swiadOrDok;
+            this.zaznacz = zazancz;
             cbSwiadczenie.Items.Add("zwrot");
             cbSwiadczenie.Items.Add("wydanie");
             if(czydodac == false)
@@ -34,6 +38,17 @@ namespace POMOST_Lite
                 cbSwiadczenie.Text = s.operacja;
                 monthCalendar1.SelectionStart = s.data;
             }
+            }
+            if(petentOrDok == true)
+            {
+                cbDokument.Items.Add(zaznaczony_dok);
+            }
+            else if(petentOrDok == false)
+            {
+               foreach(dokumenty dok in  baza.dokumenties.Where(dok => dok.id_petent == Convert.ToInt32(zazancz)))
+               {
+                   cbDokument.Items.Add(dok.id_dokumentu);
+               }
             }
         }
                 

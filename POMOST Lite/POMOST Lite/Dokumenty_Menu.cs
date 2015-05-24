@@ -98,7 +98,7 @@ namespace POMOST_Lite
         {
             if (zaznaczony_dok != null)
             {
-                Swiadczenia_Menu swiad = new Swiadczenia_Menu(zaznaczony_dok, "dokument");
+                Swiadczenia_Menu swiad = new Swiadczenia_Menu(zaznaczony_dok, "dokument", true);
                 swiad.ShowDialog();
             }
             else

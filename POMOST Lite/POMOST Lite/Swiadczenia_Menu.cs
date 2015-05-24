@@ -18,11 +18,13 @@ namespace POMOST_Lite
         private string zaznaczony_dok ;
         private string p = null;
         private bool czydodac = false;
+        private bool petentOrDok;
 
-        public Swiadczenia_Menu(string zaznacz)
+        public Swiadczenia_Menu(string zaznacz, bool swiadOrDok)
         {
             InitializeComponent();
             this.zaznacz = zaznacz;
+            this.petentOrDok = swiadOrDok;
             Shown += delegate { dgvSwiadczenie.ClearSelection(); };
             dgvSwiadczenie.DataSource = from pet in baza.petents
                                         join dok in baza.dokumenties on pet.id_petent equals dok.id_petent
@@ -31,11 +33,12 @@ namespace POMOST_Lite
                                         select swi;
         }
 
-        public Swiadczenia_Menu(string zaznaczony_dok, string p)
+        public Swiadczenia_Menu(string zaznaczony_dok, string p, bool swiadOrDok)
         {
             InitializeComponent();
             this.zaznaczony_dok = zaznaczony_dok;
             this.p = p;
+            this.petentOrDok = swiadOrDok;
             Shown += delegate { dgvSwiadczenie.ClearSelection(); };
             dgvSwiadczenie.DataSource = from swiad in baza.świadczenies
                                         where swiad.id_dokumentu == Convert.ToInt32(zaznaczony_dok)
@@ -74,7 +77,7 @@ namespace POMOST_Lite
         private void tsbDodaj_Click(object sender, EventArgs e)
         {
             {
-                Swiadczenie_Dodaj addswiad = new Swiadczenie_Dodaj(zaznaczone_swiad, zaznaczony_dok, true );
+                Swiadczenie_Dodaj addswiad = new Swiadczenie_Dodaj(zaznaczone_swiad, zaznaczony_dok, true, petentOrDok, zaznacz);
                 addswiad.FormClosed += addswiad_FormClosed;
                 addswiad.ShowDialog();
             }
@@ -107,7 +110,7 @@ namespace POMOST_Lite
         {
             if (zaznaczone_swiad != null)
             {
-                Swiadczenie_Dodaj editswiad = new Swiadczenie_Dodaj(zaznaczone_swiad, zaznaczony_dok, false);
+                Swiadczenie_Dodaj editswiad = new Swiadczenie_Dodaj(zaznaczone_swiad, zaznaczony_dok, false, petentOrDok, zaznacz);
                 editswiad.FormClosed += editswiad_FormClosed;
                 editswiad.ShowDialog();
             }

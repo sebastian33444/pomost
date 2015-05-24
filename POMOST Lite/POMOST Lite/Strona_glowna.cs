@@ -175,7 +175,7 @@ namespace POMOST_Lite
         {
             if (zaznacz != null)
             {
-                Swiadczenia_Menu swiad = new Swiadczenia_Menu(zaznacz);
+                Swiadczenia_Menu swiad = new Swiadczenia_Menu(zaznacz, false);
                 swiad.ShowDialog();
             }
             else

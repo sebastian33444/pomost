@@ -133,15 +133,12 @@
             // 
             // cbDokument
             // 
-            this.cbDokument.DataSource = this.dokumentyBindingSource;
-            this.cbDokument.DisplayMember = "id_dokumentu";
             this.cbDokument.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbDokument.FormattingEnabled = true;
             this.cbDokument.Location = new System.Drawing.Point(79, 287);
             this.cbDokument.Name = "cbDokument";
             this.cbDokument.Size = new System.Drawing.Size(157, 24);
             this.cbDokument.TabIndex = 8;
-            this.cbDokument.ValueMember = "id_dokumentu";
             // 
             // dokumentyBindingSource
             // 
@@ -188,7 +185,7 @@
             // 
             this.świadczenieTableAdapter.ClearBeforeFill = true;
             // 
-            // Swiadczenie
+            // Swiadczenie_Dodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -206,7 +203,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
-            this.Name = "Swiadczenie";
+            this.Name = "Swiadczenie_Dodaj";
             this.ShowIcon = false;
             this.Text = "POMOST LIte";
             this.Load += new System.EventHandler(this.Swiadczenie_Load);
