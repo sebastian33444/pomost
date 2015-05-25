@@ -98,27 +98,34 @@ namespace POMOST_Lite
 
         private void bZapisz_Click(object sender, EventArgs e)
         {
-            foreach (petent p in baza.petents.Where(p => p.id_petent == Convert.ToInt32(id_petent)))
+            try
             {
-                p.imie = tbImie.Text;
-                p.nazwisko = tbNazwisko.Text;
-                p.pesel = tbPesel.Text;
-                p.województwo = tbWojewodztwo.Text;
-                p.miasto = tbMiasto.Text;
-                p.kod_pocztowy = tbKod.Text;
-                p.ulica = tbUlica.Text;
-                p.nr_ulicy = Convert.ToInt32(tbNrUl.Text);
-                p.nr_mieszkania = Convert.ToInt32(tbMieszkanie.Text);
-                p.nr_telefonu = tbTelefon.Text;
-                p.d_ur = Kalendarz.SelectionStart;
-                foreach (pracownik prac in baza.pracowniks.Where(prac => prac.login == cbPracownik.Text))
+                foreach (petent p in baza.petents.Where(p => p.id_petent == Convert.ToInt32(id_petent)))
                 {
-                    p.id_pracownik = prac.id_pracownik;
+                    p.imie = tbImie.Text;
+                    p.nazwisko = tbNazwisko.Text;
+                    p.pesel = tbPesel.Text;
+                    p.województwo = tbWojewodztwo.Text;
+                    p.miasto = tbMiasto.Text;
+                    p.kod_pocztowy = tbKod.Text;
+                    p.ulica = tbUlica.Text;
+                    p.nr_ulicy = Convert.ToInt32(tbNrUl.Text);
+                    p.nr_mieszkania = Convert.ToInt32(tbMieszkanie.Text);
+                    p.nr_telefonu = tbTelefon.Text;
+                    p.d_ur = Kalendarz.SelectionStart;
+                    foreach (pracownik prac in baza.pracowniks.Where(prac => prac.login == cbPracownik.Text))
+                    {
+                        p.id_pracownik = prac.id_pracownik;
+                    }
                 }
+                baza.SubmitChanges();
+                Close();
+                MessageBox.Show("Pomyślnie zaktualizowano petenta.");
             }
-            baza.SubmitChanges();
-            Close();
-            MessageBox.Show("Pomyślnie zaktualizowano petenta.");
+            catch
+            {
+                MessageBox.Show("Nie wszystkie pola sa wypełnione!");
+            }
         }
 
         private void Edytuj_petenta_Load(object sender, EventArgs e)

@@ -76,6 +76,8 @@ namespace POMOST_Lite
 
         private void bZapisz_Click(object sender, EventArgs e) 
         {
+            try
+            {
             petent p = new petent();
             baza.petents.InsertOnSubmit(p);
             p.imie = tbImie.Text;
@@ -93,9 +95,15 @@ namespace POMOST_Lite
             {
                 p.id_pracownik = prac.id_pracownik;
             }
+
             baza.SubmitChanges();
             Close();
             MessageBox.Show("Pomyślnie dodano petenta.");
+            }
+            catch
+            {
+                MessageBox.Show("Nie wszystkie pola zostały wypełnione!");
+            }
 
         }
 
