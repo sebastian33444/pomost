@@ -15,12 +15,11 @@ namespace POMOST_Lite
         public Dokumenty_Edycja(string q, string w, string e)
         {
             //q - id dokumentu
-            //w- id petenta
-            //e- log pracownika
+         
             InitializeComponent();
             for (int i = 0; i < 1; i++)
             {
-                WBDokumenty_Edycja.Navigate("http://localhost:49286/Dokumenty_Edycja.aspx?zmienna=" + q);//+"&zmienna2="+w+"&zmienna3="+e);
+                WBDokumenty_Edycja.Navigate("http://localhost:49286/Dokumenty_Edycja.aspx?zmienna=" + q);
             }
         }
     }
