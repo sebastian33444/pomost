@@ -61,10 +61,23 @@ namespace POMOST_Lite
 
         private void tbKod_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back)
+            bool cofaj = false;
+            if (char.IsDigit(e.KeyChar))
+            {
                 base.OnKeyPress(e);
+            }
+            else if (e.KeyChar == (char)Keys.Back)
+            {
+                base.OnKeyPress(e);
+                cofaj = true;
+            }
             else
                 e.Handled = true;
+            if (tbKod.TextLength == 2 && cofaj == false)
+            {
+                tbKod.Text += "-";
+                tbKod.SelectionStart = tbKod.Text.Length;
+            }
         }
 
         private void tbNrUl_KeyPress(object sender, KeyPressEventArgs e)

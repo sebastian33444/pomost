@@ -66,7 +66,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(1, 39);
+            this.label2.Location = new System.Drawing.Point(1, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 17);
             this.label2.TabIndex = 1;
@@ -76,7 +76,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(1, 75);
+            this.label3.Location = new System.Drawing.Point(1, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 2;
@@ -96,15 +96,15 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(1, 287);
+            this.label5.Location = new System.Drawing.Point(1, 295);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 17);
+            this.label5.Size = new System.Drawing.Size(89, 17);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Dokument";
+            this.label5.Text = "Nr dokument";
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(79, 111);
+            this.monthCalendar1.Location = new System.Drawing.Point(90, 116);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 5;
@@ -135,7 +135,7 @@
             // 
             this.cbDokument.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbDokument.FormattingEnabled = true;
-            this.cbDokument.Location = new System.Drawing.Point(79, 287);
+            this.cbDokument.Location = new System.Drawing.Point(90, 292);
             this.cbDokument.Name = "cbDokument";
             this.cbDokument.Size = new System.Drawing.Size(157, 24);
             this.cbDokument.TabIndex = 8;
@@ -153,7 +153,7 @@
             // tbKwota
             // 
             this.tbKwota.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbKwota.Location = new System.Drawing.Point(79, 39);
+            this.tbKwota.Location = new System.Drawing.Point(90, 44);
             this.tbKwota.Name = "tbKwota";
             this.tbKwota.Size = new System.Drawing.Size(157, 23);
             this.tbKwota.TabIndex = 10;
@@ -171,7 +171,7 @@
             // 
             this.cbSwiadczenie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbSwiadczenie.FormattingEnabled = true;
-            this.cbSwiadczenie.Location = new System.Drawing.Point(81, 75);
+            this.cbSwiadczenie.Location = new System.Drawing.Point(92, 80);
             this.cbSwiadczenie.Name = "cbSwiadczenie";
             this.cbSwiadczenie.Size = new System.Drawing.Size(155, 24);
             this.cbSwiadczenie.TabIndex = 11;
