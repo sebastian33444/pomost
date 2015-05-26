@@ -56,7 +56,7 @@
         </asp:RadioButtonList>
         <br />
         <asp:Button ID="BZapisz_do_bazy" runat="server" OnClick="BZapisz_do_bazy_Click" Text="Zapisz do bazy" Width="132px" />
-	<input type="reset" name="reset" value="Reset" style="width: 128px" /><br />
+	    <br />
         <br />
         <textarea id="elm1" name="elm1" style="width: 100%; height: 330px;" runat="server"> </textarea><br />
      </form>

@@ -157,12 +157,6 @@
     <Compile Include="Swiadczenie_Podglad.Designer.cs">
       <DependentUpon>Swiadczenie_Podglad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Wyszukaj.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Wyszukaj.Designer.cs">
-      <DependentUpon>Wyszukaj.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Dokumenty_Edycja.resx">
       <DependentUpon>Dokumenty_Edycja.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,9 +171,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Swiadczenie_Podglad.resx">
       <DependentUpon>Swiadczenie_Podglad.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wyszukaj.resx">
-      <DependentUpon>Wyszukaj.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataClasses.dbml.layout">
       <DependentUpon>DataClasses.dbml</DependentUpon>

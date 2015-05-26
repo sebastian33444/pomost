@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Logowanie_uzytkownika));
-            this.info = new System.Windows.Forms.Label();
             this.zamknij = new System.Windows.Forms.Button();
             this.label_uzytkownik = new System.Windows.Forms.Label();
             this.label_haslo = new System.Windows.Forms.Label();
@@ -38,11 +37,6 @@
             this.zaloguj = new System.Windows.Forms.Button();
             this.KonfBazy = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // info
-            // 
-            resources.ApplyResources(this.info, "info");
-            this.info.Name = "info";
             // 
             // zamknij
             // 
@@ -100,7 +94,6 @@
             this.Controls.Add(this.label_uzytkownik);
             this.Controls.Add(this.zamknij);
             this.Controls.Add(this.zaloguj);
-            this.Controls.Add(this.info);
             this.MaximizeBox = false;
             this.Name = "Logowanie_uzytkownika";
             this.ShowIcon = false;
@@ -111,7 +104,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label info;
         private System.Windows.Forms.Button zaloguj;
         private System.Windows.Forms.Button zamknij;
         private System.Windows.Forms.Label label_uzytkownik;

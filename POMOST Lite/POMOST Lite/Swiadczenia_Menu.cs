@@ -76,16 +76,19 @@ namespace POMOST_Lite
 
         private void tsbDodaj_Click(object sender, EventArgs e)
         {
-            int flaga = 0;
-           foreach (dokumenty d in baza.dokumenties.Where(d => d.id_petent == Convert.ToInt32(zaznacz)))
-                flaga = 1;
-           if (flaga == 1)
+            bool flaga = false;
+            foreach (dokumenty d in baza.dokumenties.Where(d => d.id_petent == Convert.ToInt32(zaznacz))) flaga = true;
+            foreach (dokumenty d in baza.dokumenties.Where(d => d.id_dokumentu == Convert.ToInt32(zaznaczony_dok))) flaga = true;
+           
+          if (flaga == true)
            {
                Swiadczenie_Dodaj addswiad = new Swiadczenie_Dodaj(zaznaczone_swiad, zaznaczony_dok, true, petentOrDok, zaznacz);
                addswiad.FormClosed += addswiad_FormClosed;
                addswiad.ShowDialog();
            }
-           else { MessageBox.Show("Wybrany petent nie ma przypisanego dokumentu."); }
+           else { 
+            MessageBox.Show("Wybrany petent nie ma przypisanego dokumentu."); 
+            }
         }
 
         private void addswiad_FormClosed(object sender, FormClosedEventArgs e)

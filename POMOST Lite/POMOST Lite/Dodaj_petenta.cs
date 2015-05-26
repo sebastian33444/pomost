@@ -131,5 +131,7 @@ namespace POMOST_Lite
             this.cbPracownik.Text = null;
             this.cbPracownik.SelectedText = p;
         }
+
+       
     }
 }

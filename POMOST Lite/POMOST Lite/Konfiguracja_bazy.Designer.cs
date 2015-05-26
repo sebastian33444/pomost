@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.info = new System.Windows.Forms.Label();
             this.nazwa_bazy = new System.Windows.Forms.TextBox();
             this.nazwa_serwera = new System.Windows.Forms.TextBox();
             this.label_haslo = new System.Windows.Forms.Label();
@@ -36,17 +35,6 @@
             this.zamknij = new System.Windows.Forms.Button();
             this.zapisz = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // info
-            // 
-            this.info.AutoSize = true;
-            this.info.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.info.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.info.Location = new System.Drawing.Point(204, 9);
-            this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(240, 17);
-            this.info.TabIndex = 1;
-            this.info.Text = "Konfiguracja połaczenia z bazą.";
             // 
             // nazwa_bazy
             // 
@@ -125,12 +113,11 @@
             this.Controls.Add(this.label_uzytkownik);
             this.Controls.Add(this.zamknij);
             this.Controls.Add(this.zapisz);
-            this.Controls.Add(this.info);
             this.MaximizeBox = false;
             this.Name = "Konfiguracja_bazy";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POMOST Lite";
+            this.Text = "Konfiguracja połaczenia z bazą";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,7 +125,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label info;
         public System.Windows.Forms.TextBox nazwa_bazy;
         public System.Windows.Forms.TextBox nazwa_serwera;
         private System.Windows.Forms.Label label_haslo;

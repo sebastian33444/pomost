@@ -45,17 +45,17 @@
             this.mopsDataSet = new POMOST_Lite.mopsDataSet();
             this.dokumentyTableAdapter = new POMOST_Lite.mopsDataSetTableAdapters.dokumentyTableAdapter();
             this.dgvDokumenty = new System.Windows.Forms.DataGridView();
-            this.dokumentyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.WBPodglad_dokumentu = new System.Windows.Forms.WebBrowser();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.iddokumentuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typdokumentuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zawartośćdokumentuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpetentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpracownikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dokumentyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.WBPodglad_dokumentu = new System.Windows.Forms.WebBrowser();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dokumentyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
@@ -117,7 +117,7 @@
             this.tsbDrukuj.Image = ((System.Drawing.Image)(resources.GetObject("tsbDrukuj.Image")));
             this.tsbDrukuj.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDrukuj.Name = "tsbDrukuj";
-            this.tsbDrukuj.Size = new System.Drawing.Size(62, 23);
+            this.tsbDrukuj.Size = new System.Drawing.Size(58, 23);
             this.tsbDrukuj.Text = "Drukuj";
             this.tsbDrukuj.Click += new System.EventHandler(this.tsbDrukuj_Click);
             // 
@@ -131,7 +131,7 @@
             this.tsbOtworzSwiad.Image = ((System.Drawing.Image)(resources.GetObject("tsbOtworzSwiad.Image")));
             this.tsbOtworzSwiad.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbOtworzSwiad.Name = "tsbOtworzSwiad";
-            this.tsbOtworzSwiad.Size = new System.Drawing.Size(131, 23);
+            this.tsbOtworzSwiad.Size = new System.Drawing.Size(122, 23);
             this.tsbOtworzSwiad.Text = "Otwórz świadczenia";
             this.tsbOtworzSwiad.Click += new System.EventHandler(this.tsbOtworzSwiad_Click);
             // 
@@ -140,7 +140,7 @@
             this.Odswierz.Image = ((System.Drawing.Image)(resources.GetObject("Odswierz.Image")));
             this.Odswierz.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Odswierz.Name = "Odswierz";
-            this.Odswierz.Size = new System.Drawing.Size(75, 23);
+            this.Odswierz.Size = new System.Drawing.Size(71, 23);
             this.Odswierz.Text = "Odświerz";
             this.Odswierz.Click += new System.EventHandler(this.Odswierz_Click);
             // 
@@ -149,7 +149,7 @@
             this.tsbZamknij.Image = ((System.Drawing.Image)(resources.GetObject("tsbZamknij.Image")));
             this.tsbZamknij.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbZamknij.Name = "tsbZamknij";
-            this.tsbZamknij.Size = new System.Drawing.Size(70, 23);
+            this.tsbZamknij.Size = new System.Drawing.Size(63, 23);
             this.tsbZamknij.Text = "Zamknij";
             this.tsbZamknij.Click += new System.EventHandler(this.tsbZamknij_Click);
             // 
@@ -212,34 +212,6 @@
             this.dgvDokumenty.TabIndex = 1;
             this.dgvDokumenty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDokumenty_CellClick);
             // 
-            // dokumentyBindingSource1
-            // 
-            this.dokumentyBindingSource1.DataMember = "dokumenty";
-            this.dokumentyBindingSource1.DataSource = this.mopsDataSet;
-            // 
-            // WBPodglad_dokumentu
-            // 
-            this.WBPodglad_dokumentu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.WBPodglad_dokumentu.Location = new System.Drawing.Point(354, 26);
-            this.WBPodglad_dokumentu.MinimumSize = new System.Drawing.Size(20, 20);
-            this.WBPodglad_dokumentu.Name = "WBPodglad_dokumentu";
-            this.WBPodglad_dokumentu.Size = new System.Drawing.Size(665, 343);
-            this.WBPodglad_dokumentu.TabIndex = 4;
-            // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
             // iddokumentuDataGridViewTextBoxColumn
             // 
             this.iddokumentuDataGridViewTextBoxColumn.DataPropertyName = "id_dokumentu";
@@ -285,6 +257,34 @@
             this.idpracownikDataGridViewTextBoxColumn.ReadOnly = true;
             this.idpracownikDataGridViewTextBoxColumn.Visible = false;
             // 
+            // dokumentyBindingSource1
+            // 
+            this.dokumentyBindingSource1.DataMember = "dokumenty";
+            this.dokumentyBindingSource1.DataSource = this.mopsDataSet;
+            // 
+            // WBPodglad_dokumentu
+            // 
+            this.WBPodglad_dokumentu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.WBPodglad_dokumentu.Location = new System.Drawing.Point(354, 26);
+            this.WBPodglad_dokumentu.MinimumSize = new System.Drawing.Size(20, 20);
+            this.WBPodglad_dokumentu.Name = "WBPodglad_dokumentu";
+            this.WBPodglad_dokumentu.Size = new System.Drawing.Size(665, 343);
+            this.WBPodglad_dokumentu.TabIndex = 4;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // Dokumenty_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,7 +299,7 @@
             this.Name = "Dokumenty_Menu";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POMOST Lite";
+            this.Text = "Zarządzanie dokumentami";
             this.Load += new System.EventHandler(this.Dodaj_dokumenty_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

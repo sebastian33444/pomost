@@ -57,7 +57,7 @@
        
     
 
-        <input type="reset" name="reset" value="Reset" style="width: 128px" /><br />
+        <br />
         <br />
      <textarea id="elm2" name="elm1" style="width: 100%; height: 330px;" runat="server"> </textarea>
         <br />        

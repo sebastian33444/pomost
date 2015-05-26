@@ -75,7 +75,7 @@ namespace POMOST_Lite
                     swiad.kwota = Convert.ToDecimal(tbKwota.Text);
                     swiad.operacja = cbSwiadczenie.Text;
                     swiad.data = monthCalendar1.SelectionStart;
-                    swiad.id_dokumentu = Convert.ToInt32(zaznaczony_dok);
+                    swiad.id_dokumentu = Convert.ToInt32(cbDokument.Text);
                     baza.świadczenies.InsertOnSubmit(swiad);
                     baza.SubmitChanges();
                     Close();
@@ -84,7 +84,7 @@ namespace POMOST_Lite
                 }
                 catch
                 {
-                    MessageBox.Show("Bład");
+                   MessageBox.Show("Bład");
                 }
         }
             else
@@ -121,5 +121,7 @@ namespace POMOST_Lite
             }
 
         }
+
+       
     }
 }

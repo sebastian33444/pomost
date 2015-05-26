@@ -250,7 +250,7 @@ namespace POMOST_Lite
                 }
             }
             baza.SubmitChanges();
-            Close();
+            wczytajOsoby();
         }
 
         private void zapisz_dodaj_Click(object sender, EventArgs e)
@@ -284,7 +284,19 @@ namespace POMOST_Lite
                     prac.admin = false;
                 }
                 baza.SubmitChanges();
-                Close();
+                nazwa_uzytkownika.Text = null;
+                haslol.Text = null;
+                hasloponl.Text = null;
+                imiel.Text = null;
+                nazwiskol.Text = null;
+                dzielnical.Text = null;
+                miastol.Text = null;
+                anuluj_dodaj.Visible = false;
+                zapisz_dodaj.Visible = false;
+                dodaj.Enabled = true;
+                usun.Enabled = true;
+                edytuj.Enabled = true;
+
                 MessageBox.Show("Pomyślnie dodano użytkownika.");
                 nazwa_uzytkownika.Enabled = false;
                 haslol.Enabled = false;

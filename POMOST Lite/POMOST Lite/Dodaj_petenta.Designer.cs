@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
             this.tbImie = new System.Windows.Forms.TextBox();
             this.tbPesel = new System.Windows.Forms.TextBox();
             this.tbWojewodztwo = new System.Windows.Forms.TextBox();
@@ -65,16 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(275, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Dodaj petenta";
             // 
             // tbImie
             // 
@@ -142,7 +131,7 @@
             // 
             this.tbTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tbTelefon.Location = new System.Drawing.Point(171, 273);
-            this.tbTelefon.MaxLength = 10;
+            this.tbTelefon.MaxLength = 9;
             this.tbTelefon.Name = "tbTelefon";
             this.tbTelefon.Size = new System.Drawing.Size(320, 22);
             this.tbTelefon.TabIndex = 10;
@@ -387,11 +376,10 @@
             this.Controls.Add(this.tbWojewodztwo);
             this.Controls.Add(this.tbPesel);
             this.Controls.Add(this.tbImie);
-            this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "Dodaj_petenta";
             this.ShowIcon = false;
-            this.Text = "POMOST Lite";
+            this.Text = "Dodawanie petenta";
             this.Load += new System.EventHandler(this.Dodaj_petenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pracownikBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).EndInit();
@@ -403,7 +391,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbImie;
         private System.Windows.Forms.TextBox tbPesel;
         private System.Windows.Forms.TextBox tbWojewodztwo;

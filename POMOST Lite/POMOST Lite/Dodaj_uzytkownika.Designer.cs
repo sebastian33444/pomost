@@ -35,7 +35,6 @@
             this.label_haslo = new System.Windows.Forms.Label();
             this.label_uzytkownik = new System.Windows.Forms.Label();
             this.wroc = new System.Windows.Forms.Button();
-            this.info = new System.Windows.Forms.Label();
             this.nazwiskol = new System.Windows.Forms.TextBox();
             this.imiel = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -130,17 +129,6 @@
             this.wroc.Text = "Wróć";
             this.wroc.UseVisualStyleBackColor = true;
             this.wroc.Click += new System.EventHandler(this.wroc_Click);
-            // 
-            // info
-            // 
-            this.info.AutoSize = true;
-            this.info.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.info.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.info.Location = new System.Drawing.Point(193, 12);
-            this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(206, 17);
-            this.info.TabIndex = 29;
-            this.info.Text = "Zarządzanie użytkownikami";
             // 
             // nazwiskol
             // 
@@ -416,12 +404,11 @@
             this.Controls.Add(this.anuluj_dodaj);
             this.Controls.Add(this.anuluj_edycja);
             this.Controls.Add(this.wroc);
-            this.Controls.Add(this.info);
             this.MaximizeBox = false;
             this.Name = "Dodaj_uzytkownika";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POMOST Lite";
+            this.Text = "Zarządzanie użytkownikami";
             this.Load += new System.EventHandler(this.Dodaj_uzytkownika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).EndInit();
@@ -439,7 +426,6 @@
         private System.Windows.Forms.Label label_haslo;
         private System.Windows.Forms.Label label_uzytkownik;
         private System.Windows.Forms.Button wroc;
-        private System.Windows.Forms.Label info;
         public System.Windows.Forms.TextBox nazwiskol;
         public System.Windows.Forms.TextBox imiel;
         private System.Windows.Forms.Label label1;

@@ -40,11 +40,17 @@ public partial class Dokumenty_Edycja : System.Web.UI.Page
             d.zawartość_dokumentu = x;
             d.data = DateTime.Now.Date;
             d.typ_dokumentu = y;
-
+               
         }
 
         p.SubmitChanges();
 
+
+        foreach (dokumenty d in p.dokumenties.Where(d => d.id_dokumentu == Convert.ToInt32(b)))
+        {
+            elm2.InnerText = d.zawartość_dokumentu;
+            RBLista.Items.FindByText(d.typ_dokumentu).Selected = true;
+        }
 
     }
 }

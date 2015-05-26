@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label15 = new System.Windows.Forms.Label();
             this.Kalendarz = new System.Windows.Forms.MonthCalendar();
             this.label14 = new System.Windows.Forms.Label();
             this.cbPracownik = new System.Windows.Forms.ComboBox();
@@ -65,16 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label15.Location = new System.Drawing.Point(284, 9);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(107, 16);
-            this.label15.TabIndex = 58;
-            this.label15.Text = "Edytuj petenta";
             // 
             // Kalendarz
             // 
@@ -283,7 +272,7 @@
             // 
             this.tbTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tbTelefon.Location = new System.Drawing.Point(171, 272);
-            this.tbTelefon.MaxLength = 10;
+            this.tbTelefon.MaxLength = 9;
             this.tbTelefon.Name = "tbTelefon";
             this.tbTelefon.Size = new System.Drawing.Size(320, 22);
             this.tbTelefon.TabIndex = 41;
@@ -361,7 +350,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(673, 329);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.Kalendarz);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.cbPracownik);
@@ -392,7 +380,7 @@
             this.MaximizeBox = false;
             this.Name = "Edytuj_petenta";
             this.ShowIcon = false;
-            this.Text = "POMOST Lite";
+            this.Text = "Edycja petenta";
             this.Load += new System.EventHandler(this.Edytuj_petenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pracownikBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSetBindingSource)).EndInit();
@@ -404,7 +392,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.MonthCalendar Kalendarz;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cbPracownik;

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,16 +50,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dokumentyBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.świadczenieBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(63, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Dodaj świadczenie";
             // 
             // label2
             // 
@@ -201,11 +190,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "Swiadczenie_Dodaj";
             this.ShowIcon = false;
-            this.Text = "POMOST LIte";
+            this.Text = "Dodawanie świadczenia";
             this.Load += new System.EventHandler(this.Swiadczenie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dokumentyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mopsDataSet)).EndInit();
@@ -218,7 +206,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

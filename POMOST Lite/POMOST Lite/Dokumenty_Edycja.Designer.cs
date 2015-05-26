@@ -47,7 +47,7 @@
             this.ClientSize = new System.Drawing.Size(792, 473);
             this.Controls.Add(this.WBDokumenty_Edycja);
             this.Name = "Dokumenty_Edycja";
-            this.Text = "Dokumenty_Edycja";
+            this.Text = "Edycja dokumentu";
             this.ResumeLayout(false);
 
         }
